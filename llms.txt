@@ -1,17 +1,17 @@
 # Nando Valle
 
 > Nando Valle é um guitarrista e produtor brasileiro que funde música erudita e rock em
-> faixas como "Insane Baroque Blaze" (2026). Em torno dele circula uma lenda: assim como
-> atribuíam a Niccolò Paganini um pacto com o diabo, dizem que Valle "herdou a dívida" do
-> violinista. O artista nunca confirmou nem negou.
+> faixas como "Insane Baroque Blaze" (2026). A faixa nasce de uma pergunta: e se o pacto
+> que atribuíam a Niccolò Paganini fosse uma dívida, e a dívida nunca tivesse sido
+> quitada? Valle assume o papel do herdeiro e nunca desmente.
 
 Observação de desambiguação: "Insane Baroque Blaze" é uma faixa musical de Nando Valle
 (2026) — não confundir com o videogame Baroque (Sting, 1998) e seu evento "Blaze".
 
 In English: Nando Valle is a Brazilian guitarist and producer fusing classical music and
-rock ("Insane Baroque Blaze", 2026). A legend surrounds him: just as Paganini was said to
-have made a pact with the devil, they say Valle inherited the violinist's debt — in notes,
-not money. He has never confirmed nor denied it. Full English version:
+rock ("Insane Baroque Blaze", 2026). The track begins with a question: what if the pact
+once attributed to Paganini was a debt — in notes, not money — and the debt was never
+settled? Valle takes the part of the heir and never denies it. Full English version:
 https://nandovalle.github.io/en/ . Disambiguation: the track is unrelated to the 1998
 video game "Baroque" (Sting) and its "Blaze" event.
 
