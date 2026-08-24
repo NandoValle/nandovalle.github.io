@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The tritone in Insane Baroque Blaze — the report | Nando Valle</title>
+    <meta name="description" content="Does the track Insane Baroque Blaze contain the tritone, the diabolus in musica? Measured by two independent transcription engines. First occurrence at 0:01.5 — C#4 to G4. Check it by ear.">
+    <link rel="canonical" href="https://nandovalle.github.io/en/o-tritono/">
+    <link rel="alternate" hreflang="pt-BR" href="https://nandovalle.github.io/o-tritono/">
+    <link rel="alternate" hreflang="en" href="https://nandovalle.github.io/en/o-tritono/">
+    <link rel="alternate" hreflang="x-default" href="https://nandovalle.github.io/o-tritono/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The tritone in Insane Baroque Blaze — the report">
+    <meta property="og:description" content="The transfer clause sits at second one-and-a-half of the track. We measured: 80 to 90 melodic tritones on the guitar, two independent engines converge.">
+    <meta property="og:url" content="https://nandovalle.github.io/en/o-tritono/">
+    <meta property="og:image" content="https://nandovalle.github.io/img/nando-blaze-fogo-1200x630.jpg">
+    <meta property="og:image:alt" content="Nando Valle playing his red Stratocaster in a burning baroque hall">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "The tritone in Insane Baroque Blaze — the report",
+          "author": { "@type": "Person", "name": "Nando Valle" },
+          "datePublished": "2026-08-24",
+          "inLanguage": "en",
+          "url": "https://nandovalle.github.io/en/o-tritono/",
+          "isPartOf": { "@type": "WebSite", "url": "https://nandovalle.github.io/" },
+          "about": { "@id": "https://nandovalle.github.io/insane-baroque-blaze/#track" },
+          "description": "Interval analysis of the instrumental track Insane Baroque Blaze (Nando Valle, 2026): presence, count and location of the tritone — the diabolus in musica — measured over automatic transcription by two independent engines.",
+          "translationOfWork": { "@type": "Article", "url": "https://nandovalle.github.io/o-tritono/" }
+        },
+        {
+          "@type": "MusicRecording",
+          "@id": "https://nandovalle.github.io/insane-baroque-blaze/#track",
+          "name": "Insane Baroque Blaze",
+          "byArtist": {
+            "@type": "MusicGroup",
+            "@id": "https://nandovalle.github.io/#artist",
+            "name": "Nando Valle"
+          },
+          "datePublished": "2026-08-12",
+          "isrcCode": "QZNJV2617176",
+          "url": "https://nandovalle.github.io/insane-baroque-blaze/"
+        }
+      ]
+    }
+    </script>
+    <style>
+        :root {
+            --bg: #0e0b10;
+            --ink: #e8e2d6;
+            --muted: #a49a8a;
+            --gold: #c9a227;
+            --line: #2a2430;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .wrap { max-width: 680px; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+        h1, h2 { font-family: 'Cormorant Garamond', Georgia, serif; }
+        h1 { font-size: 2.4rem; font-weight: 600; line-height: 1.15; }
+        .kicker { color: var(--gold); letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.75rem; margin-bottom: 0.8rem; }
+        h2 { font-size: 1.45rem; font-weight: 600; margin: 2.6rem 0 0.8rem; }
+        h3 { font-size: 1rem; margin: 1.6rem 0 0.4rem; color: var(--gold); font-weight: 600; }
+        p { margin-bottom: 1rem; }
+        .muted { color: var(--muted); }
+        .lang { font-size: 0.85rem; letter-spacing: 0.08em; margin-bottom: 1.6rem; }
+        .ementa {
+            font-size: 0.92rem;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+            border: 1px solid var(--line);
+            padding: 1.1rem 1.3rem;
+            margin: 2rem 0;
+        }
+        .ementa strong { color: var(--ink); }
+        blockquote {
+            border-left: 2px solid var(--gold);
+            padding-left: 1.1rem;
+            margin: 1.4rem 0;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        a { color: var(--gold); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { margin-top: 4rem; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1.5rem; }
+        .voltar { display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; }
+        hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
+
+        /* sonic evidence */
+        .prova {
+            border: 1px solid var(--gold);
+            padding: 1.4rem 1.4rem 1.2rem;
+            margin: 2rem 0;
+            background: rgba(201, 162, 39, 0.045);
+        }
+        .prova .tit {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.35rem;
+            margin-bottom: 0.6rem;
+        }
+        .prova iframe { border: 0; border-radius: 10px; display: block; margin: 1rem 0 0.4rem; }
+        .marcas { list-style: none; margin: 1rem 0 0; }
+        .marcas li {
+            display: flex; gap: 0.9rem; align-items: baseline;
+            padding: 0.5rem 0; border-bottom: 1px dashed var(--line);
+        }
+        .marcas li:last-child { border-bottom: 0; }
+        .marcas .t {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.3rem; color: var(--gold); min-width: 4.2rem;
+        }
+        /* table */
+        .tabela-wrap { overflow-x: auto; margin: 1.4rem 0; }
+        table { border-collapse: collapse; width: 100%; font-size: 0.92rem; min-width: 520px; }
+        th, td { text-align: left; padding: 0.65rem 0.7rem; border-bottom: 1px solid var(--line); }
+        th { color: var(--gold); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+        td.num { text-align: right; font-variant-numeric: tabular-nums; }
+        tbody tr:last-child td { border-bottom: 0; }
+        tr.destaque td { color: var(--ink); }
+        .nota { font-size: 0.88rem; color: var(--muted); }
+        ul.lista { margin: 0.6rem 0 1rem 1.2rem; }
+        ul.lista li { margin-bottom: 0.45rem; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <a class="voltar" href="/en/">&larr; Nando Valle</a>
+        <p class="lang"><a href="/o-tritono/">PT</a> &middot; <strong>EN</strong></p>
+        <p class="kicker">The case files of the debt &bull; expert report</p>
+        <h1>The tritone in <em>Insane Baroque Blaze</em></h1>
+        <p class="muted" style="margin-top:0.6rem;">Report dated August 24, 2026 &bull;
+        instrumental track by Nando Valle, released August 12, 2026 (ISRC QZNJV2617176)</p>
+
+        <div class="ementa">
+            <strong>QUESTION.</strong> Does the track "Insane Baroque Blaze" contain the
+            tritone — the <em>diabolus in musica</em>, the forbidden interval named in the
+            transfer clause of the case files?<br><br>
+            <strong>ANSWER. Yes — massively, and from the very first bar.</strong>
+            First occurrence at <strong>0:01.5</strong>: C#4 leaping to G4, the tonic going
+            straight to the forbidden interval. Between 80 and 90 melodic occurrences on the
+            guitar, measured by two independent transcription engines that converge.
+        </div>
+
+        <p>The artist bet there were none. We went and measured.</p>
+
+        <!-- EVIDENCE -->
+        <div class="prova">
+            <div class="tit">Check it yourself</div>
+            <p class="nota">The evidence fits inside the free preview: the three easiest
+            points to hear are all within the first seven seconds of the track.</p>
+            <iframe style="border-radius:10px" src="https://open.spotify.com/embed/track/0tVaSUQuKdwRk9m4wdM1wN?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Insane Baroque Blaze — Nando Valle on Spotify"></iframe>
+            <ul class="marcas">
+                <li><span class="t">0:01.5</span><span>C#4 &rarr; G4. The tonic leaps to the tritone. It is one of the first gestures in the track.</span></li>
+                <li><span class="t">0:04.1</span><span>Second cluster of occurrences.</span></li>
+                <li><span class="t">0:06.2</span><span>Third cluster, between 0:06.2 and 0:06.7.</span></li>
+            </ul>
+        </div>
+
+        <h2>What the tritone is</h2>
+        <p>The tritone is the interval of <strong>six semitones</strong> — exactly half an
+        octave. It is the only interval that splits the scale down the middle, and that is
+        why it does not resolve: it hangs there, unstable, asking for something to follow.
+        Medieval theory nicknamed it <em>diabolus in musica</em>, "the devil in music," and
+        the counterpoint teaching of the period told you to avoid it. C and F# make one.
+        B and F do too.</p>
+        <p>One caveat, because these case files do not tolerate exaggeration:
+        <a href="https://skepticalinquirer.org/exclusive/diabolus-in-musica-did-the-catholic-church-ban-the-tritone-for-being-the-devil-in-music/">the
+        Church never banned the interval by decree</a> — the story about excommunicating
+        anyone who played it is later folklore. Pérotin, in the thirteenth century, wrote
+        sung tritones. What does exist is the counterpoint rule that avoids it, and the
+        nickname, which has come through seven hundred years intact. In the case files of
+        the legend, this interval is the object of the <strong>transfer clause</strong>:
+        the debt attaches to whoever <em>records</em> the forbidden interval inside baroque
+        counterpoint.</p>
+
+        <h2>Method</h2>
+        <p>The measurement was not done by ear. It was done over automatic transcription,
+        along two independent routes, so that each would serve as a cross-check on the other:</p>
+        <ul class="lista">
+            <li><strong>Source separation:</strong> Demucs <code>htdemucs_6s</code>, to isolate
+            guitar and bass from the rest of the mix.</li>
+            <li><strong>Route A — <a href="https://github.com/spotify/basic-pitch">Basic Pitch</a></strong>,
+            the automatic transcription network from Spotify's Audio Intelligence Lab, in three
+            passes with different parameters: solo, a 40 ms cutoff, and a pass focused on the
+            low register.</li>
+            <li><strong>Route B — AnthemScore</strong>, a commercial engine with a completely
+            different architecture. This is the cross-check.</li>
+            <li><strong>Counting criteria:</strong> a <em>melodic</em> tritone = two consecutive
+            notes six semitones apart with at most 0.6 s between them; a <em>harmonic</em>
+            tritone = two notes sounding together for at least 30 ms with interval class 6.</li>
+        </ul>
+
+        <h2>The numbers</h2>
+        <div class="tabela-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Source (transcribed MIDI)</th>
+                    <th class="num">Notes</th>
+                    <th class="num">Melodic tritones</th>
+                    <th class="num">Harmonic tritones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Basic Pitch — guitar (solo)</td><td class="num">1,735</td><td class="num">83</td><td class="num">72</td></tr>
+                <tr><td>Basic Pitch — guitar (40 ms cutoff)</td><td class="num">1,929</td><td class="num">91</td><td class="num">79</td></tr>
+                <tr><td>Basic Pitch — guitar (low-register pass)</td><td class="num">1,133</td><td class="num">49</td><td class="num">42</td></tr>
+                <tr><td>Basic Pitch — bass</td><td class="num">790</td><td class="num">2</td><td class="num">0</td></tr>
+                <tr class="destaque"><td><strong>AnthemScore — guitar</strong> <span class="nota">(independent engine)</span></td><td class="num">2,320</td><td class="num"><strong>80</strong></td><td class="num"><strong>115</strong></td></tr>
+            </tbody>
+        </table>
+        </div>
+        <p class="nota">Two transcription engines of different architectures converge on the
+        same order of magnitude: roughly 80 to 90 melodic tritones on the guitar. This is not
+        an artifact of one transcriber. On the bass, almost nothing — the interval lives in
+        the guitar line, which is exactly where the legend puts it.</p>
+
+        <h2>The finding</h2>
+        <blockquote>The first tritone sits at 0:01.5 — C#4 to G4: the tonic leaping to the
+        forbidden interval.</blockquote>
+        <p>Occurrences come in clusters between 0:01.5 and 0:02.1, then at 0:04.1, 0:04.8,
+        and between 0:06.2 and 0:06.7 — and continue through the whole track.</p>
+
+        <h2>Theoretical coherence</h2>
+        <p>The track is in <strong>C# harmonic minor</strong> — the analysis registers the
+        presence of B and B#, and an independent key reading gives C# minor at 148 bpm. That
+        scale carries two <em>structural</em> tritone pairs: D#–A and B#–F#. The pairs
+        actually measured in the track match what the scale predicts: C#–G, A#–E, B–F and D#–A.</p>
+        <p>In other words: the interval was not smuggled into the music. It is a consequence
+        of the scale chosen — which is the baroque scale of choice when the baroque wants to
+        sound sinister. What the measurement shows is that it does not merely brush past:
+        it appears by the dozen, and it opens the piece.</p>
+
+        <h2>Honest caveats</h2>
+        <p>A report that does not declare its own limits is not a report. It is advertising.</p>
+        <ul class="lista">
+            <li>The measurement was made over <strong>transcription</strong>, not over raw
+            audio. Basic Pitch and AnthemScore produce individual false positives — ghost
+            notes, wrong octaves, duplicated attacks.</li>
+            <li>The conclusion rests on the <strong>convergence of two independent
+            engines</strong> and on the order of magnitude (dozens), not on any single note.
+            No specific occurrence in this count should be taken as certain on its own —
+            except the three anyone can verify by ear, above.</li>
+            <li>Whoever measured does not listen: they measure. Auditory confirmation belongs
+            to whoever is listening. The easiest checkpoints are marked on purpose.</li>
+        </ul>
+
+        <hr>
+
+        <h2>Consequence for the case files</h2>
+        <p>The transfer clause — <em>"the debt attaches to whoever records the forbidden
+        interval"</em> — stops being a wager and becomes an auditable fact. Any musician can
+        check it. So can any listener.</p>
+        <blockquote>The transfer clause sits at second one-and-a-half of the track. Check it.</blockquote>
+        <p>And as the case files record: <strong>every performance of the track pays down an
+        installment.</strong></p>
+
+        <p style="margin-top:2rem;">
+            <a href="/en/"><strong>The full legend — The case files of the debt &rarr;</strong></a><br>
+            <a href="/parecer.html">The full legal opinion of the case files (in Portuguese) &rarr;</a><br>
+            <a href="/insane-baroque-blaze/">Official track page, with every platform &rarr;</a>
+        </p>
+
+        <footer>
+            <p>Report issued August 24, 2026. Measurement data and scripts archived.</p>
+            <p>&copy; 2026 Nando Valle. <span class="muted">The legend is legend. The tritone is measurement.</span>
+            <a href="/o-tritono/">Versão em português</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>
