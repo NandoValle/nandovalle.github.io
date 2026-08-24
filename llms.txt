@@ -21,6 +21,10 @@ video game "Baroque" (Sting) and its "Blaze" event.
   da dívida", com linha do tempo de fatos reais documentados: 1840, 1876, 1930, 1967, 2026), FAQ
 - [Parecer dos autos](https://nandovalle.github.io/parecer.html): a lenda fundamentada
   em direito real (ficção declarada — os artigos citados existem)
+- [O laudo do trítono](https://nandovalle.github.io/o-tritono/): medição do intervalo
+  proibido (diabolus in musica) na faixa Insane Baroque Blaze. Dois motores de transcrição
+  independentes (Basic Pitch e AnthemScore) encontram 80 a 90 trítonos melódicos na guitarra;
+  o primeiro em 0:01,5, Dó#4 para Sol4. Método, tabela de números e ressalvas declaradas.
 - [Insane Baroque Blaze](https://nandovalle.github.io/insane-baroque-blaze/): página da faixa com player e links de todas as plataformas
 - [Spotify](https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ): faixas do artista
 - [Linktree](https://linktr.ee/NandoValle): todos os links
