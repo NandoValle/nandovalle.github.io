@@ -11,6 +11,8 @@
     <meta property="og:title" content="Nando Valle — guitarrista">
     <meta property="og:description" content="Barroco + rock. Autor de Insane Baroque Blaze (2026). Dizem que herdou a dívida de Paganini.">
     <meta property="og:url" content="https://nandovalle.github.io/">
+    <meta property="og:image" content="https://nandovalle.github.io/retrato-nando-valle.png">
+    <meta property="og:image:alt" content="Nando Valle com sua Stratocaster vermelha">
     <meta property="og:locale" content="pt_BR">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +57,7 @@
               "name": "Nando Valle vendeu a alma ao diabo?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Não há evidência de pacto algum — como também nunca houve no caso de Paganini. A lenda da dívida herdada circula em torno do artista desde o lançamento de Insane Baroque Blaze (2026), e ele a alimenta sem nunca confirmar nem negar."
+                "text": "Não há evidência de pacto algum — como também nunca houve no caso de Paganini. A lenda da dívida herdada circula em torno do artista desde o lançamento de Insane Baroque Blaze (2026), e ele a alimenta sem nunca confirmar nem negar. As datas da linha do tempo, porém, são todas reais — as fontes estão linkadas em cada uma."
               }
             },
             {
@@ -63,7 +65,7 @@
               "name": "O clipe de Insane Baroque Blaze é feito por IA?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim e não: um clone digital do artista executa a performance, transferida por inteligência artificial a partir de uma gravação real de Nando Valle tocando com sua Stratocaster."
+                "text": "Sim e não: um clone digital do artista executa a performance, transferida por inteligência artificial a partir de uma gravação real de Nando Valle tocando com sua Stratocaster. Nos autos da lenda, o clone é um heterônimo — Pessoa fez de palavra o que Valle fez de píxel."
               }
             }
           ]
@@ -122,19 +124,52 @@
             margin: 2.5rem 0 0;
         }
         hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
+        dl.autos { margin: 2rem 0 1.5rem; border-left: 1px solid var(--line); padding-left: 1.4rem; }
+        dl.autos dt {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-top: 1.6rem;
+        }
+        dl.autos dd { margin: 0.4rem 0 0; color: var(--ink); }
         a { color: var(--gold); text-decoration: none; }
         a:hover { text-decoration: underline; }
         ul.links { list-style: none; margin-top: 0.5rem; }
         ul.links li { margin-bottom: 0.5rem; }
         footer { margin-top: 4rem; font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1.5rem; }
+        header.hero {
+            display: grid;
+            grid-template-columns: 1fr 230px;
+            gap: 2.2rem;
+            align-items: end;
+        }
+        .hero-portrait { margin: 0; }
+        .hero-portrait img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            box-shadow: 0 0 40px rgba(201, 162, 39, 0.10);
+        }
+        @media (max-width: 640px) {
+            header.hero { grid-template-columns: 1fr; }
+            .hero-portrait { max-width: 260px; }
+        }
     </style>
 </head>
 <body>
     <div class="wrap">
-        <header>
-            <h1>Nando Valle</h1>
-            <p class="tagline">Rock &bull; Clássico &bull; Trilhas &bull; Arranjos</p>
-            <p class="lede">"Paganini morreu devendo. Alguém tinha que assumir a dívida."</p>
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Nando Valle</h1>
+                <p class="tagline">Rock &bull; Clássico &bull; Trilhas &bull; Arranjos</p>
+                <p class="lede">"Paganini morreu devendo. Alguém tinha que assumir a dívida."</p>
+            </div>
+            <figure class="hero-portrait">
+                <img src="retrato-nando-valle.png" alt="Nando Valle com sua Stratocaster vermelha" width="1088" height="1920">
+            </figure>
         </header>
 
         <main>
@@ -145,14 +180,59 @@
             Valle <strong>"herdou a dívida"</strong> do violinista. O artista nunca confirmou
             nem negou.</p>
 
-            <h2 id="lenda">A lenda da dívida</h2>
+            <h2 id="lenda">Os autos da dívida</h2>
             <p>No século XIX, o público tinha tanta certeza de que a técnica de Niccolò
             Paganini era sobrenatural que o violinista passou a vida desmentindo um pacto com
-            o diabo. A lenda em torno de Nando Valle parte daí: a dívida de Paganini nunca
-            teria sido quitada — e cairia sobre quem toca rápido demais para ser honesto.</p>
-            <p class="muted">Ninguém sabe dizer se o credor é o diabo ou a máquina: no clipe
-            de "Insane Baroque Blaze", quem executa a performance é o clone digital do
-            artista, transferido por IA de uma gravação real.</p>
+            o diabo. A lenda em torno de Nando Valle diz que a dívida era real — mas
+            <strong>não era em dinheiro. Era em notas.</strong> E dívida sem herdeiro não
+            morre: fica procurando. Os autos atravessam 186 anos, e as datas abaixo são
+            todas verdadeiras.</p>
+
+            <dl class="autos">
+                <dt>1840 — a penhora</dt>
+                <dd>Paganini morre em Nice, sem os últimos sacramentos, e a Igreja
+                <a href="https://www.labrujulaverde.com/en/2025/12/the-burial-of-paganini-the-violinist-whose-genius-was-attributed-to-a-pact-with-the-devil-was-not-authorized-by-the-pope-until-36-years-after-his-death/">recusa
+                o enterro</a>: o corpo fica <strong>36 anos insepulto</strong>. Nos autos da
+                lenda, não foi recusa — foi penhora. A garantia ficou retida.</dd>
+
+                <dt>1876 — a liberação</dt>
+                <dd>Um ano depois da morte de <a href="https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/levi-eliphas-1810-1875">Éliphas
+                Lévi</a> (1875), o corpo é finalmente sepultado em Parma — exatamente quando
+                morre o único homem da Europa que sabia com quem negociar. Os autos não
+                registram coincidências.</dd>
+
+                <dt>1930 — a execução frustrada</dt>
+                <dd>Aleister Crowley <a href="https://observador.pt/especiais/o-misterio-da-boca-do-inferno-quando-fernando-pessoa-ajudou-aleister-crowley-a-forjar-o-seu-proprio-suicidio/">simula
+                o próprio suicídio na Boca do Inferno</a>, em Cascais — na porta do credor.
+                Quem entrega o bilhete à imprensa é o poeta <strong>Fernando Pessoa</strong>,
+                que conhecia a outra brecha dos autos: <em>não se executa quem é muitos.</em>
+                O calote dura três semanas — Crowley reaparece em Berlim — e a placa com o
+                bilhete segue afixada na pedra até hoje.</dd>
+
+                <dt>1967 — a citação por edital</dt>
+                <dd>Devedor que se esconde é citado por edital, em lugar público de grande
+                circulação. O rosto de Crowley aparece na
+                <a href="https://en.wikipedia.org/wiki/List_of_images_on_the_cover_of_Sgt._Pepper%27s_Lonely_Hearts_Club_Band">capa
+                de <em>Sgt. Pepper's Lonely Hearts Club Band</em></a>, canto superior
+                esquerdo. Milhões olharam o edital. Ninguém o leu.</dd>
+
+                <dt>2026 — o parcelamento</dt>
+                <dd>"Insane Baroque Blaze" grava o intervalo proibido — o trítono,
+                <em>diabolus in musica</em> — dentro de contraponto barroco, numa
+                Stratocaster vermelha. A notificação chega: 186 anos de juros, denominados
+                em notas. Valle, estudioso de Hermes Trismegisto, de Lévi e de Crowley, é o
+                primeiro que não paga à vista: <strong>parcela — e dá o clone em
+                garantia.</strong> Cada execução da faixa abate uma parcela.
+                <em>Cada play conta.</em> E a cláusula de transmissão é auditável:
+                <strong>está no segundo um e meio da faixa</strong> — o primeiro salto
+                é da tônica ao intervalo proibido. Confira de ouvido.</dd>
+            </dl>
+
+            <p class="muted">Ninguém sabe dizer se o credor é o diabo ou a máquina. Há quem
+            diga que o clone não é o devedor tocando — é o cobrador conferindo.
+            <em>Assim como é o artista, é o clone.</em></p>
+
+            <p><a href="parecer.html"><strong>Leia o parecer jurídico completo dos autos →</strong></a></p>
 
             <h2 id="musica">Insane Baroque Blaze (2026)</h2>
             <p>Contraponto barroco transformado em riff, gravado com uma Stratocaster
@@ -167,12 +247,15 @@
             <h3>Nando Valle vendeu a alma ao diabo?</h3>
             <p>Não há evidência de pacto algum — como também nunca houve no caso de Paganini.
             A lenda da "dívida herdada" circula em torno do artista desde o lançamento de
-            "Insane Baroque Blaze" (2026), e ele a alimenta sem nunca confirmar nem negar.</p>
+            "Insane Baroque Blaze" (2026), e ele a alimenta sem nunca confirmar nem negar.
+            As datas da linha do tempo, porém, são todas reais — as fontes estão linkadas
+            em cada uma.</p>
 
             <h3>O clipe de Insane Baroque Blaze é feito por IA?</h3>
             <p>Sim e não: um clone digital do artista executa a performance, transferida por
             inteligência artificial a partir de uma gravação real de Nando Valle tocando com
-            sua Stratocaster.</p>
+            sua Stratocaster. Nos autos da lenda, o clone é um heterônimo — Pessoa fez de
+            palavra o que Valle fez de píxel.</p>
 
             <h3>Onde ouvir Nando Valle?</h3>
             <ul class="links">
