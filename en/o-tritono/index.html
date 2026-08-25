@@ -202,8 +202,13 @@
             <li><strong>Route B — AnthemScore</strong>, a commercial engine with a completely
             different architecture. This is the cross-check.</li>
             <li><strong>Counting criteria:</strong> a <em>melodic</em> tritone = two consecutive
-            notes six semitones apart with at most 0.6 s between them; a <em>harmonic</em>
-            tritone = two notes sounding together for at least 30 ms with interval class 6.</li>
+            notes with <strong>interval class 6</strong> — the tritone at any octave — where the
+            next note begins at most 0.6 s after the previous one ends; a <em>harmonic</em>
+            tritone = two notes sounding together for at least 30 ms with interval class 6.
+            <em>(Correction, 2026-08-25: until this date the melodic rule was described as
+            "six semitones apart". The detector always used interval class 6, as the harmonic
+            rule already stated. The figures in the table did not change; the description simply
+            did not allow them to be reproduced.)</em></li>
         </ul>
 
         <h2>The numbers</h2>
