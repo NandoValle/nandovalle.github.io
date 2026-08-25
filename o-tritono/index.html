@@ -207,6 +207,22 @@
             é que não permitia reproduzi-los.)</em></li>
         </ul>
 
+        <h2>Reproduzir</h2>
+        <p>O detector e os quatro MIDIs transcritos estão publicados. Não é preciso
+        reimplementar nada — os números da tabela abaixo saem destes arquivos:</p>
+        <ul class="lista">
+            <li><a href="/o-tritono/reproduzir/detecta_tritono.py">detecta_tritono.py</a> — o detector, como foi usado</li>
+            <li><a href="/o-tritono/reproduzir/guitar_basic_pitch.mid">guitar_basic_pitch.mid</a> ·
+            <a href="/o-tritono/reproduzir/guitar_40ms.mid">guitar_40ms.mid</a> ·
+            <a href="/o-tritono/reproduzir/guitar_registro_grave.mid">guitar_registro_grave.mid</a> ·
+            <a href="/o-tritono/reproduzir/guitar_anthemscore.mid">guitar_anthemscore.mid</a></li>
+        </ul>
+        <p>Dependência única: <code>pip install pretty_midi</code>. Depois:</p>
+        <p><code>python detecta_tritono.py guitar_basic_pitch.mid guitar_40ms.mid guitar_registro_grave.mid guitar_anthemscore.mid</code></p>
+        <p>A saída traz a contagem de notas, os trítonos melódicos e os harmônicos de cada
+        arquivo, com o instante e as duas notas de cada ocorrência. Se der número diferente
+        do publicado aqui, o erro é nosso e queremos saber.</p>
+
         <h2>Números</h2>
         <div class="tabela-wrap">
         <table>

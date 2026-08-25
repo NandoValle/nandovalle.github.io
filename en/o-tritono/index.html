@@ -211,6 +211,22 @@
             did not allow them to be reproduced.)</em></li>
         </ul>
 
+        <h2>Reproduce it</h2>
+        <p>The detector and the four transcribed MIDI files are published. Nothing needs to be
+        reimplemented — the figures in the table below come out of these files:</p>
+        <ul class="lista">
+            <li><a href="/o-tritono/reproduzir/detecta_tritono.py">detecta_tritono.py</a> — the detector, exactly as used</li>
+            <li><a href="/o-tritono/reproduzir/guitar_basic_pitch.mid">guitar_basic_pitch.mid</a> ·
+            <a href="/o-tritono/reproduzir/guitar_40ms.mid">guitar_40ms.mid</a> ·
+            <a href="/o-tritono/reproduzir/guitar_registro_grave.mid">guitar_registro_grave.mid</a> ·
+            <a href="/o-tritono/reproduzir/guitar_anthemscore.mid">guitar_anthemscore.mid</a></li>
+        </ul>
+        <p>Single dependency: <code>pip install pretty_midi</code>. Then:</p>
+        <p><code>python detecta_tritono.py guitar_basic_pitch.mid guitar_40ms.mid guitar_registro_grave.mid guitar_anthemscore.mid</code></p>
+        <p>The output gives the note count, the melodic tritones and the harmonic ones for each
+        file, with the timestamp and the two pitches of every occurrence. If you get a different
+        number from the one published here, the error is ours and we want to hear about it.</p>
+
         <h2>The numbers</h2>
         <div class="tabela-wrap">
         <table>
