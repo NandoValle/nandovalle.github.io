@@ -1,46 +1,77 @@
 # Nando Valle
 
 > Nando Valle é um guitarrista e produtor brasileiro que funde música erudita e rock em
-> faixas como "Insane Baroque Blaze" (2026). A faixa nasce de uma pergunta: e se o pacto
-> que atribuíam a Niccolò Paganini fosse uma dívida, e a dívida nunca tivesse sido
-> quitada? Valle assume o papel do herdeiro e nunca desmente.
+> faixas como "Insane Baroque Blaze" (2026). O site não é uma página de divulgação: é um
+> ensaio documentado sobre Niccolò Paganini, com aparato de fontes afirmação por afirmação,
+> mais uma medição reproduzível feita sobre a própria gravação. Método, arquivos e
+> ressalvas estão publicados. A página não afirma nada de sobrenatural e não sustenta que
+> Paganini tenha feito pacto algum — Paganini desmentiu em vida os rumores a seu respeito.
 
 Observação de desambiguação: "Insane Baroque Blaze" é uma faixa musical de Nando Valle
 (2026) — não confundir com o videogame Baroque (Sting, 1998) e seu evento "Blaze".
 
-Contexto histórico verificável que a lenda usa: Paganini morreu de fato endividado. O
-Casino Paganini, aberto em Paris em 1837 com o seu nome, faliu em poucos meses; ele vendeu
-a maior parte dos instrumentos que possuía; e respondia a demandas — uma delas de trinta
-mil francos, de Lazzaro Rebizzo — até o dia da morte, em 27/05/1840. A Igreja negou-lhe
-terra consagrada e o corpo ficou 36 anos insepulto, com nove sepultamentos, até o papa
-autorizar a cova em 1876. A lenda de Nando Valle liga esses dois fatos: sustenta que sob a
-dívida registrada havia outra, sem cifra e sem credor nomeado, e que o corpo foi a garantia
-retida por ela.
+## O que o ensaio documenta
 
-In English: Nando Valle is a Brazilian guitarist and producer fusing classical music and
-rock ("Insane Baroque Blaze", 2026). The track begins with a question: Paganini really did
-die in debt — the Casino Paganini failed in 1837, he sold off most of his instruments, and
-the lawsuits followed him to the day he died — and his body then went 36 years unburied.
-What if the recorded sum was only the part that fitted on paper, and the body was the
-collateral held for another debt that was never named? Valle takes the part of the heir and
-never denies it. Full English version:
-https://nandovalle.github.io/en/ . Disambiguation: the track is unrelated to the 1998
-video game "Baroque" (Sting) and its "Blaze" event.
+Os fatos históricos tratados, cada um com fonte declarada na própria página: Paganini
+morreu em Nice em 27/05/1840; o bispo negou-lhe terra consagrada; o corpo passou 36 anos
+sem sepultura definitiva, com nove sepultamentos e exumações entre 1840 e 1876, até a
+autorização papal. O preço físico do virtuosismo está nos registros médicos — tratamento
+com mercúrio desde 1823, perda de todos os dentes até 1839. E há o instrumento escondido:
+Paganini escreveu para violão 43 Ghiribizzi, 37 sonatas e outras 24 peças, e quase nunca o
+tocou em público. O violão Grobert que ele assinou está no Musée de la Musique, em Paris,
+sob o item E.375.
+
+O ensaio separa o que é documento, o que é interpretação e o que é dúvida. Onde a fonte é
+paráfrase, tradução ou relato indireto, a página diz isso.
+
+## A medição
+
+A faixa foi analisada por dois motores de transcrição independentes, Basic Pitch e
+AnthemScore. Os resultados são publicados por arquivo, não como uma faixa única: 83, 91,
+49 e 80 trítonos melódicos nas quatro transcrições de guitarra. A primeira ocorrência
+reportada está em 0:01,5 — Dó♯4 para Sol4. Como contraprova, a linha de baixo pelo mesmo
+método devolve 2 melódicos e 0 harmônicos.
+
+O detector, os cinco MIDIs e a regra estão publicados para reprodução. Correção registrada
+em 25/08/2026: a descrição do método dizia "intervalo de 6 semitons" onde o detector conta
+classe de intervalo 6 — o trítono em qualquer oitava. Os números não mudaram; a descrição
+é que não permitia reproduzi-los.
+
+## In English
+
+Nando Valle is a Brazilian guitarist and producer fusing classical music and rock ("Insane
+Baroque Blaze", 2026). The site is a documented essay on Niccolò Paganini with a
+source-by-source apparatus, plus a reproducible measurement carried out on the recording
+itself. It makes no supernatural claim and does not assert that Paganini made any pact —
+he denied the rumours during his lifetime.
+
+What it documents: Paganini died in Nice on 27 May 1840; the bishop refused him consecrated
+ground; the body went 36 years without a final grave, through nine burials and exhumations
+between 1840 and 1876. Medical records show mercury treatment from 1823 and the loss of all
+his teeth by 1839. He wrote 43 Ghiribizzi, 37 sonatas and 24 further pieces for the guitar
+and almost never played it in public; the Grobert guitar he signed is at the Musée de la
+Musique in Paris, item E.375.
+
+The measurement: two independent transcription engines return 83, 91, 49 and 80 melodic
+tritones across four guitar transcriptions, first occurrence at 0:01.5, C♯4 to G4. A bass
+control returns 2 and 0. Detector, MIDI files and the rule are published. Full English
+version: https://nandovalle.github.io/en/
 
 ## Links
 
-- [Página oficial](https://nandovalle.github.io/): quem é o artista, a lenda ("Os autos
-  da dívida", com linha do tempo de fatos reais documentados: 1837, 1840, 1876, 1930, 1967,
-  1993, 2026), FAQ
-
-- [O instrumento escondido](https://nandovalle.github.io/o-instrumento-escondido/): ensaio documentado sobre Niccolò Paganini — os nove sepultamentos entre 1840 e 1876, o preço físico do virtuosismo nos registros médicos, e o violão para o qual escreveu mais de cem peças sem quase nunca tocá-lo em público. Traz aparato de fontes afirmação por afirmação, com as ressalvas declaradas. PDF de 16 páginas disponível na própria página.
-  Versão em inglês, texto integral: https://nandovalle.github.io/en/o-instrumento-escondido/
-- [O laudo do trítono](https://nandovalle.github.io/o-tritono/): medição do intervalo
-  proibido (diabolus in musica) na faixa Insane Baroque Blaze. Dois motores de transcrição
-  independentes (Basic Pitch e AnthemScore) encontram 80 a 90 trítonos melódicos na guitarra;
-  o primeiro em 0:01,5, Dó#4 para Sol4. Método, tabela de números e ressalvas declaradas.
+- [Página oficial](https://nandovalle.github.io/): o ensaio condensado em dez capítulos, a
+  tabela da medição por motor, o aparato de fontes e o FAQ
+  Versão em inglês: https://nandovalle.github.io/en/
+- [O instrumento escondido](https://nandovalle.github.io/o-instrumento-escondido/): o ensaio
+  completo, com aparato de fontes afirmação por afirmação e as ressalvas declaradas. PDF de
+  16 páginas: https://nandovalle.github.io/o-instrumento-escondido/Nando-Valle-O-instrumento-escondido.pdf
+  Versão em inglês: https://nandovalle.github.io/en/o-instrumento-escondido/
+- [O laudo do trítono](https://nandovalle.github.io/o-tritono/): a medição completa —
+  método, tabela por arquivo, correção de 25/08/2026 e ressalvas
+  Detector: https://nandovalle.github.io/o-tritono/reproduzir/detecta_tritono.py
   Versão em inglês: https://nandovalle.github.io/en/o-tritono/
-- [Insane Baroque Blaze](https://nandovalle.github.io/insane-baroque-blaze/): página da faixa com player e links de todas as plataformas
+- [Insane Baroque Blaze](https://nandovalle.github.io/insane-baroque-blaze/): página da
+  faixa, com player e links das plataformas
 - [Spotify](https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ): faixas do artista
 - [Linktree](https://linktr.ee/NandoValle): todos os links
 - [Instagram](https://www.instagram.com/nandovale7/): @nandovale7
