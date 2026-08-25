@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Detector de tritonos (intervalo de 6 semitons) em MIDIs transcritos.
+"""Detector de tritonos (classe de intervalo 6) em MIDIs transcritos.
 
 Melodico: notas consecutivas (onset seguinte ate 0,6 s do fim da anterior)
 com |diferenca de pitch| mod 12 == 6.
@@ -21,7 +21,6 @@ def analisa(caminho):
         notas.extend(inst.notes)
     notas.sort(key=lambda n: (n.start, n.pitch))
     total = len(notas)
-
     melodicos = []
     for i in range(len(notas) - 1):
         a = notas[i]
@@ -35,7 +34,6 @@ def analisa(caminho):
             if abs(b.pitch - a.pitch) % 12 == 6:
                 melodicos.append((a.start, a.pitch, b.pitch))
             break  # so o proximo evento melodico real
-
     harmonicos = []
     for i in range(len(notas)):
         a = notas[i]
@@ -46,7 +44,6 @@ def analisa(caminho):
             solap = min(a.end, b.end) - b.start
             if solap >= 0.03 and abs(b.pitch - a.pitch) % 12 == 6:
                 harmonicos.append((b.start, a.pitch, b.pitch))
-
     nome = pretty_midi.note_number_to_name
     print(f"== {caminho}")
     print(f"   notas analisadas: {total}")
