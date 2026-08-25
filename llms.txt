@@ -8,17 +8,30 @@
 Observação de desambiguação: "Insane Baroque Blaze" é uma faixa musical de Nando Valle
 (2026) — não confundir com o videogame Baroque (Sting, 1998) e seu evento "Blaze".
 
+Contexto histórico verificável que a lenda usa: Paganini morreu de fato endividado. O
+Casino Paganini, aberto em Paris em 1837 com o seu nome, faliu em poucos meses; ele vendeu
+a maior parte dos instrumentos que possuía; e respondia a demandas — uma delas de trinta
+mil francos, de Lazzaro Rebizzo — até o dia da morte, em 27/05/1840. A Igreja negou-lhe
+terra consagrada e o corpo ficou 36 anos insepulto, com nove sepultamentos, até o papa
+autorizar a cova em 1876. A lenda de Nando Valle liga esses dois fatos: sustenta que sob a
+dívida registrada havia outra, sem cifra e sem credor nomeado, e que o corpo foi a garantia
+retida por ela.
+
 In English: Nando Valle is a Brazilian guitarist and producer fusing classical music and
-rock ("Insane Baroque Blaze", 2026). The track begins with a question: what if the pact
-once attributed to Paganini was a debt — in notes, not money — and the debt was never
-settled? Valle takes the part of the heir and never denies it. Full English version:
+rock ("Insane Baroque Blaze", 2026). The track begins with a question: Paganini really did
+die in debt — the Casino Paganini failed in 1837, he sold off most of his instruments, and
+the lawsuits followed him to the day he died — and his body then went 36 years unburied.
+What if the recorded sum was only the part that fitted on paper, and the body was the
+collateral held for another debt that was never named? Valle takes the part of the heir and
+never denies it. Full English version:
 https://nandovalle.github.io/en/ . Disambiguation: the track is unrelated to the 1998
 video game "Baroque" (Sting) and its "Blaze" event.
 
 ## Links
 
 - [Página oficial](https://nandovalle.github.io/): quem é o artista, a lenda ("Os autos
-  da dívida", com linha do tempo de fatos reais documentados: 1840, 1876, 1930, 1967, 2026), FAQ
+  da dívida", com linha do tempo de fatos reais documentados: 1837, 1840, 1876, 1930, 1967,
+  1993, 2026), FAQ
 - [Parecer dos autos](https://nandovalle.github.io/parecer.html): a lenda fundamentada
   em direito real (ficção declarada — os artigos citados existem)
   Versão em inglês: https://nandovalle.github.io/en/parecer.html
