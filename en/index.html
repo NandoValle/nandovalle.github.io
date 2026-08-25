@@ -1,409 +1,1127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070607'/%3E%3Crect x='.5' y='.5' width='31' height='31' rx='6.5' fill='none' stroke='%23d4ad62' stroke-opacity='.55'/%3E%3Ctext x='16' y='22.5' font-family='Georgia,Times New Roman,serif' font-size='18' font-weight='600' fill='%23d4ad62' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
-    <title>Nando Valle — guitarist | Insane Baroque Blaze</title>
-    <meta name="description" content="Nando Valle is a Brazilian guitarist, producer and lawyer. Author of Insane Baroque Blaze (2026) and of The Hidden Instrument, a documented essay on Paganini — the nine burials, the price of virtuosity in the medical record, and the guitar he almost never played in public.">
-    <link rel="canonical" href="https://nandovalle.github.io/en/">
-    <link rel="alternate" hreflang="pt-BR" href="https://nandovalle.github.io/">
-    <link rel="alternate" hreflang="en" href="https://nandovalle.github.io/en/">
-    <link rel="alternate" hreflang="x-default" href="https://nandovalle.github.io/">
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Nando Valle — guitarist">
-    <meta property="og:description" content="Baroque + rock. Author of Insane Baroque Blaze (2026) and of The Hidden Instrument, a documented essay on Paganini. Everything documented. Nothing declared.">
-    <meta property="og:url" content="https://nandovalle.github.io/en/">
-    <meta property="og:image" content="https://nandovalle.github.io/img/nando-blaze-guitarra-1200x630.jpg">
-    <meta property="og:image:alt" content="Nando Valle playing guitar in a burning baroque hall">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MusicGroup",
-          "@id": "https://nandovalle.github.io/#artist",
-          "name": "Nando Valle",
-          "url": "https://nandovalle.github.io/en/",
-          "genre": ["Baroque rock", "Rock instrumental", "Neoclassical"],
-          "foundingLocation": { "@type": "Country", "name": "Brazil" },
-          "sameAs": [
-            "https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ",
-            "https://music.apple.com/us/artist/nando-valle/6793694273",
-            "https://www.instagram.com/nandovale7/",
-            "https://soundcloud.com/nandovalle",
-            "https://www.facebook.com/profile.php?id=61593285793608",
-            "https://musicbrainz.org/artist/5df30714-7e47-486c-ba63-8a8ec57d0412",
-            "https://www.wikidata.org/wiki/Q141164901",
-            "https://linktr.ee/NandoValle"
-          ]
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070607'/%3E%3Crect x='.5' y='.5' width='31' height='31' rx='6.5' fill='none' stroke='%23d4ad62' stroke-opacity='.55'/%3E%3Ctext x='16' y='22.5' font-family='Georgia,Times New Roman,serif' font-size='18' font-weight='600' fill='%23d4ad62' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#070607" />
+  <meta name="color-scheme" content="dark" />
+  <title>Nando Valle &mdash; Insane Baroque Blaze | Everything documented. Nothing declared.</title>
+  <meta name="description" content="Nine burials. Seven keys. A tritone at one and a half seconds. Four transcriptions: 83, 91, 49 and 80. Method, files and caveats published." />
+  <link rel="canonical" href="https://nandovalle.github.io/en/" />
+  <link rel="alternate" hreflang="pt-BR" href="https://nandovalle.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://nandovalle.github.io/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://nandovalle.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Everything documented. Nothing declared." />
+  <meta property="og:description" content="Paganini. Crowley. A guitar. Second 1.5. Open the files, hear the track, draw your own conclusion." />
+  <meta property="og:url" content="https://nandovalle.github.io/en/" />
+  <meta property="og:image" content="https://nandovalle.github.io/img/nando-blaze-guitarra-1200x630.jpg" />
+  <meta property="og:image:alt" content="Nando Valle playing guitar in a burning baroque hall" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Everything documented. Nothing declared." />
+  <meta name="twitter:description" content="Paganini. Crowley. A guitar. Second 1.5." />
+  <meta name="twitter:image" content="https://nandovalle.github.io/img/nando-blaze-guitarra-1200x630.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MusicGroup",
+        "@id": "https://nandovalle.github.io/#artist",
+        "name": "Nando Valle",
+        "url": "https://nandovalle.github.io/",
+        "genre": [
+          "Baroque rock",
+          "Rock instrumental",
+          "Neoclassical"
+        ],
+        "foundingLocation": {
+          "@type": "Country",
+          "name": "Brazil"
         },
-        {
-          "@type": "MusicRecording",
-          "name": "Insane Baroque Blaze",
-          "byArtist": { "@id": "https://nandovalle.github.io/#artist" },
-          "datePublished": "2026-08-12",
-          "isrcCode": "QZNJV2617176",
-          "url": "https://nandovalle.github.io/insane-baroque-blaze/"
+        "sameAs": [
+          "https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ",
+          "https://music.apple.com/us/artist/nando-valle/6793694273",
+          "https://www.instagram.com/nandovale7/",
+          "https://soundcloud.com/nandovalle",
+          "https://www.facebook.com/profile.php?id=61593285793608",
+          "https://musicbrainz.org/artist/5df30714-7e47-486c-ba63-8a8ec57d0412",
+          "https://www.wikidata.org/wiki/Q141164901",
+          "https://linktr.ee/NandoValle"
+        ]
+      },
+      {
+        "@type": "MusicRecording",
+        "@id": "https://nandovalle.github.io/#insane-baroque-blaze",
+        "name": "Insane Baroque Blaze",
+        "byArtist": {
+          "@id": "https://nandovalle.github.io/#artist"
         },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Who is Nando Valle?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Nando Valle is a Brazilian guitarist, producer and lawyer who fuses classical music and rock in tracks such as Insane Baroque Blaze (2026). He is the author of The Hidden Instrument, a documented essay on Niccolò Paganini in which every historical claim is verified against a named source and the caveats are stated in the apparatus."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Did Nando Valle sell his soul to the devil?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. And there was no pact in Paganini's case either — he himself denied it in print twice, in 1828 and in 1831. What Nando Valle publishes is not a legend: it is a documented essay, with a source for every historical claim and the caveats stated in the apparatus. Where there is belief rather than fact, the text says it is belief."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is the Insane Baroque Blaze music video made with AI?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The recording is Nando Valle playing guitar. In the video, a digital clone delivers the performance, transferred by artificial intelligence from that real recording."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Does Insane Baroque Blaze really contain the tritone, the diabolus in musica?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, but the number is not the interesting part — tritones are unavoidable in baroque writing, because one lives inside every dominant seventh chord. Measurement over automatic transcription, using two independent engines (Basic Pitch and AnthemScore), finds between 80 and 90 melodic tritones in the guitar line. The first sits at 0:01.5 - C#4 leaping to G4, the tonic going straight to the forbidden interval in the very first gesture of the track. The track is in C# harmonic minor, a scale that carries structural tritone pairs. The full report, with numbers, method and caveats, is at https://nandovalle.github.io/en/o-tritono/ ."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is The Hidden Instrument?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "An essay by Nando Valle on Niccolò Paganini, in ten chapters linked by cause and effect. It starts from a documented anomaly — the violinist's body was buried and disinterred nine times between 1840 and 1876 — and works through the documents that explain why: the refused last rites, the demonic reputation, the medical record of the mercury, the two denials he published, and the guitar for which he wrote more than a hundred pieces while almost never playing it in public. It carries a source apparatus claim by claim, with the caveats stated."
-              }
-            }
-          ]
+        "author": {
+          "@id": "https://nandovalle.github.io/#artist"
+        },
+        "datePublished": "2026-08-12",
+        "duration": "PT2M44S",
+        "isrcCode": "QZNJV2617176",
+        "inLanguage": "zxx",
+        "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d0000b2737c9b4ca66417528fd9b5ed9f",
+        "url": "https://nandovalle.github.io/insane-baroque-blaze/",
+        "sameAs": "https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN"
+      },
+      {
+        "@type": "MusicAlbum",
+        "name": "The Unbroken",
+        "albumReleaseType": "https://schema.org/SingleRelease",
+        "byArtist": {
+          "@id": "https://nandovalle.github.io/#artist"
+        },
+        "datePublished": "2026-09-11"
+      },
+      {
+        "@type": "MusicAlbum",
+        "name": "Insane Grand Illusion",
+        "albumReleaseType": "https://schema.org/SingleRelease",
+        "byArtist": {
+          "@id": "https://nandovalle.github.io/#artist"
+        },
+        "datePublished": "2026-10-09"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://nandovalle.github.io/en/#page",
+        "url": "https://nandovalle.github.io/en/",
+        "name": "Nando Valle \u2014 Insane Baroque Blaze | Everything documented. Nothing declared.",
+        "description": "Nine burials. Seven keys. A tritone at one and a half seconds. Method, files and caveats published.",
+        "inLanguage": "en",
+        "author": {
+          "@id": "https://nandovalle.github.io/#artist"
+        },
+        "image": "https://nandovalle.github.io/img/nando-blaze-guitarra-1200x630.jpg",
+        "mainEntity": {
+          "@id": "https://nandovalle.github.io/#insane-baroque-blaze"
         }
-      ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://nandovalle.github.io/en/#faq",
+        "inLanguage": "en",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Did Nando Valle sell his soul to the devil?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. And the essay does not claim Paganini did either. Paganini denied the rumours about himself in his own lifetime, in writing. This page is about something else: how a historical reputation was built, which documents survived, and what happens when fact, interpretation and imagination are set side by side without pretending to be the same thing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the site claim a supernatural link between Paganini, Crowley and the music?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The link built here is narrative, not historical. Paganini supplies the case; Crowley supplies another language for a few questions - will, experience and silence; the recording supplies the part that can actually be tested."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does Aleister Crowley appear here?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because Aha!, published in 1910, holds three ideas that run through the project in an unusual way: the paradox of seven keys and eight stages; the image of the soul struck by the “plectron of the Will”; and the demand that doctrine be submitted to the test of experiment. None of them proves anything about Paganini or about this music. They frame the question."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Insane Baroque Blaze really contain tritones?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes - and the bare fact is musically less extraordinary than the word “diabolus” suggests. Four published guitar transcriptions return 83, 91, 49 and 80 melodic tritones, given per file and per engine; the first reported occurrence is at roughly 0:01.5. As a control, the bass line by the same method returns 2 melodic and 0 harmonic. The report carries the musical context, the metric used and the corrections - and the point is that the method, the detector and the files were published so anyone can check."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was the video made with artificial intelligence?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The original musical performance is Nando Valle on guitar. In the video, a digital clone reproduces that performance from the real recording with the help of artificial intelligence. The image is synthetic; the performance behind it is not."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #070607;
+      --bg-2: #0d0a0c;
+      --panel: rgba(18, 14, 16, .72);
+      --panel-strong: rgba(20, 15, 17, .94);
+      --cream: #f4ead8;
+      --paper: #d9cbb6;
+      --muted: #9d9184;
+      --muted-2: #70675f;
+      --gold: #d4ad62;
+      --gold-2: #9a7436;
+      --ember: #a52a20;
+      --red: #6f1316;
+      --line: rgba(212, 173, 98, .20);
+      --line-soft: rgba(244, 234, 216, .09);
+      --shadow: 0 30px 90px rgba(0,0,0,.48);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Manrope", "Inter", system-ui, sans-serif;
+      --max: 1180px;
     }
-    </script>
-    <style>
-:root{
-  --bg:#0B0907;      --bg2:#12100C;
-  --ink:#EFE6D6;     --ink2:#C9BCA6;  --ink3:#8C806E;
-  --gold:#C8912F;    --gold2:#E0A83F;
-  --sangue:#C24638;
-  --fio:rgba(200,145,47,.26);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg);color:var(--ink);
-  font-family:'EB Garamond',Constantia,Georgia,serif;
-  font-size:1.16rem;line-height:1.78;
-  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  font-variant-ligatures:common-ligatures;
-}
-body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(60rem 40rem at 12% -8%,rgba(200,145,47,.13),transparent 62%),
-    radial-gradient(46rem 38rem at 92% 108%,rgba(194,70,56,.11),transparent 60%)}
-.wrap{position:relative;z-index:1;max-width:38rem;margin:0 auto;padding:0 1.5rem 3rem}
-#barra{position:fixed;top:0;left:0;height:2px;width:0;z-index:9;
-  background:linear-gradient(90deg,var(--sangue),var(--gold2));transition:width .1s linear}
 
-/* ---------- HERO ---------- */
-header.hero{position:relative;display:flex;align-items:flex-end;min-height:100svh;
-  overflow:hidden;width:100%;border-bottom:1px solid var(--fio)}
-.hero-portrait{position:absolute;inset:0;margin:0;z-index:0}
-.hero-portrait picture,.hero-portrait img{display:block;width:100%;height:100%;
-  object-fit:cover;object-position:50% 20%;filter:saturate(.92) contrast(1.04)}
-.hero-portrait::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(11,9,7,.58) 0%,rgba(11,9,7,.26) 30%,rgba(11,9,7,.90) 76%,var(--bg) 100%)}
-.hero-portrait::before{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg,rgba(11,9,7,.86) 0%,rgba(11,9,7,.60) 26%,rgba(11,9,7,.16) 52%,transparent 70%)}
-.hero-text{position:relative;z-index:2;width:100%;max-width:calc(38rem - 3rem);
-  margin:0 auto;padding:0 1.5rem 4.2rem}
-.lang{position:absolute;top:1.4rem;left:0;right:0;z-index:3;text-align:center}
-.lang p{margin:0;color:var(--ink2);font-size:.8rem;letter-spacing:.14em}
-.kicker{font-family:'Cormorant Garamond',Georgia,serif;font-size:.7rem;letter-spacing:.34em;
-  text-transform:uppercase;color:var(--gold);margin:0 0 1.1rem}
-h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;
-  font-size:clamp(3rem,10vw,5.4rem);line-height:.98;letter-spacing:-.02em;margin:0 0 .9rem}
-.tagline{font-family:'Cormorant Garamond',Georgia,serif;color:var(--gold);
-  letter-spacing:.3em;text-transform:uppercase;font-size:.7rem;margin:0 0 1.7rem}
-.lede{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
-  font-size:clamp(1.3rem,3.4vw,1.6rem);line-height:1.4;color:var(--sangue);margin:0}
-.hero-pe{margin:2.4rem 0 0}
-.baixar{display:inline-flex;align-items:center;border:1px solid var(--fio);color:var(--gold);
-  padding:.62rem 1.15rem;border-radius:2px;font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;transition:.22s}
-.baixar:hover{background:rgba(200,145,47,.10);border-color:var(--gold);color:var(--gold2)}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(112, 23, 21, .18), transparent 38rem),
+        radial-gradient(circle at 8% 38%, rgba(212, 173, 98, .055), transparent 32rem),
+        var(--bg);
+      color: var(--paper);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
 
-/* ---------- CAPITULOS ---------- */
-.cap{position:relative;padding:4.6rem 0 0}
-.cap .num{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;
-  font-size:4.6rem;line-height:.8;color:rgba(200,145,47,.17);margin:0 0 -.4rem;letter-spacing:.02em}
-h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;
-  font-size:clamp(1.9rem,5vw,2.5rem);line-height:1.12;margin:0;letter-spacing:-.008em}
-h2::after{content:"";display:block;width:3.4rem;border-top:1px solid var(--fio);margin:1.3rem 0 1.8rem}
-h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:400;
-  color:var(--gold);margin:2.4rem 0 .5rem;line-height:1.3}
-p{margin:0 0 1.15em}
-strong{font-weight:600;color:#FBF4E8}
-em{font-style:italic}
-a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:.2s}
-a:hover{color:var(--gold2);border-bottom-color:var(--fio)}
-.muted{color:var(--ink3)}
-hr{border:0;border-top:1px solid var(--fio);margin:4.6rem 0 0}
+    ::selection { background: rgba(212,173,98,.26); color: #fff8eb; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { max-width: 100%; display: block; }
 
-.abertura{padding:.2rem 0 .2rem 1.3rem;border-left:2px solid var(--fio);
-  font-size:1.2rem;line-height:1.62;color:var(--ink);margin-bottom:1.6rem}
-.lead{font-size:1.24rem;line-height:1.66;color:#F6EEE0}
-.beat{margin:2.7rem auto;max-width:30rem;text-align:center;font-style:italic;
-  font-size:1.24rem;line-height:1.55;color:var(--ink2)}
-.beat.pico{font-family:'Cormorant Garamond',Georgia,serif;font-style:normal;
-  font-size:clamp(1.5rem,4vw,1.9rem);color:var(--ink);line-height:1.34}
-.gancho{margin:2.8rem auto 0;max-width:30rem;text-align:center;
-  font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;line-height:1.42;color:var(--sangue)}
-.gancho a{color:var(--sangue)}
-.gancho a:hover{color:#D9614F}
+    .noise {
+      position: fixed; inset: 0; z-index: 999; pointer-events: none; opacity: .045;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.72'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+    }
 
-.verse{margin:2.4rem auto;max-width:30rem;text-align:center;padding:1.7rem 1.2rem;
-  background:var(--bg2);border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
-.verse .en{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
-  font-size:1.22rem;line-height:1.44;color:var(--ink2)}
-.verse .sep{width:2.2rem;border-top:1px solid var(--fio);margin:1rem auto}
-.verse .pt{color:var(--sangue);font-size:1.06rem;line-height:1.5}
-.ref{display:block;margin-top:1rem;font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
+    .top-progress {
+      position: fixed; left: 0; top: 0; width: 100%; height: 2px; z-index: 1002;
+      background: rgba(255,255,255,.04);
+    }
+    .top-progress > span {
+      display: block; height: 100%; width: 0;
+      background: linear-gradient(90deg, #78431d, #d4ad62, #f3ddb4);
+      box-shadow: 0 0 20px rgba(212,173,98,.55);
+    }
 
-.close{margin:3.6rem auto 0;text-align:center}
-.close .big{font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;
-  font-size:clamp(1.6rem,5vw,2.1rem);line-height:1.34;color:var(--ink)}
-.close .cta{margin-top:1.6rem;font-family:'Cormorant Garamond',Georgia,serif;font-size:.7rem;
-  letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
-.saida{margin-top:3rem;padding-top:1.8rem;border-top:1px solid var(--fio);
-  text-align:center;line-height:2}
+    .nav {
+      position: fixed; inset: 14px 0 auto; z-index: 1000;
+      padding: 0 20px;
+      pointer-events: none;
+    }
+    .nav-inner {
+      max-width: var(--max); margin: auto; min-height: 58px; padding: 10px 12px 10px 18px;
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      border: 1px solid rgba(255,255,255,.085);
+      background: rgba(7,6,7,.62);
+      backdrop-filter: blur(20px) saturate(115%);
+      border-radius: 999px;
+      box-shadow: 0 12px 36px rgba(0,0,0,.28);
+      pointer-events: auto;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-mark {
+      width: 34px; height: 34px; border-radius: 50%; position: relative; flex: 0 0 auto;
+      border: 1px solid rgba(212,173,98,.55);
+      background: url("/img/nando-valle-avatar.jpg") center/cover no-repeat,
+                  radial-gradient(circle at 35% 28%, #ddbc7b 0 4%, #4f241a 20%, #100a0b 62%);
+      box-shadow: inset 0 0 18px rgba(212,173,98,.16), 0 0 24px rgba(140,46,26,.12);
+    }
+    .brand-mark::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 12px rgba(0,0,0,.55); }
+    .brand-copy strong { display:block; color:#f7efe3; font-size:12px; letter-spacing:.18em; text-transform:uppercase; }
+    .brand-copy small { display:block; margin-top:3px; color:var(--muted); font-size:10px; letter-spacing:.08em; white-space:nowrap; }
+    .nav-actions { display:flex; align-items:center; gap:8px; }
+    .nav-link { color:#cbbda9; font-size:12px; padding:10px 12px; border-radius:999px; transition:.2s ease; }
+    .nav-link:hover { color:#fff; background:rgba(255,255,255,.05); }
+    .nav-cta {
+      display:inline-flex; align-items:center; gap:8px; padding:11px 15px; border-radius:999px;
+      background: linear-gradient(180deg, #e0bd78, #b78844);
+      color:#130e0e; font-weight:700; font-size:12px; letter-spacing:.03em;
+      box-shadow: 0 8px 24px rgba(183,136,68,.18), inset 0 1px rgba(255,255,255,.4);
+    }
+    .nav-cta svg { width:15px; height:15px; }
 
-ul.links{list-style:none;margin:.8rem 0 0}
-ul.links li{margin-bottom:.7rem}
-footer{position:relative;z-index:1;max-width:38rem;margin:4rem auto 0;
-  padding:2rem 1.5rem 4rem;border-top:1px solid var(--fio);
-  font-family:'Cormorant Garamond',Georgia,serif;font-size:.92rem;color:var(--ink3);line-height:1.9}
+    .hero {
+      min-height: 100svh; position: relative; display: grid; align-items:end; overflow:hidden;
+      background: #090708;
+    }
+    .hero-media { position:absolute; inset:0; }
+    .hero-media::before {
+      content:""; position:absolute; inset:-3%; z-index:1;
+      background-image:url('https://nandovalle.github.io/img/nando-blaze-fogo.jpg');
+      background-size:cover; background-position:center 37%;
+      filter:saturate(.78) contrast(1.08) brightness(.72);
+      transform: scale(1.03);
+      animation: breathe 16s ease-in-out infinite alternate;
+    }
+    @keyframes breathe { to { transform: scale(1.075); } }
+    .hero-media::after {
+      content:""; position:absolute; inset:0; z-index:2;
+      background:
+        linear-gradient(90deg, rgba(7,6,7,.93) 0%, rgba(7,6,7,.57) 31%, rgba(7,6,7,.18) 58%, rgba(7,6,7,.55) 100%),
+        linear-gradient(0deg, #070607 0%, rgba(7,6,7,.78) 11%, transparent 47%, rgba(7,6,7,.34) 100%),
+        radial-gradient(circle at 65% 50%, transparent 0 24%, rgba(0,0,0,.34) 76%);
+    }
+    .hero-lines { position:absolute; inset:0; z-index:3; pointer-events:none; opacity:.24; }
+    .hero-lines::before, .hero-lines::after { content:""; position:absolute; top:0; bottom:0; width:1px; background:linear-gradient(transparent, rgba(212,173,98,.35), transparent); }
+    .hero-lines::before { left:9vw; } .hero-lines::after { right:9vw; }
 
-@media (max-width:640px){
-  body{font-size:1.09rem}
-  .hero-text{padding-bottom:3.2rem}
-  .cap{padding-top:3.4rem}
-  .cap .num{font-size:3.4rem}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  #barra{transition:none}
-}
-</style>
+    .hero-content {
+      width:min(var(--max), calc(100% - 40px)); margin:0 auto; padding:150px 0 72px; position:relative; z-index:5;
+      display:grid; grid-template-columns:minmax(0, 1.15fr) minmax(280px, .52fr); gap:50px; align-items:end;
+    }
+    .eyebrow { display:flex; align-items:center; gap:12px; color:#d2b477; font-size:11px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; }
+    .eyebrow::before { content:""; width:34px; height:1px; background:linear-gradient(90deg, transparent, var(--gold)); }
+    .hero h1 { margin:18px 0 0; max-width:860px; color:#f7efe2; font-family:var(--serif); font-weight:500; letter-spacing:-.055em; line-height:.88; font-size:clamp(64px, 8.8vw, 142px); text-wrap:balance; }
+    .hero h1 em { color:var(--gold); font-weight:500; }
+    .hero-deck { max-width:690px; margin:28px 0 0; color:#c8bbab; font-family:var(--serif); font-size:clamp(22px,2.4vw,34px); line-height:1.15; letter-spacing:-.02em; }
+    .hero-deck strong { color:#f7efe2; font-weight:500; }
+    .hero-buttons { display:flex; flex-wrap:wrap; gap:10px; margin-top:30px; }
+    .btn {
+      border:1px solid rgba(255,255,255,.12); background:rgba(9,7,8,.58); color:#f3eadc; border-radius:999px; padding:14px 18px; display:inline-flex; align-items:center; gap:10px; cursor:pointer; transition:.25s ease; backdrop-filter:blur(12px); font-size:13px; font-weight:650;
+    }
+    .btn:hover { transform:translateY(-2px); border-color:rgba(212,173,98,.34); background:rgba(25,18,19,.76); }
+    .btn-gold { background:linear-gradient(180deg,#e1bf7a,#b88a48); color:#160f0c; border-color:transparent; box-shadow:0 12px 32px rgba(184,138,72,.18); }
+    .btn-gold:hover { background:linear-gradient(180deg,#eccf94,#c09656); }
+    .btn svg { width:17px; height:17px; }
+
+    .hero-card {
+      align-self:end; padding:22px; border-radius:24px; border:1px solid rgba(212,173,98,.20); background:linear-gradient(180deg,rgba(17,12,14,.76),rgba(9,7,8,.86)); backdrop-filter: blur(16px); box-shadow:var(--shadow); position:relative; overflow:hidden;
+    }
+    .hero-card::before { content:""; position:absolute; inset:0 0 auto; height:1px; background:linear-gradient(90deg,transparent,#e3c78f,transparent); opacity:.6; }
+    .stamp { display:inline-flex; align-items:center; gap:8px; padding:7px 10px; border-radius:999px; border:1px solid rgba(212,173,98,.18); color:#c8aa6e; font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
+    .pulse-dot { width:6px; height:6px; border-radius:50%; background:#bd3b26; box-shadow:0 0 0 0 rgba(189,59,38,.55); animation:pulse 2.2s infinite; }
+    @keyframes pulse { 70% { box-shadow:0 0 0 10px rgba(189,59,38,0); } 100% { box-shadow:0 0 0 0 rgba(189,59,38,0); } }
+    .hero-card-number { margin:18px 0 2px; color:#f7efe3; font:500 clamp(58px,7vw,100px)/.85 var(--serif); letter-spacing:-.055em; }
+    .hero-card-number span { font-size:.38em; color:var(--gold); letter-spacing:-.01em; }
+    .hero-card p { margin:12px 0 0; color:#aa9c8b; font-size:12px; line-height:1.6; }
+    .tiny-rule { height:1px; background:var(--line-soft); margin:18px 0; }
+    .mini-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .mini-grid span { display:block; color:#70675f; font-size:9px; text-transform:uppercase; letter-spacing:.16em; }
+    .mini-grid strong { display:block; margin-top:5px; color:#ded2c2; font-size:12px; font-weight:600; }
+
+    .scroll-cue { position:absolute; left:50%; bottom:20px; z-index:7; transform:translateX(-50%); color:#746a61; font-size:9px; letter-spacing:.22em; text-transform:uppercase; display:flex; align-items:center; gap:9px; }
+    .scroll-cue i { width:1px; height:26px; background:linear-gradient(var(--gold),transparent); display:block; animation:drop 1.8s ease-in-out infinite; transform-origin:top; }
+    @keyframes drop { 0%,100%{transform:scaleY(.4);opacity:.35} 50%{transform:scaleY(1);opacity:1} }
+
+    main { position:relative; z-index:4; }
+    .section { position:relative; padding:120px 20px; }
+    .section::after { content:""; position:absolute; left:50%; bottom:0; width:min(var(--max),calc(100% - 40px)); transform:translateX(-50%); height:1px; background:linear-gradient(90deg,transparent,var(--line-soft),transparent); }
+    .wrap { width:min(var(--max),100%); margin:0 auto; }
+    .essay-grid { display:grid; grid-template-columns:180px minmax(0, 740px) 1fr; gap:40px; align-items:start; }
+    .roman { position:sticky; top:110px; color:rgba(212,173,98,.52); font:500 74px/1 var(--serif); letter-spacing:-.04em; }
+    .chapter { max-width:740px; }
+    .chapter .kicker { color:#9b783f; font-size:10px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; }
+    .chapter h2 { margin:13px 0 24px; color:#f0e5d3; font:500 clamp(42px,5vw,70px)/.98 var(--serif); letter-spacing:-.035em; text-wrap:balance; }
+    .chapter .lead { color:#e2d5c2; font:500 clamp(25px,3vw,38px)/1.16 var(--serif); letter-spacing:-.025em; margin:0 0 28px; }
+    .chapter p { color:#b4a696; font-size:16px; line-height:1.83; margin:0 0 22px; }
+    .chapter p strong { color:#e7dac6; font-weight:600; }
+    .chapter .hardline, .experiment-copy .hardline { color:#f3e8d7; font:500 clamp(28px,3vw,42px)/1.15 var(--serif); margin:38px 0; padding-left:22px; border-left:1px solid var(--gold-2); }
+    .side-note { padding-top:62px; color:#9b9288; font-size:12px; line-height:1.72; }
+    .side-note span { display:block; color:#aa8950; text-transform:uppercase; letter-spacing:.16em; font-size:9px; margin-bottom:8px; }
+    .source-inline {
+      margin:8px 0 24px; padding:12px 14px 12px 16px; border-left:1px solid rgba(212,173,98,.55);
+      color:#9c9085; font-size:11px; line-height:1.68; letter-spacing:.015em; background:linear-gradient(90deg,rgba(212,173,98,.035),transparent 72%);
+    }
+    .source-inline strong { color:#c5b397; font-weight:600; }
+    .quote-translation {
+      margin:-6px 0 22px; color:#9d9185; font-size:12px; line-height:1.65; font-style:italic;
+    }
+    .quote-translation em { color:#b9a892; }
+
+    .wave-caption {
+      margin:-6px 50px 20px; color:#9b9084; font-size:10.5px; letter-spacing:.11em;
+      text-transform:uppercase; text-align:right;
+    }
+    .experiment-kicker {
+      padding:0 50px 10px; color:#766a60; font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+    }
+    .count-grid {
+      padding:0 50px 32px; display:grid; grid-template-columns:repeat(4,1fr); gap:10px;
+    }
+    .count-card {
+      min-height:140px; padding:18px; border:1px solid var(--line-soft); border-radius:18px;
+      background:linear-gradient(180deg,rgba(255,255,255,.022),rgba(255,255,255,.006));
+      position:relative; overflow:hidden;
+    }
+    .count-card::after {
+      content:""; position:absolute; left:0; bottom:0; height:3px; width:var(--bar);
+      background:linear-gradient(90deg,#7e321f,#d4ad62); box-shadow:0 0 18px rgba(212,173,98,.2);
+    }
+    .count-card small { display:block; min-height:27px; color:#776b61; font-size:8px; letter-spacing:.13em; text-transform:uppercase; line-height:1.45; }
+    .count-card b { display:block; margin-top:14px; color:#eadcc8; font:500 48px/1 var(--serif); letter-spacing:-.045em; }
+    .count-card span { display:block; margin-top:7px; color:#8a7d72; font-size:10px; }
+    .method-box, .repro-box {
+      margin-top:16px; padding:20px; border:1px solid rgba(212,173,98,.15); border-radius:18px;
+      background:rgba(212,173,98,.025);
+    }
+    .method-box h3, .repro-box h3 { margin:0 0 12px; color:#dfd1bd; font:500 27px/1.06 var(--serif); }
+    .method-box p, .method-box li, .repro-box p { color:#92867b; font-size:12px; line-height:1.72; }
+    .method-box ul { margin:0; padding-left:18px; }
+    .correction-flag {
+      display:inline-flex; gap:7px; align-items:center; margin:4px 0 14px; padding:7px 10px;
+      border:1px solid rgba(196,135,70,.22); border-radius:999px; color:#bf9052;
+      font-size:9px; letter-spacing:.1em; text-transform:uppercase;
+    }
+    .data-wrap { margin-top:20px; overflow-x:auto; border:1px solid var(--line-soft); border-radius:18px; }
+    .data-table { width:100%; min-width:760px; border-collapse:collapse; background:rgba(255,255,255,.008); }
+    .data-table th, .data-table td { padding:14px 16px; border-bottom:1px solid var(--line-soft); text-align:left; line-height:1.45; }
+    .data-table th { color:#a17e48; font-size:8px; letter-spacing:.12em; text-transform:uppercase; background:rgba(212,173,98,.025); }
+    .data-table td { color:#9b8e82; font-size:11px; }
+    .data-table td strong { color:#e3d5c1; font-size:14px; }
+    .data-table tr:last-child td { border-bottom:0; }
+    .file-chips { display:flex; flex-wrap:wrap; gap:7px; margin:13px 0 15px; }
+    .file-chip {
+      padding:8px 10px; border:1px solid var(--line-soft); border-radius:999px;
+      color:#aa9a84; font-size:9px; transition:.2s ease;
+    }
+    .file-chip:hover { border-color:rgba(212,173,98,.32); color:#e7d8c0; transform:translateY(-1px); }
+    .code-line {
+      overflow-x:auto; white-space:nowrap; margin-top:8px; padding:13px 14px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.06); background:#050405; color:#b9a991;
+      font:11px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    }
+    .apparatus-section {
+      background:linear-gradient(180deg,rgba(212,173,98,.025),rgba(94,17,18,.035),transparent);
+    }
+    .apparatus-head { max-width:900px; margin:0 auto 34px; text-align:center; }
+    .apparatus-head .kicker { color:#9b783f; font-size:10px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; }
+    .apparatus-head h2 {
+      margin:14px 0 16px; color:#f0e4d1; font:500 clamp(48px,6vw,82px)/.95 var(--serif);
+      letter-spacing:-.045em;
+    }
+    .apparatus-head p { color:#92877b; font-size:14px; line-height:1.75; }
+    .apparatus-quick { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:32px 0 26px; }
+    .apparatus-quick a {
+      min-height:145px; padding:18px; border:1px solid var(--line-soft); border-radius:16px;
+      background:rgba(255,255,255,.012); transition:.2s;
+    }
+    .apparatus-quick a:hover { transform:translateY(-3px); border-color:rgba(212,173,98,.28); }
+    .apparatus-quick small { display:block; color:#82643a; font-size:8px; letter-spacing:.14em; text-transform:uppercase; }
+    .apparatus-quick strong { display:block; margin-top:28px; color:#dccdb8; font:500 22px/1.08 var(--serif); }
+    .apparatus-wrap { overflow-x:auto; border:1px solid var(--line-soft); border-radius:22px; box-shadow:0 24px 70px rgba(0,0,0,.18); }
+    .apparatus-table { width:100%; min-width:1000px; border-collapse:collapse; background:rgba(8,7,8,.7); }
+    .apparatus-table th {
+      padding:15px 18px; text-align:left; color:#a07e49; font-size:8px; letter-spacing:.16em;
+      text-transform:uppercase; background:#0d0a0b; border-bottom:1px solid rgba(212,173,98,.14);
+    }
+    .apparatus-table td {
+      vertical-align:top; padding:15px 18px; border-bottom:1px solid var(--line-soft);
+      color:#8e8379; font-size:11px; line-height:1.62;
+    }
+    .apparatus-table td:first-child { width:42%; color:#c0b19f; }
+    .apparatus-table tr:last-child td { border-bottom:0; }
+    .warn { color:#c3904f; font-weight:700; }
+    .apparatus-note { max-width:800px; margin:25px auto 0; text-align:center; color:#726a62; font-size:11px; line-height:1.72; }
+
+    .dark-band { background:linear-gradient(180deg, rgba(95,18,20,.11), rgba(7,6,7,0) 78%); }
+    .quote-section { padding:140px 20px; position:relative; overflow:hidden; }
+    .quote-section::before { content:"AHA!"; position:absolute; right:-.04em; top:-.17em; color:rgba(212,173,98,.025); font:600 min(33vw,520px)/1 var(--serif); letter-spacing:-.08em; pointer-events:none; }
+    .quote-shell { width:min(1020px,100%); margin:auto; text-align:center; position:relative; z-index:2; }
+    .quote-label { color:#9f7b42; font-size:10px; letter-spacing:.24em; text-transform:uppercase; font-weight:700; }
+    .quote { margin:26px auto 0; max-width:910px; color:#f0e2cf; font:500 clamp(42px,6vw,86px)/.99 var(--serif); letter-spacing:-.04em; }
+    .quote em { color:var(--gold); font-style:italic; }
+    .translation { margin:24px auto 0; color:#92877b; font:italic 500 clamp(18px,2vw,26px)/1.4 var(--serif); max-width:720px; }
+    .citation { margin-top:22px; color:#a79b8d; font-size:11px; letter-spacing:.14em; text-transform:uppercase; }
+
+    .keys { margin-top:46px; display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    .key {
+      min-height:160px; border:1px solid var(--line-soft); border-radius:18px; padding:18px; text-align:left; background:linear-gradient(180deg,rgba(255,255,255,.022),rgba(255,255,255,.006)); position:relative; overflow:hidden;
+    }
+    .key b { color:#bc9554; font:500 32px/1 var(--serif); }
+    .key p { margin:28px 0 0; color:#9e9286; font-size:12px; line-height:1.55; }
+    .key.final { border-color:rgba(212,173,98,.28); background:linear-gradient(160deg,rgba(145,91,37,.14),rgba(77,15,18,.05)); }
+    .key.final::after { content:"1"; position:absolute; right:14px; top:8px; color:rgba(212,173,98,.08); font:500 90px/1 var(--serif); }
+
+    .experiment {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(153,35,28,.14), transparent 42rem),
+        #090708;
+    }
+    .experiment-card { position:relative; overflow:hidden; border-radius:32px; border:1px solid rgba(212,173,98,.15); background:linear-gradient(155deg,rgba(30,20,21,.84),rgba(8,7,8,.92)); box-shadow:var(--shadow); }
+    .experiment-card::before { content:""; position:absolute; inset:0; background:linear-gradient(120deg,transparent 0 49.5%,rgba(212,173,98,.04) 50%,transparent 50.5%); pointer-events:none; }
+    .experiment-head { padding:50px 50px 28px; display:grid; grid-template-columns:1fr auto; gap:28px; align-items:end; }
+    .experiment-head small { color:#a78147; font-size:10px; letter-spacing:.22em; text-transform:uppercase; }
+    .experiment-head h2 { margin:10px 0 0; color:#f5ead8; font:500 clamp(46px,6vw,82px)/.95 var(--serif); letter-spacing:-.045em; }
+    .experiment-head .time { color:#e1bc77; font:500 clamp(58px,8vw,104px)/.9 var(--serif); letter-spacing:-.055em; }
+    .experiment-head .time span { font-size:.3em; color:#81653c; margin-left:5px; letter-spacing:.04em; }
+    .wave { height:140px; display:flex; align-items:center; gap:3px; padding:0 36px; overflow:hidden; opacity:.9; }
+    .wave i { display:block; flex:1 1 0; min-width:2px; max-width:5px; height:var(--h); background:linear-gradient(180deg,#d6b16c,rgba(157,38,29,.34)); border-radius:999px; transform-origin:center; animation:wave 1.7s ease-in-out infinite; animation-delay:var(--d); }
+    @keyframes wave { 0%,100%{transform:scaleY(.42);opacity:.4} 50%{transform:scaleY(1);opacity:1} }
+    .experiment-body { padding:10px 50px 52px; display:grid; grid-template-columns:1.05fr .95fr; gap:44px; }
+    .experiment-copy p { color:#b7aa99; line-height:1.78; font-size:15px; margin:0 0 18px; }
+    .experiment-copy strong { color:#eadfce; }
+    .metrics { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+    .metric { padding:18px; border:1px solid var(--line-soft); border-radius:16px; background:rgba(255,255,255,.016); }
+    .metric span { display:block; color:#6f675f; font-size:9px; letter-spacing:.15em; text-transform:uppercase; }
+    .metric b { display:block; margin-top:7px; color:#e0d3c1; font:500 24px/1.05 var(--serif); }
+    .verdict { margin-top:14px; padding:18px; border:1px solid rgba(212,173,98,.20); border-radius:16px; background:rgba(212,173,98,.035); color:#9f9283; font-size:12px; line-height:1.6; }
+    .verdict strong { color:#d9c5a4; }
+
+    .spotify-wrap { display:grid; grid-template-columns:.88fr 1.12fr; gap:48px; align-items:center; }
+    .spotify-copy h2 { margin:12px 0 18px; color:#f1e6d4; font:500 clamp(48px,6vw,80px)/.96 var(--serif); letter-spacing:-.045em; }
+    .spotify-copy p { color:#a99d90; line-height:1.75; font-size:15px; }
+    .track-meta { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0; }
+    .track-meta span { padding:8px 10px; border:1px solid var(--line-soft); border-radius:999px; color:#8f8479; font-size:10px; letter-spacing:.07em; }
+    .spotify-frame { padding:10px; border-radius:28px; border:1px solid rgba(255,255,255,.075); background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.008)); box-shadow:var(--shadow); }
+    .spotify-frame iframe { width:100%; border:0; border-radius:20px; display:block; min-height:352px; }
+
+    .distance { text-align:center; max-width:930px; margin:auto; }
+    .distance .kicker { color:#8f6c3d; font-size:10px; letter-spacing:.23em; text-transform:uppercase; }
+    .distance h2 { color:#f3e6d2; font:500 clamp(50px,7vw,94px)/.94 var(--serif); letter-spacing:-.05em; margin:14px 0 26px; }
+    .distance p { color:#aa9e91; font-size:17px; line-height:1.8; }
+    .three-objects { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:40px; text-align:left; }
+    .object { min-height:210px; padding:24px; border:1px solid var(--line-soft); border-radius:20px; background:rgba(255,255,255,.015); }
+    .object small { color:#80643b; text-transform:uppercase; font-size:9px; letter-spacing:.18em; }
+    .object h3 { color:#e9ddca; font:500 30px/1.05 var(--serif); margin:38px 0 10px; }
+    .object p { color:#81776e; font-size:12px; line-height:1.55; }
+
+    .command { margin-top:60px; display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
+    .command span { font:500 clamp(40px,5vw,68px)/1 var(--serif); color:#665d55; letter-spacing:-.03em; }
+    .command span.active { color:var(--gold); }
+
+    .sources { background:linear-gradient(180deg,rgba(212,173,98,.035),transparent 50%); }
+    .sources-head { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:30px; }
+    .sources-head h2 { margin:0; color:#ede1cf; font:500 clamp(44px,5vw,68px)/1 var(--serif); letter-spacing:-.04em; }
+    .sources-head p { max-width:500px; color:#8e8378; font-size:13px; line-height:1.65; margin:0; }
+    .source-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    .source-card { min-height:220px; border:1px solid var(--line-soft); border-radius:18px; padding:20px; background:rgba(255,255,255,.012); transition:.25s ease; display:flex; flex-direction:column; }
+    .source-card:hover { transform:translateY(-4px); border-color:rgba(212,173,98,.25); background:rgba(212,173,98,.026); }
+    .source-card small { color:#7f6034; text-transform:uppercase; font-size:9px; letter-spacing:.17em; }
+    .source-card h3 { color:#dfd3c2; font:500 26px/1.05 var(--serif); margin:28px 0 8px; }
+    .source-card p { color:#786f67; font-size:11px; line-height:1.55; margin:0 0 20px; }
+    .source-card .arrow { margin-top:auto; color:#b58d4d; font-size:18px; }
+
+    .faq { width:min(900px,100%); margin:auto; }
+    .faq > h2 { color:#eee2cf; font:500 clamp(46px,6vw,76px)/1 var(--serif); letter-spacing:-.04em; text-align:center; margin:0 0 34px; }
+    details { border-top:1px solid var(--line-soft); padding:0; }
+    details:last-child { border-bottom:1px solid var(--line-soft); }
+    summary { list-style:none; cursor:pointer; padding:24px 42px 24px 0; position:relative; color:#d8ccbb; font:500 24px/1.15 var(--serif); }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:"+"; position:absolute; right:2px; top:21px; color:#9a7540; font:400 28px/1 var(--serif); transition:.2s; }
+    details[open] summary::after { transform:rotate(45deg); }
+    details p { color:#968b80; font-size:14px; line-height:1.75; margin:0 0 26px; max-width:780px; }
+
+    .finale { min-height:78vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden; background:radial-gradient(circle at 50% 50%,rgba(100,22,20,.16),transparent 40rem); }
+    .finale::before { content:""; position:absolute; width:1px; height:45%; top:0; left:50%; background:linear-gradient(var(--gold),transparent); opacity:.3; }
+    .finale-inner { width:min(920px,calc(100% - 40px)); position:relative; z-index:2; }
+    .finale .small { color:#8b6a3a; text-transform:uppercase; font-size:10px; letter-spacing:.23em; }
+    .finale blockquote { margin:26px 0 0; color:#ddd0be; font:italic 500 clamp(28px,4vw,48px)/1.2 var(--serif); }
+    .finale h2 { margin:52px 0 0; color:#f5e8d4; font:500 clamp(64px,9vw,138px)/.83 var(--serif); letter-spacing:-.06em; }
+    .finale h2 span { display:block; color:var(--gold); }
+    .finale p { max-width:610px; margin:30px auto 0; color:#8f8479; line-height:1.7; font-size:14px; }
+    .share-row { display:flex; gap:9px; justify-content:center; flex-wrap:wrap; margin-top:28px; }
+
+    footer { padding:38px 20px 48px; border-top:1px solid var(--line-soft); }
+    .footer-inner { width:min(var(--max),100%); margin:auto; display:flex; align-items:flex-end; justify-content:space-between; gap:30px; }
+    .footer-name { color:#d5c7b4; font:500 26px/1 var(--serif); }
+    .footer-note { margin-top:7px; color:#655f59; font-size:10px; line-height:1.5; }
+    .footer-links { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:14px; color:#7f766e; font-size:11px; }
+    .footer-links a:hover { color:#c3a264; }
+
+    .reveal { opacity:0; transform:translateY(22px); transition:opacity .8s ease, transform .8s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    .floating-share { position:fixed; right:20px; bottom:20px; z-index:980; }
+    .share-fab { width:48px; height:48px; border-radius:50%; border:1px solid rgba(212,173,98,.22); background:rgba(11,8,9,.78); color:#d4ad62; display:grid; place-items:center; cursor:pointer; backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,.35); transition:.2s; }
+    .share-fab:hover { transform:translateY(-2px) rotate(-4deg); border-color:rgba(212,173,98,.45); }
+    .share-fab svg { width:18px; height:18px; }
+
+    .toast { position:fixed; left:50%; bottom:30px; z-index:1100; transform:translate(-50%,20px); opacity:0; pointer-events:none; color:#e8dbc8; background:rgba(18,13,15,.92); border:1px solid rgba(212,173,98,.2); border-radius:999px; padding:11px 15px; font-size:11px; box-shadow:0 12px 34px rgba(0,0,0,.4); transition:.25s ease; }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+
+    @media (max-width: 980px) {
+      .nav-link { display:none; }
+      .hero-content { grid-template-columns:1fr; gap:28px; padding-bottom:90px; }
+      .hero-card { max-width:470px; }
+      .essay-grid { grid-template-columns:90px minmax(0,1fr); }
+      .side-note { display:none; }
+      .roman { font-size:54px; }
+      .keys { grid-template-columns:repeat(2,1fr); }
+      .experiment-head { grid-template-columns:1fr; }
+      .experiment-body, .spotify-wrap { grid-template-columns:1fr; }
+      .count-grid, .apparatus-quick { grid-template-columns:repeat(2,1fr); }
+      .three-objects, .source-grid { grid-template-columns:repeat(2,1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .nav { padding:0 10px; top:8px; }
+      .nav-inner { min-height:50px; padding:7px 8px 7px 12px; }
+      .brand-mark { width:30px; height:30px; }
+      .brand-copy small { display:none; }
+      .nav-cta { padding:10px 12px; font-size:11px; }
+      .hero-media::before { background-position:62% 34%; filter:saturate(.78) contrast(1.04) brightness(.62); }
+      .hero-media::after { background:linear-gradient(0deg,#070607 0%,rgba(7,6,7,.82) 14%,rgba(7,6,7,.18) 60%,rgba(7,6,7,.48) 100%), linear-gradient(90deg,rgba(7,6,7,.67),rgba(7,6,7,.25)); }
+      .hero-content { width:calc(100% - 28px); padding-top:120px; }
+      .hero h1 { font-size:clamp(58px,18vw,86px); max-width:6.5em; }
+      .hero-deck { font-size:22px; }
+      .section { padding:86px 14px; }
+      .essay-grid { display:block; }
+      .roman { position:static; font-size:36px; margin-bottom:24px; }
+      .chapter h2 { font-size:46px; }
+      .chapter p { font-size:15px; }
+      .quote-section { padding:100px 14px; }
+      .quote { font-size:46px; }
+      .keys, .three-objects, .source-grid, .count-grid, .apparatus-quick { grid-template-columns:1fr; }
+      .key { min-height:135px; }
+      .experiment-card { border-radius:22px; }
+      .experiment-head { padding:32px 24px 16px; }
+      .experiment-kicker { padding:0 24px 10px; }
+      .count-grid { padding:0 24px 26px; }
+      .wave-caption { margin:-6px 24px 18px; }
+      .wave { padding:0 18px; height:100px; gap:2px; }
+      .experiment-body { padding:8px 24px 30px; gap:26px; }
+      .metrics { grid-template-columns:1fr 1fr; }
+      .spotify-wrap { gap:28px; }
+      .spotify-frame { padding:7px; border-radius:20px; }
+      .spotify-frame iframe { border-radius:15px; }
+      .sources-head { display:block; }
+      .sources-head p { margin-top:14px; }
+      .finale h2 { font-size:74px; }
+      .footer-inner { display:block; }
+      .footer-links { justify-content:flex-start; margin-top:22px; }
+      .floating-share { right:12px; bottom:12px; }
+      .scroll-cue { display:none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.001ms !important; }
+      .reveal { opacity:1; transform:none; }
+    }
+  </style>
+  <noscript>
+    <style>.reveal { opacity:1 !important; transform:none !important; }</style>
+  </noscript>
 </head>
 <body>
-<div id="barra"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="top-progress" aria-hidden="true"><span id="progressBar"></span></div>
 
-<header class="hero">
-    <nav class="lang"><p><a href="/">PT</a> · <strong>EN</strong></p></nav>
-    <figure class="hero-portrait">
-        <picture>
-            <source srcset="/img/nando-blaze-fogo-600.webp" type="image/webp">
-            <img src="/img/nando-blaze-fogo.jpg" alt="Nando Valle playing guitar in a baroque hall on fire" width="1023" height="1537" fetchpriority="high">
-        </picture>
-    </figure>
-    <div class="hero-text">
-        <p class="kicker">On Niccolò Paganini, and on what is left over</p>
-        <h1>Nando Valle</h1>
-        <p class="tagline">Rock &bull; Classical &bull; Soundtracks &bull; Arrangements</p>
-        <p class="lede">"Everything documented. Nothing declared."</p>
-        <p class="hero-pe"><a class="baixar" href="/en/o-instrumento-escondido/">Read the full essay</a></p>
+  <header class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Nando Valle &mdash; home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy"><strong>Nando Valle</strong><small>Rock &middot; Classical &middot; Scores &middot; Arrangements</small></span>
+      </a>
+      <nav class="nav-actions">
+        <a class="nav-link" href="#dossie">The dossier</a>
+        <a class="nav-link" href="#experimento">The test</a>
+        <a class="nav-link" href="#fontes">Sources</a>
+        <a class="nav-cta" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M7.3 9.2c3.3-1 7-.7 9.7.7M7.9 12.1c2.7-.7 5.8-.5 8.2.6M8.5 14.9c2.1-.5 4.5-.3 6.4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          Listen now
+        </a>
+      </nav>
     </div>
-</header>
+  </header>
 
-<div class="wrap">
-<main>
-
-    <section class="cap" id="anomaly">
-        <p class="num">I</p>
-        <h2>The anomaly</h2>
-        <p class="abertura">They buried Paganini nine times.<br>Thirty-six years without a final grave.<br>All of Europe found it unremarkable.</p>
-        <p class="lead">This is not legend. It is record. Between 1840 and 1876, the violinist's body was buried and dug up nine times.</p>
-        <p>He died in Nice on 27 May 1840. The bishop refused consecrated ground. They embalmed the man. He spent more than a year in the cellar of the house where he died. Then he ended up in an olive oil factory. He crossed thirty-six years changing address. Only in 1876 did a pope authorise the grave.</p>
-        <p class="gancho">Thirty-six years is not paperwork.<br>It begins with a refusal he made himself.</p>
-    </section>
-
-    <section class="cap" id="refusal">
-        <p class="num">II</p>
-        <h2>The refusal</h2>
-        <p>In May 1840, knowing him to be ill, the bishop of Nice sent a priest to give him the last rites. <strong>Paganini refused.</strong> He thought it was too early — that he still had time.</p>
-        <p>A week later he was dead of an internal haemorrhage, with no voice left to call anyone. Father Caffarelli reported to the bishop that the violinist intended to refuse the sacraments. On the strength of that report, the Church denied him consecrated ground.</p>
-        <p>A priest reporting a refusal explains the bishop's decision. It does not explain why nobody in all of Europe found the thing strange enough to protest.</p>
-        <p class="gancho">What the public thought he was.</p>
-    </section>
-
-    <section class="cap" id="name">
-        <p class="num">III</p>
-        <h2>The name they gave him</h2>
-        <p class="lead">They thought he was the devil. The belief is the fact.</p>
-        <p>At a concert in Vienna, a member of the audience publicly declared he had seen the Devil standing beside him, guiding his bow. Others swore they had seen hooves under the tailcoat where the feet should be. This was not two or three people: it was the common sense of a European audience faced with a technique nobody could explain.</p>
-        <p>With a reputation like that, a bishop who refuses a grave meets no resistance. He confirms what everyone already believed.</p>
-        <p class="gancho">But why did the technique look impossible?<br>That part is in the medical record.</p>
-    </section>
-
-    <section class="cap" id="body">
-        <p class="num">IV</p>
-        <h2>The body</h2>
-        <p>His physician wrote, in 1831, that Paganini's hand was no larger than anyone else's — but that every part of it was so elastic that it doubled its own reach. He twisted the first phalanges sideways, at a right angle, without effort.</p>
-        <p>At the time there was no name for that. There was a body doing what no other body did. The public used the word it had.</p>
-        <p>And the same body charged for it. From 1823 on, Paganini was treated with mercury in enormous doses, combined with opium. He lost every tooth. The jaw rotted from the inside. By July 1839 he had not a single tooth in his mouth and could barely eat — less than a year from the bed in Nice. The metal is still there: modern mass spectrometry analysis of his hair found mercury in the strands.</p>
-        <p class="beat">The hand explained the technique.<br>The mercury explained the ruin.<br>Neither had a name in 1840.</p>
-        <p class="gancho">Which leaves what Paganini himself<br>did with the name they gave him.</p>
-    </section>
-
-    <section class="cap" id="denial">
-        <p class="num">V</p>
-        <h2>The denial</h2>
-        <p class="lead">He denied it. In writing. Twice.</p>
-        <p>In 1828 he published, in a Prague newspaper, a letter from his own mother, full of God, as documentary proof against the rumour that he was the Devil's son. In 1831, in the <em>Revue musicale</em>, he published another about the Vienna episode, calling it ridiculous.</p>
-        <p>And he went on arriving in black. Pale, thin, hair dishevelled, long coat, dark carriage, and never a word more than strictly necessary.</p>
-        <p class="beat">He denied it in the record that leaves a document.<br>He confirmed it in the record that leaves an impression.</p>
-        <p class="gancho">If he kept the image up in public,<br>what did he do when nobody was looking?</p>
-    </section>
-
-    <section class="cap" id="instrument">
-        <p class="num">VI</p>
-        <h2>The hidden instrument</h2>
-        <p class="lead">He played guitar.</p>
-        <p>Not electric guitar — that would only appear in the 1930s. The six-string guitar all of Europe played in his day. Between 1801 and 1804, Paganini dropped off the map and spent the time studying it. This was no hobby: forty-three <em>Ghiribizzi</em>, thirty-seven sonatas and two dozen more pieces, for solo guitar alone. Almost all of his chamber music was written with the guitar inside it.</p>
-        <p>And he almost never played guitar in public. He kept it for the closed circle.</p>
-        <p>For anyone who thinks this is a stretch, the object exists. In 1838 the luthier Vuillaume lent him a guitar by Grobert. Paganini signed his name on the soundboard. When he died, Vuillaume gave the instrument to Hector Berlioz, who signed the other side. <a href="https://collectionsdumusee.philharmoniedeparis.fr/0161650-guitare-nicolas-grobert.aspx">The guitar is now at the Musée de la Musique, item E.375</a>, with both signatures.</p>
-        <p>The violin he took care of in writing. In 1837 he left it by will to the City of Genoa, to be preserved in perpetuity. Il Cannone is still there, at the Palazzo Doria-Tursi. They take it out of the case once a month so that someone can play it, just so the instrument does not fall silent.</p>
-        <p class="beat pico">He was buried nine times.<br>The violin never stopped playing.</p>
-        <p class="gancho">All of this has been in public archives for decades.<br>Somebody had to put it side by side.</p>
-    </section>
-
-    <section class="cap" id="who">
-        <p class="num">VII</p>
-        <h2>Who went and read</h2>
-        <p>Nando Valle is a lawyer and a guitarist. He read about the nine burials, found the number strange, and did what one does with a strange case file: he went after the documents. The six chapters above are what he found.</p>
-        <p>There is a reason he recognised the subject. In 1993 and 1994, between sixteen and eighteen years old, he read several books by Éliphas Lévi and Aleister Crowley. In 1994 he reached the <em>Book of the Law</em>. He says that in that year he used to joke with whoever was nearby that he was a magician. This cannot be verified by third parties, and he does not pretend that it can.</p>
-        <p>Across the Atlantic, in 1993, Alan Moore turned forty and announced that he had decided to become a magician. Moore took up the worship of Glycon, a serpent god that antiquity itself exposed as a wooden puppet. He knows it is a fraud, and worships it anyway: if the gods live in the imagination, proving the fraud does not undo the god — it only reveals the address.</p>
-        <p>Valle says he had no idea who Alan Moore was.</p>
-        <p class="gancho">Thirty-two years went by.<br>What stayed was a doubt.</p>
-    </section>
-
-    <section class="cap" id="keys">
-        <p class="num">VIII</p>
-        <h2>The keys</h2>
-        <p>He remembered a passage about keys. And he remembered seven or eight, never able to settle which.</p>
-        <p>He went to check. In March 1910, Crowley published in <em>The Equinox</em> a poem called <em>Aha!</em>. The title page announces it as "the sevenfold mystery of the ineffable love".</p>
-        <p class="beat">Sevenfold. Seven.<br>And he put eight steps inside it.</p>
-        <p>It was not carelessness. The opening couplet announces both counts at once:</p>
-        <div class="verse">
-            <div class="en">There are seven keys to the great gate,<br>Being eight in one and one in eight.</div>
-            <span class="ref">Aha! &middot; The Equinox I (3) &middot; 1910</span>
+  <section class="hero" id="top">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-lines" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div>
+        <div class="eyebrow">A file on technique, myth and silence</div>
+        <h1>Everything documented.<br><em>Nothing declared.</em></h1>
+        <p class="hero-deck">On Niccol&ograve; Paganini, Aleister Crowley, a guitar &mdash; and what is left when legend meets the <strong>experiment.</strong></p>
+        <div class="hero-buttons">
+          <a class="btn btn-gold" href="#dossie">Open the dossier <span aria-hidden="true">&darr;</span></a>
+          <a class="btn" href="https://nandovalle.github.io/en/o-instrumento-escondido/" target="_blank" rel="noopener noreferrer">Full essay &nearr;</a>
         </div>
-        <p>There are seven. And there are eight. The doubt he carried for thirty-two years was not a failure of memory: it was written into the second line of the verse.</p>
-        <p class="gancho">The eighth is not a new key.<br>It is the seven at once.</p>
-    </section>
-
-    <section class="cap" id="measurement">
-        <p class="num">IX</p>
-        <h2>The measurement</h2>
-        <p>In August 2026, Valle recorded <em>Insane Baroque Blaze</em> — a baroque piece on the guitar. Weeks later he went to measure his own recording, out of technical curiosity. He was certain of one thing: that there was no tritone in it at all, the interval the Middle Ages nicknamed <em>diabolus in musica</em>.</p>
-        <p><strong>He was wrong, and wrong about the basics.</strong> The tritone lives inside every dominant seventh chord. Whoever writes baroque writes tritones, knowingly or not. The count was never going to be zero.</p>
-        <p>Two independent transcription engines found the same thing: between eighty and ninety tritones in the guitar line. The first at one and a half seconds, right on the opening leap.</p>
-        <p>Then the report itself was audited, and the melodic count would not reproduce. The defect was not in the numbers — it was in their description: the report said <em>an interval of 6 semitones</em> where the program counts interval class 6, the tritone at any octave. Change the phrase and everything lines up.</p>
-        <p class="beat">One wrong word in the description of the method.<br>The numbers were right all along.</p>
-        <p class="gancho">He was wrong about the zero, and the method about itself.<br><a href="/en/o-tritono/">Both corrections are in the report</a> — with the detector and the files, you can redo the count.</p>
-    </section>
-
-    <section class="cap" id="distance">
-        <p class="num">X</p>
-        <h2>The distance</h2>
-        <p class="lead">Paganini never declared any pact about himself. He denied it in writing, twice. The ones who declared were the audience.</p>
-        <p>The word "devil" did not come from him. It came from people who had no other word for what they were seeing.</p>
-        <p>What is left, after all the documents, is the same thing that was left of Paganini: a technique some could not explain, and a second instrument almost nobody saw. The rest is projection.</p>
-        <div class="close">
-            <div class="big">The archive is open.<br>Measure it. Deny it. Name it.</div>
-            <div class="cta">Insane Baroque Blaze &middot; second 1.5</div>
+      </div>
+      <aside class="hero-card" aria-label="First measured occurrence">
+        <div class="stamp"><i class="pulse-dot"></i> measured occurrence</div>
+        <div class="hero-card-number">0:01<span>.5</span></div>
+        <p>The first result appears on practically the opening gesture of the guitar.</p>
+        <div class="tiny-rule"></div>
+        <div class="mini-grid">
+          <div><span>Track</span><strong>Insane Baroque Blaze</strong></div>
+          <div><span>Length</span><strong>2:44</strong></div>
+          <div><span>Released</span><strong>12 Aug 2026</strong></div>
+          <div><span>Artist</span><strong>Nando Valle</strong></div>
         </div>
-        <p class="saida">
-            <a href="/en/o-instrumento-escondido/"><strong>The full essay, in ten chapters, with the source apparatus &rarr;</strong></a>
-        </p>
+      </aside>
+    </div>
+    <div class="scroll-cue"><i></i> scroll without believing</div>
+  </section>
+
+  <main id="dossie">
+    <section class="section dark-band">
+      <div class="wrap essay-grid reveal">
+        <div class="roman">I</div>
+        <article class="chapter">
+          <div class="kicker">The anomaly</div>
+          <h2>They buried Paganini nine times.</h2>
+          <p class="lead">Thirty-six years without a final grave.</p>
+          <p>Niccol&ograve; Paganini died in Nice on 27 May 1840. The bishop refused him consecrated ground. The body was embalmed. It moved from place to place for decades. Only in 1876 did the definitive authorisation for burial arrive.</p>
+          <p class="hardline">Thirty-six years is not a detail.</p>
+          <p>And it all begins with a refusal made by Paganini himself.</p>
+        </article>
+        <aside class="side-note"><span>Rule of this page</span>Where there is a document, a document. Where there is interpretation, interpretation. Where there is doubt, doubt.</aside>
+      </div>
     </section>
 
-    <hr>
+    <section class="section">
+      <div class="wrap essay-grid reveal">
+        <div class="roman">II</div>
+        <article class="chapter">
+          <div class="kicker">The refusal</div>
+          <h2>He thought he was not dying yet.</h2>
+          <p>In May 1840, already gravely ill, Paganini received a priest sent to give him the last rites.</p>
+          <p><strong>He refused.</strong> Not because he was proclaiming some dark faith. He simply thought he was not dying yet.</p>
+          <p>A week later he was dead of an internal haemorrhage, with almost no voice left. Father <strong>Caffarelli</strong> reported to the bishop that the violinist intended to refuse the sacraments. On the strength of that report, the Church refused burial in consecrated ground.</p>
+          <p class="hardline">That explains the administrative decision. It does not explain the ground it fell on.</p>
+          <p>Because, before dying, Paganini already carried another name.</p>
+        </article>
+        <aside class="side-note"><span>Next piece</span>The historical fact is not that the Devil was there. It is that there were people convinced he was.</aside>
+      </div>
+    </section>
 
-    <h2 id="music">Insane Baroque Blaze (2026)</h2>
-    <p>Baroque counterpoint turned into a riff, recorded on guitar, self-produced. Instrumental track, released 12 August 2026. <a href="/insane-baroque-blaze/">Official track page</a>, with a player — or straight to your platform:</p>
-    <ul class="links">
-        <li><a href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN" rel="me">Spotify</a></li>
-        <li><a href="https://music.apple.com/us/album/insane-baroque-blaze/6794384680?i=6794384682">Apple Music / iTunes</a></li>
-        <li><a href="https://www.youtube.com/watch?v=m0nqZgA-ung">YouTube</a></li>
-        <li><a href="https://www.deezer.com/track/4174912812">Deezer</a></li>
-        <li><a href="https://song.link/us/i/6794384682">Every platform (song.link)</a></li>
-    </ul>
+    <section class="section dark-band">
+      <div class="wrap essay-grid reveal">
+        <div class="roman">III</div>
+        <article class="chapter">
+          <div class="kicker">The name they gave it</div>
+          <h2>Devil.</h2>
+          <p class="lead">What matters here is not whether anyone really saw anything. The historical fact is that they <em>believed they saw.</em></p>
+          <p>In Vienna, a spectator claimed to have seen the Devil standing beside Paganini, guiding his bow. Others swore they could make out hooves under his clothes.</p>
+          <p>The extraordinary thing is not the legend. It is the need for it.</p>
+          <p>Faced with a technique that seemed physically impossible, the audience looked for a word able to explain it. It found a very old one.</p>
+          <p class="hardline">The audience used the word it had.</p>
+          <p>Seventy years later, in a poem about initiation, Aleister Crowley stated a similar mechanism. The speaker is Marsyas &mdash; the satyr who, in the myth, was flayed alive after a musical contest with Apollo:</p>
+          <p style="font-family:var(--serif);font-size:clamp(24px,2.5vw,34px);line-height:1.28;color:#e6d9c5;margin:28px 0 18px">&ldquo;So the adept is called insane<br>For his frank failure to explain.&rdquo;</p>
+          <div class="source-inline"><strong>Source:</strong> Aleister Crowley, <em>Aha!</em>, <em>The Equinox</em> I (3), 1910, printed p. 30. Marsyas speaking.</div>
+          <p>And, a few lines further on:</p>
+          <p style="font-family:var(--serif);font-size:clamp(22px,2.1vw,30px);line-height:1.3;color:#d7c8b2;margin:18px 0 8px">&ldquo;Some fool thinks names are things.&rdquo;</p>
+        </article>
+        <aside class="side-note"><span>Hypothesis of the essay</span>When technique outruns the vocabulary of the people watching, imagination fills the distance.</aside>
+      </div>
+    </section>
 
-    <h2 id="upcoming">Upcoming releases</h2>
-    <ul class="links">
-        <li><strong>The Unbroken</strong> — instrumental single, 11 September 2026.</li>
-        <li><strong>Insane Grand Illusion</strong> — piano single, 9 October 2026.</li>
-    </ul>
+    <section class="section">
+      <div class="wrap essay-grid reveal">
+        <div class="roman">IV</div>
+        <article class="chapter">
+          <div class="kicker">The body</div>
+          <h2>The hand explained part of the prodigy.</h2>
+          <p>A doctor who examined Paganini recorded something strange: his hand was not particularly large. It was extraordinarily flexible.</p>
+          <p>The joints moved in unusual ways. The fingers reached positions that seemed incompatible with a normal hand.</p>
+          <p>Today we can discuss medical hypotheses. In a nineteenth-century audience, nobody had that vocabulary.</p>
+          <p>The same body that widened the limits of technique also charged another price. <strong>From 1823 on</strong>, Paganini was treated with mercury in enormous doses, combined with opium. He lost every tooth; the jaw deteriorated. By July 1839 he had not a single tooth left and could barely eat. Modern analysis of his hair found mercury in the strands.</p>
+          <p class="hardline">The hand explained the technique.<br>The treatment explained part of the ruin.<br>Neither of them explained the legend.</p>
+        </article>
+        <aside class="side-note"><span>A necessary separation</span>The text does not turn a medical hypothesis into a retroactive diagnosis.</aside>
+      </div>
+    </section>
 
-    <h2 id="faq">Frequently asked</h2>
+    <section class="section dark-band">
+      <div class="wrap essay-grid reveal">
+        <div class="roman">V</div>
+        <article class="chapter">
+          <div class="kicker">The denial</div>
+          <h2>Paganini confirmed no pact.</h2>
+          <p class="lead">He did the opposite.</p>
+          <p><strong>He denied it in writing.</strong> More than once. He tried to use documents against what the audience had already decided to see.</p>
+          <p>But he went on appearing dressed in black. Pale. Gaunt. Hair dishevelled. Long coat. Few words.</p>
+          <p class="hardline">On paper, he denied it.<br>In person, he let the image survive.</p>
+          <p>Perhaps because an explanation closes what mystery keeps alive.</p>
+        </article>
+        <aside class="side-note"><span>Not to be confused</span>A public image is not a confession. Atmosphere is not evidence.</aside>
+      </div>
+    </section>
 
-    <h3>Did Nando Valle sell his soul to the devil?</h3>
-    <p>No. And there was no pact in Paganini's case either — he denied it himself in writing twice, in 1828 and 1831. What Valle publishes is not legend: it is a documented essay, with a source for every historical claim and the caveats declared in the apparatus. Where there is belief instead of fact, the text says it is belief.</p>
+    <section class="section">
+      <div class="wrap essay-grid reveal">
+        <div class="roman">VI</div>
+        <article class="chapter">
+          <div class="kicker">The hidden instrument</div>
+          <h2>Paganini played the guitar.</h2>
+          <p class="lead">Not as a curiosity.</p>
+          <p>Between 1801 and 1804 he studied the instrument seriously. It was no hobby: <strong>43 Ghiribizzi, 37 sonatas and 24 further pieces</strong> for solo guitar &mdash; a decomposable count of 104 works. Almost all of his chamber music was written with the guitar inside it.</p>
+          <p>But he almost never performed on it in public. The violin belonged to the stage. The guitar stayed close to the private circle.</p>
+          <p>One of them built the legend. The other stayed almost hidden inside it.</p>
+          <p>There is even a physical object running through this story: in 1838, Vuillaume lent him a guitar by Grobert, of Mirecourt. Paganini signed the soundboard; after his death, Hector Berlioz signed the other side. The instrument is today at the Mus&eacute;e de la Musique in Paris, catalogued as <strong>item E.375</strong>.</p>
+          <p class="hardline">The man died.<br>The sound went on.</p>
+        </article>
+        <aside class="side-note"><span>Verifiable object</span>Mus&eacute;e de la Musique &middot; Paris &middot; Grobert guitar &middot; <strong>item E.375</strong>. The inventory number is part of the proof.</aside>
+      </div>
+    </section>
 
-    <h3>Is the Insane Baroque Blaze video made by AI?</h3>
-    <p>The recording is Nando Valle playing guitar. In the video, a digital clone performs it, transferred by artificial intelligence from that real recording.</p>
 
-    <h3>Does Insane Baroque Blaze really contain the tritone, the <em>diabolus in musica</em>?</h3>
-    <p>Yes — and the number is not the interesting part. Two independent transcription engines find between 80 and 90 melodic tritones in the guitar line, the first at <strong>0:01.5</strong>, C#4 leaping to G4. But <strong>a tritone is unavoidable in baroque writing</strong>: one lives inside every dominant seventh chord, and the track is in C# harmonic minor. What remains is where the first one sits. <a href="/en/o-tritono/">The report is here</a>, with the detector and the files published.</p>
+    <section class="quote-section dark-band">
+      <div class="quote-shell reveal">
+        <div class="quote-label">Interlude &middot; another file &middot; The Equinox &middot; 1910</div>
+        <p class="quote">&ldquo;The soul sings still,<br>struck by the <em>plectron of the Will</em>.&rdquo;</p>
+        <div class="citation">Aleister Crowley &middot; Aha! &middot; printed p. 29</div>
+      </div>
+    </section>
 
-    <h3>Where to listen to Nando Valle?</h3>
-    <ul class="links">
-        <li><a href="/insane-baroque-blaze/">Insane Baroque Blaze — official track page</a></li>
-        <li><a href="https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ" rel="me">Spotify — Nando Valle</a></li>
-        <li><a href="https://linktr.ee/NandoValle" rel="me">All links (Linktree)</a></li>
-        <li><a href="https://www.instagram.com/nandovale7/" rel="me">Instagram — @nandovale7</a></li>
-    </ul>
+    <section class="section">
+      <div class="wrap essay-grid reveal">
+        <div class="roman">VII</div>
+        <article class="chapter">
+          <div class="kicker">Who went and read</div>
+          <h2>The story only reaches the guitar because somebody went after the documents.</h2>
+          <p>Nando Valle is a lawyer and a guitarist. He read about the nine burials, found the number strange, and did what one does with a strange case file: he went after the sources. The six chapters above are what he found.</p>
+          <p>There is a personal reason the subject felt familiar. In <strong>1993 and 1994</strong>, from sixteen to eighteen years old, he read several books by &Eacute;liphas L&eacute;vi and Aleister Crowley. He began with <em>Dogme et Rituel de la Haute Magie</em>; in 1994 he reached <em>The Book of the Law</em>. He says that, that year, he used to joke to whoever was around that he was a magician.</p>
+          <p><strong>There is no independent verification possible for this.</strong> It is a personal account &mdash; and it stays marked as a personal account.</p>
+          <p>On the other side of the Atlantic, in 1993, Alan Moore turned forty and announced he had decided to become a magician. He took up the worship of Glycon, a snake-god whose material fraud had been known since antiquity. Moore knows this: for him, exposing the puppet does not remove the god; it merely moves the address to the imagination.</p>
+          <p>Valle says he had no idea who Alan Moore was.</p>
+          <p class="hardline">Thirty-two years went by.<br>What remained was a doubt.</p>
+          <p>He remembered a passage about keys. And he remembered <strong>seven or eight</strong>, without ever being able to settle which of the two counts was right.</p>
+        </article>
+        <aside class="side-note"><span>Rule of verifiability</span>An autobiography does not become an external fact just because it is in print. Here, what only Nando can report stays marked as his report.</aside>
+      </div>
+    </section>
 
-</main>
+    <section class="section dark-band">
+      <div class="wrap reveal">
+        <div class="distance">
+          <div class="kicker">VIII &middot; the keys &middot; Aha! &middot; 1910</div>
+          <h2>Seven. Eight. One.</h2>
+          <p>He went to check. In March 1910, Crowley published in <em>The Equinox</em> a dialogue-poem called <strong>Aha!</strong>. The title page announces it as &ldquo;the sevenfold mystery of the ineffable love&rdquo; and promises to set out the path of initiation from beginning to end, in the dialogue between Marsyas, the adept, and Olympas, his disciple.</p>
+          <p style="font-family:var(--serif);font-size:clamp(28px,3vw,42px);line-height:1.18;color:#e5d8c5;margin:34px auto;max-width:780px">&ldquo;There are seven keys to the great gate,<br>being eight in one and one in eight.&rdquo;</p>
+          <p>Seven keys to the great gate &mdash; being eight in one and one in eight. The doubt carried for thirty-two years was not necessarily a failure of memory: <strong>both counts are in the same couplet.</strong></p>
+        </div>
+        <div class="keys" aria-label="The seven keys and the convergence">
+          <div class="key"><b>01</b><p>Still the body until it is rigid.</p></div>
+          <div class="key"><b>02</b><p>Slow and regulate the rhythm of the breath.</p></div>
+          <div class="key"><b>03</b><p>Keep life pure and calm.</p></div>
+          <div class="key"><b>04</b><p>Bind the will to live to a single love.</p></div>
+          <div class="key"><b>05</b><p>Free thought from the senses and watch it.</p></div>
+          <div class="key"><b>06</b><p>Fix the mind on one thought; &ldquo;burn up the being in a word&rdquo;.</p></div>
+          <div class="key"><b>07</b><p>Let not even &ldquo;God&rdquo; distract attention from the chosen act.</p></div>
+          <div class="key final"><b>08 / 01</b><p>At last, all the previous ones mastered as one.</p></div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-    <p>&copy; 2026 Nando Valle. Last updated: 25 August 2026.</p>
-    <p class="muted">No soul was sold in the making of this site. Borrowed, perhaps.</p>
-</footer>
-</div>
+    <section class="quote-section">
+      <div class="quote-shell reveal">
+        <div class="quote-label">The epistemological rule, in the poem's own prose summary</div>
+        <p class="quote">THE TEST OF<br><em>EXPERIMENT</em></p>
+        <p class="translation">Not by the authority of whoever is speaking. By what happens when you test it.</p>
+        <div class="citation">Aha! &middot; The Argumentation &middot; 1910</div>
+      </div>
+    </section>
 
-<script>
-(function(){
-  var b=document.getElementById('barra');
-  function u(){var h=document.documentElement,t=h.scrollTop||document.body.scrollTop,m=h.scrollHeight-h.clientHeight;
-    b.style.width=(m>0?(t/m*100):0)+'%';}
-  addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();
+    <section class="section experiment" id="experimento">
+      <div class="wrap reveal">
+        <div class="experiment-card">
+          <div class="experiment-head">
+            <div><small>IX &middot; the measurement &middot; August 2026</small><h2>Insane Baroque Blaze</h2></div>
+            <div class="time">0:01<span>.5</span></div>
+          </div>
 
-})();
-</script>
+          <div class="wave" aria-hidden="true" id="wave"></div>
+          <div class="wave-caption">Illustration &mdash; not the waveform of the track.</div>
+
+          <div class="experiment-kicker">Published tritones &middot; the eight numbers reproducible from the four guitar MIDI files</div>
+          <div class="count-grid" aria-label="Published tritone counts">
+            <div class="count-card" style="--bar:91.2%"><small>Basic Pitch &middot; solo</small><b>83</b><span>72 harmonic</span></div>
+            <div class="count-card" style="--bar:100%"><small>Basic Pitch &middot; 40 ms cutoff</small><b>91</b><span>79 harmonic</span></div>
+            <div class="count-card" style="--bar:53.8%"><small>Basic Pitch &middot; low-register pass</small><b>49</b><span>42 harmonic</span></div>
+            <div class="count-card" style="--bar:87.9%"><small>AnthemScore &middot; independent engine</small><b>80</b><span>115 harmonic</span></div>
+          </div>
+
+          <div class="experiment-body">
+            <div class="experiment-copy">
+              <p>In August 2026, Valle recorded <strong>Insane Baroque Blaze</strong> &mdash; a baroque piece on the guitar. Weeks later he went to measure his own recording, out of technical curiosity.</p>
+              <p>He was sure of one thing: that there was no tritone in it at all, the interval historically nicknamed <em>diabolus in musica</em>.</p>
+              <p class="hardline"><strong>He was wrong, and wrong on the basics.</strong></p>
+              <p>The tritone lives inside every dominant seventh chord. Whoever writes baroque meets tritones, knowingly or not. The count was never going to be zero. And a caveat is due: there was no universal church decree &ldquo;banning&rdquo; the interval; the excommunication story is later folklore.</p>
+              <p>In the full passes, the two independent engines returned <strong>83, 91 and 80 melodic tritones</strong>. A third Basic Pitch pass, tuned to the low register, returned <strong>49</strong>. That is why this page does not treat &ldquo;80 to 90&rdquo; as a universal range: it gives the four results separately. The first reported occurrence appears at <strong>0:01.5 &mdash; C#4 to G4</strong>, right on the opening leap.</p>
+              <p>Then somebody tried to reproduce the count from the published description alone, and could not. Nine variants of the rule were tested; the divergence ran from four to nineteen occurrences depending on the file.</p>
+              <p><strong>The defect was not in the numbers. It was in their description.</strong></p>
+              <div class="correction-flag">&#9888; correction published on 25 August 2026</div>
+              <p>The report said &ldquo;an interval of 6 semitones&rdquo; for the melodic line. The detector had always counted <strong>interval class 6</strong> &mdash; the tritone at any octave &mdash; exactly as the harmonic rule already stated.</p>
+              <p>Change the phrase and the note count, the melodic tritones, the harmonic tritones and the first occurrence all reproduce the files again.</p>
+              <p class="hardline">One wrong word in the description of the method.<br>The numbers were always right.</p>
+            </div>
+
+            <div>
+              <div class="metrics">
+                <div class="metric"><span>First occurrence</span><b>0:01.5</b></div>
+                <div class="metric"><span>First leap</span><b>C#4 &rarr; G4</b></div>
+                <div class="metric"><span>Independent engines</span><b>2</b></div>
+                <div class="metric"><span>Bass &middot; control</span><b>2 / 0</b></div>
+              </div>
+
+              <div class="method-box">
+                <h3>The corrected rule</h3>
+                <ul>
+                  <li><strong>Melodic:</strong> two consecutive notes with interval class 6; the next note begins within 0.6 s of the end of the previous one.</li>
+                  <li><strong>Harmonic:</strong> two notes sounding together for at least 30 ms with interval class 6.</li>
+                  <li><strong>Control:</strong> the bass, by the same method, returns 2 melodic and 0 harmonic.</li>
+                </ul>
+              </div>
+
+              <div class="verdict"><strong>Not:</strong> &ldquo;take my word for it&rdquo;.<br><br><strong>But:</strong> here is the rule. Here are the numbers. Here are the files. Do it again.</div>
+            </div>
+          </div>
+
+          <div style="padding:0 50px 50px">
+            <div class="data-wrap">
+              <table class="data-table" aria-label="Reproducible table of the measurement">
+                <thead><tr><th>Transcribed source</th><th>Notes</th><th>Melodic tritones</th><th>Harmonic tritones</th></tr></thead>
+                <tbody>
+                  <tr><td>Basic Pitch &mdash; guitar (solo)</td><td>1,735</td><td><strong>83</strong></td><td>72</td></tr>
+                  <tr><td>Basic Pitch &mdash; guitar (40 ms cutoff)</td><td>1,929</td><td><strong>91</strong></td><td>79</td></tr>
+                  <tr><td>Basic Pitch &mdash; guitar (low-register pass)</td><td>1,133</td><td><strong>49</strong></td><td>42</td></tr>
+                  <tr><td>Basic Pitch &mdash; bass</td><td>790</td><td><strong>2</strong></td><td>0</td></tr>
+                  <tr><td>AnthemScore &mdash; guitar (independent engine)</td><td>2,320</td><td><strong>80</strong></td><td>115</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="repro-box">
+              <h3>Nothing needs to be reimplemented.</h3>
+              <p>The detector and the five MIDI files are published. Single dependency: <code>pretty_midi</code>. One command line returns the melodic and harmonic counts for the four guitar files.</p>
+              <div class="file-chips">
+                <a class="file-chip" href="https://nandovalle.github.io/o-tritono/reproduzir/detecta_tritono.py" target="_blank" rel="noopener noreferrer">detecta_tritono.py &nearr;</a>
+                <a class="file-chip" href="https://nandovalle.github.io/o-tritono/reproduzir/guitar_basic_pitch.mid" target="_blank" rel="noopener noreferrer">guitar_basic_pitch.mid &nearr;</a>
+                <a class="file-chip" href="https://nandovalle.github.io/o-tritono/reproduzir/guitar_40ms.mid" target="_blank" rel="noopener noreferrer">guitar_40ms.mid &nearr;</a>
+                <a class="file-chip" href="https://nandovalle.github.io/o-tritono/reproduzir/guitar_registro_grave.mid" target="_blank" rel="noopener noreferrer">guitar_registro_grave.mid &nearr;</a>
+                <a class="file-chip" href="https://nandovalle.github.io/o-tritono/reproduzir/guitar_anthemscore.mid" target="_blank" rel="noopener noreferrer">guitar_anthemscore.mid &nearr;</a>
+                <a class="file-chip" href="https://nandovalle.github.io/o-tritono/reproduzir/bass_basic_pitch.mid" target="_blank" rel="noopener noreferrer">bass_basic_pitch.mid &nearr;</a>
+              </div>
+              <div class="code-line">pip install pretty_midi</div>
+              <div class="code-line">python detecta_tritono.py guitar_basic_pitch.mid guitar_40ms.mid guitar_registro_grave.mid guitar_anthemscore.mid</div>
+              <div style="margin-top:16px"><a class="btn btn-gold" href="https://nandovalle.github.io/en/o-tritono/" target="_blank" rel="noopener noreferrer">Open the report, method and caveats &nearr;</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ouvir">
+      <div class="wrap spotify-wrap reveal">
+        <div class="spotify-copy">
+          <div class="eyebrow">The recording exists</div>
+          <h2>Hear it before concluding.</h2>
+          <p><strong>Insane Baroque Blaze</strong> is an instrumental rock track, 2 min 44 s, released on 12 August 2026.</p>
+          <p>The player below is the public record. The rest of this page can be read as narrative. The music cannot.</p>
+          <div class="track-meta"><span>NANDO VALLE</span><span>INSTRUMENTAL ROCK</span><span>ISRC QZNJV2617176</span></div>
+          <a class="btn" href="https://song.link/us/i/6794384682" target="_blank" rel="noopener noreferrer">Every platform &nearr;</a>
+        </div>
+        <div class="spotify-frame">
+          <iframe style="border-radius:20px" src="https://open.spotify.com/embed/track/0tVaSUQuKdwRk9m4wdM1wN?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Insane Baroque Blaze &mdash; Spotify"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section dark-band">
+      <div class="wrap distance reveal">
+        <div class="kicker">X &middot; the distance</div>
+        <h2>The file does not force a conclusion.</h2>
+        <p>Paganini never declared any pact about himself. <strong style="color:#dfd2c0">He denied it in writing, twice.</strong> The ones who declared were the audience.</p>
+        <p>The word &ldquo;devil&rdquo; did not come from him. It came from people who had no other word for what they were seeing.</p>
+        <p>Paganini died in 1840. Crowley published <em>Aha!</em> in 1910. <em>Insane Baroque Blaze</em> was released in 2026. <strong style="color:#dfd2c0">There is no document linking the three events.</strong></p>
+        <div class="three-objects">
+          <div class="object"><small>Object 01</small><h3>A man.</h3><p>Turned into legend by people trying to explain a technique that looked impossible.</p></div>
+          <div class="object"><small>Object 02</small><h3>A text.</h3><p>On will, experience, silence, seven keys &mdash; and the test of experiment.</p></div>
+          <div class="object"><small>Object 03</small><h3>A recording.</h3><p>Public, audible, measured by independent transcriptions and shipped with the files for reproduction.</p></div>
+        </div>
+        <p style="margin-top:42px">Perhaps this means nothing. That possibility stays open. Perhaps someone else will find another explanation. Better still: the method lets them try.</p>
+        <p>Whatever is left after all the documents will not be the work of this text. It will be the work of what stays unexplained &mdash; and of what each reader decides to project onto it.</p>
+        <div class="command" aria-label="Final commands"><span>Measure.</span><span>Deny.</span><span class="active">Name.</span></div>
+      </div>
+    </section>
+
+    <section class="section sources" id="fontes">
+      <div class="wrap reveal">
+        <div class="sources-head">
+          <h2>The file is open.</h2>
+          <p>This page does not ask you to close the question. It offers doors for checking what can be checked &mdash; and keeps fact, interpretation and atmosphere apart.</p>
+        </div>
+        <div class="source-grid">
+          <a class="source-card" href="https://nandovalle.github.io/en/o-instrumento-escondido/" target="_blank" rel="noopener noreferrer"><small>Dossier</small><h3>The Hidden Instrument</h3><p>The full essay, with apparatus and historical sources.</p><span class="arrow">&nearr;</span></a>
+          <a class="source-card" href="https://nandovalle.github.io/en/o-tritono/" target="_blank" rel="noopener noreferrer"><small>Report</small><h3>The tritone</h3><p>Numbers, method, corrections and the files to redo the count.</p><span class="arrow">&nearr;</span></a>
+          <a class="source-card" href="https://archive.org/details/oto-equinox-vol-1-no-01-10" target="_blank" rel="noopener noreferrer"><small>Primary source</small><h3>Aha! &middot; 1910</h3><p>Facsimile of The Equinox. Aha! begins in volume I, no. III.</p><span class="arrow">&nearr;</span></a>
+          <a class="source-card" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer"><small>Recording</small><h3>Insane Baroque Blaze</h3><p>The public track on Spotify. Hear the sound source.</p><span class="arrow">&nearr;</span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section apparatus-section" id="aparato">
+      <div class="wrap reveal">
+        <div class="apparatus-head">
+          <div class="kicker">Apparatus &middot; what can be checked</div>
+          <h2>The promise of verifiability is inside the page.</h2>
+          <p>Every relevant historical claim is given the place where it can be checked. Where the source is indirect, incomplete or was not re-verified, the caveat appears &mdash; including when it weakens the narrative itself.</p>
+        </div>
+
+        <div class="apparatus-quick">
+          <a href="https://collectionsdumusee.philharmoniedeparis.fr/0161650-guitare-nicolas-grobert.aspx" target="_blank" rel="noopener noreferrer"><small>Object</small><strong>Grobert guitar &middot; E.375 &nearr;</strong></a>
+          <a href="https://archive.org/details/oto-equinox-vol-1-no-01-10" target="_blank" rel="noopener noreferrer"><small>Primary source</small><strong>Aha! &middot; 1910 facsimile &nearr;</strong></a>
+          <a href="https://archive.org/details/EliphasLeviDogmaYRitualDeLaAltaMagia" target="_blank" rel="noopener noreferrer"><small>Cited reading</small><strong>&Eacute;liphas L&eacute;vi &middot; full text &nearr;</strong></a>
+          <a href="https://nandovalle.github.io/en/o-tritono/" target="_blank" rel="noopener noreferrer"><small>Reproduction</small><strong>Report + detector + MIDI files &nearr;</strong></a>
+        </div>
+
+        <div class="apparatus-wrap">
+          <table class="apparatus-table" aria-label="Full verifiability apparatus">
+            <thead><tr><th>Claim</th><th>Where to check / caveat</th></tr></thead>
+            <tbody>
+              <tr><td>Nine burials and exhumations between 1840 and 1876</td><td>The Strad, November 1932 archive, and later biographies</td></tr>
+              <tr><td>Bishop of Nice refuses consecrated ground; body embalmed; 36 years without a final grave; papal authorisation in 1876</td><td>Encyclopedia.com; La Br&uacute;jula Verde</td></tr>
+              <tr><td>Refusal of the last rites in May 1840; Father Caffarelli's report; death on 27/05/1840</td><td>Interlude.hk; Classicals.de</td></tr>
+              <tr><td>Casino Paganini (Paris, 1837), bankruptcy, sale of the instruments, a thirty-thousand-franc claim, litigation until his death</td><td>The Strad, "House of cards: Paganini's doomed casino venture"; Britannica</td></tr>
+              <tr><td>Devil seen guiding the bow, in Vienna; hooves (a belief of the period — the fact is the belief)</td><td>ClassicFM; Today I Found Out; and Paganini's own letter in the Revue musicale, 1831</td></tr>
+              <tr><td>Hypermobile hand (1831); modern Marfan and Ehlers-Danlos hypotheses</td><td>Marfan Trust; Musicians' Health Collective. <span class="warn">&#9888;&#65039; In the text the description is paraphrased, not quoted literally</span></td></tr>
+              <tr><td>Mercury from 1823, with opium; loss of all teeth; osteomyelitis of the jaw; mercury in the hair by mass spectrometry</td><td>Hektoen International; PubMed 22448466 and 3054102</td></tr>
+              <tr><td>Mother's letter published in a Prague newspaper, 1828; letter in the Revue musicale with F&eacute;tis, 1831</td><td>Serenade Magazine; ClassicFM</td></tr>
+              <tr><td>"Only the imperfect Saints reveal themselves as such"</td><td>The Argumentation, the prose summary Crowley wrote of Aha! — The Equinox I (3), 1910, p. 12</td></tr>
+              <tr><td>Guitar output: 43 Ghiribizzi, 37 sonatas and 24 others; the 1801&ndash;1804 retreat; almost never played in public</td><td>A Dictionary of Music and Musicians; Brilliant Classics; Siccas Guitars. <span class="warn">&#9888;&#65039; Some sources say 140 pieces; the text uses the decomposable count: 43 + 37 + 24 = 104</span></td></tr>
+              <tr><td>Schottky on Paganini's guitar playing</td><td>quoted by Siccas Guitars and Strings By Mail. <span class="warn">&#9888;&#65039; Read in English translation, not in the German original — hence reported speech, without quotation marks</span></td></tr>
+              <tr><td>Grobert guitar of Mirecourt, lent by Vuillaume in 1838, signed by Paganini and by Berlioz</td><td>Mus&eacute;e de la Musique, item E.375 — public record, checked on 25/08/2026</td></tr>
+              <tr><td>1837 will leaving Il Cannone to Genoa; delivery in 1851; Palazzo Doria-Tursi; played once a month</td><td>Musei di Genova; Premio Paganini. <span class="warn">&#9888;&#65039; The wording of the will comes from museum sources, not from the original document — hence reported speech</span></td></tr>
+              <tr><td>Alan Moore declares himself a magician at forty, in 1993; worship of Glycon, a fraud known since antiquity</td><td>Wikipedia; Hermetic Library</td></tr>
+              <tr><td>Marsyas on the adept called insane (<em>"So the adept is called insane / For his frank failure to explain"</em>) and on names (<em>"Some fool thinks names are things"</em>)</td><td><strong>Primary source:</strong> <em>Aha!</em>, in <em>The Equinox</em> I (3), 1910, printed p. 30. The Marsyas myth — flayed by Apollo after the musical contest — in Britannica and Theoi</td></tr>
+              <tr><td>The poem Aha!, the subtitle, Marsyas's speech, the seven keys and the eighth</td><td><strong>Primary source:</strong> The Equinox, vol. I no. III, March 1910, pp. 9&ndash;54, under the title The Sevenfold Mystery of the Ineffable Love, as a discourse between Marsyas an Adept and Olympas his Pupil, written for the brethren of the A&there4;A&there4;. Free facsimile on the Internet Archive. Eight markers in sequence: First, Next, Third, Fourth, Fifth, Sixth, Next, Last</td></tr>
+              <tr><td>Ipsissimus is the highest grade of the A&there4;A&there4;, above Magus</td><td><strong>Primary source:</strong> Crowley, One Star in Sight — the scale ends at Ipsissimus (10&deg;=1), and no grade exists above it. <strong>Verified on 25/08/2026.</strong></td></tr>
+              <tr><td>Crowley takes the grade at Cefal&ugrave;, 1921</td><td>Thelemapedia; LAShTAL. <span class="warn">&#9888;&#65039; <strong>Not re-verified</strong> — the primary source (the diary) was not consulted</span></td></tr>
+              <tr><td>Tritones: melodic 83/91/49/80 and harmonic 72/79/42/115 across the four files; first at 1.5 s (C sharp &rarr; G)</td><td>public report; figures <strong>reproduced on 25/08/2026</strong> by running the detector itself over the same MIDI files. The melodic rule uses interval class 6, not 6 semitones — description corrected on that date</td></tr>
+              <tr><td>Conversation of 24/08/2026 assigning degrees</td><td>record of a dialogue mediated by artificial intelligence. <strong>The questions were formulated and sent by Claude, Anthropic's AI — not by Nando Valle.</strong> It constitutes neither a title nor a claim; it is archived as a document of its time</td></tr>
+              <tr><td>Reading L&eacute;vi and Crowley in 1993&ndash;94; the "I am a magician" joke in 1994; not knowing Alan Moore</td><td><strong>Nando Valle's personal account</strong> — no independent verification possible, and the text says so to the reader. L&eacute;vi's work is itself public, but its availability does not corroborate the date of the reading</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="apparatus-note">The legend, if one forms, will not be the work of this text. It will be the work of what stays unexplained &mdash; and of what other people decide to project onto it.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="faq reveal">
+        <h2>Questions this page provokes.</h2>
+        <details>
+          <summary>Did Nando Valle sell his soul to the devil?</summary>
+          <p>No. And the essay does not claim Paganini did either. Paganini denied the rumours about himself in his own lifetime, in writing. This page is about something else: how a historical reputation was built, which documents survived, and what happens when fact, interpretation and imagination are set side by side without pretending to be the same thing.</p>
+        </details>
+        <details>
+          <summary>Does the site claim a supernatural link between Paganini, Crowley and the music?</summary>
+          <p>No. The link built here is narrative, not historical. Paganini supplies the case; Crowley supplies another language for a few questions &mdash; will, experience and silence; the recording supplies the part that can actually be tested.</p>
+        </details>
+        <details>
+          <summary>Why does Aleister Crowley appear here?</summary>
+          <p>Because <em>Aha!</em>, published in 1910, holds three ideas that run through the project in an unusual way: the paradox of seven keys and eight stages; the image of the soul struck by the &ldquo;plectron of the Will&rdquo;; and the demand that doctrine be submitted to the test of experiment. None of them proves anything about Paganini or about this music. They frame the question.</p>
+        </details>
+        <details>
+          <summary>Does Insane Baroque Blaze really contain tritones?</summary>
+          <p>Yes &mdash; and the bare fact is musically less extraordinary than the word &ldquo;diabolus&rdquo; suggests. Four published guitar transcriptions return <strong>83, 91, 49 and 80</strong> melodic tritones, given per file and per engine; the first reported occurrence is at roughly <strong>0:01.5</strong>. As a control, the bass line by the same method returns 2 melodic and 0 harmonic. The report carries the musical context, the metric used and the corrections &mdash; and the point is that the method, the detector and the files were published so anyone can check.</p>
+        </details>
+        <details>
+          <summary>Was the video made with artificial intelligence?</summary>
+          <p>The original musical performance is Nando Valle on guitar. In the video, a digital clone reproduces that performance from the real recording with the help of artificial intelligence. The image is synthetic; the performance behind it is not.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="finale">
+      <div class="finale-inner reveal">
+        <div class="small">One last instruction</div>
+        <blockquote>&ldquo;Follow thyself, not me.&rdquo;</blockquote>
+        <p style="margin-top:10px;color:#645f59;font-size:10px;letter-spacing:.14em;text-transform:uppercase">Marsyas &middot; Aha! &middot; 1910</p>
+        <h2>Everything documented.<span>Nothing declared.</span></h2>
+        <p>Do not believe this page. Do not believe the myth. Open the sources. Hear the recording. Run the detector. Reach your own answer.</p>
+        <div class="share-row">
+          <button class="btn btn-gold" type="button" onclick="sharePage()">Share the mystery</button>
+          <button class="btn" type="button" onclick="copyLink()">Copy link</button>
+          <a class="btn" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer">Listen on Spotify &nearr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-name">Nando Valle</div><div class="footer-note">&copy; 2026 &middot; No soul was sold in the making of this site.<br>Lent, perhaps.</div></div>
+      <div class="footer-links">
+        <a href="https://nandovalle.github.io/en/" target="_blank" rel="noopener noreferrer">Official site</a>
+        <a href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer">Spotify</a>
+        <a href="https://www.instagram.com/nandovale7/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://nandovalle.github.io/en/o-tritono/" target="_blank" rel="noopener noreferrer">The report</a>
+        <a href="/" hreflang="pt-BR" lang="pt-BR">Portugu&ecirc;s</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-share"><button class="share-fab" type="button" onclick="sharePage()" aria-label="Share this page"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="18" cy="5" r="2.5" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="12" r="2.5" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="19" r="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M8.2 10.8l7.5-4.4M8.2 13.2l7.5 4.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div>
+  <div class="toast" id="toast">Link copied.</div>
+
+  <script>
+    // Decorative waveform — deterministic heights, no audio analysis claim.
+    const wave = document.getElementById('wave');
+    const heights = [18,28,40,24,55,70,44,30,76,92,52,36,82,110,66,44,95,120,78,56,100,126,84,62,116,136,92,72,122,104,84,60,110,90,74,48,92,76,58,36,74,60,48,28,52,42,34,20,44,30,22,14,34,26,18,10,26,18,12,8,20,14,10,7,16,12,9,6,12,9,7,5,10,8,6,4];
+    heights.forEach((h, i) => {
+      const bar = document.createElement('i');
+      bar.style.setProperty('--h', h + 'px');
+      bar.style.setProperty('--d', (-1 * (i % 13) * .07) + 's');
+      wave.appendChild(bar);
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const progressBar = document.getElementById('progressBar');
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      progressBar.style.width = Math.min(100, Math.max(0, pct)) + '%';
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+    }
+
+    async function copyLink() {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        showToast('Link copied.');
+      } catch (e) {
+        showToast('Copy the address from your browser.');
+      }
+    }
+
+    async function sharePage() {
+      const data = {
+        title: 'Everything documented. Nothing declared.',
+        text: 'Paganini. Crowley. A guitar. Second 1.5. Open the file and draw your own conclusion.',
+        url: window.location.href
+      };
+      if (navigator.share) {
+        try { await navigator.share(data); } catch (e) {}
+      } else {
+        await copyLink();
+      }
+    }
+  </script>
 </body>
 </html>
