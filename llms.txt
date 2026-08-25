@@ -34,6 +34,7 @@ video game "Baroque" (Sting) and its "Blaze" event.
   1993, 2026), FAQ
 
 - [O instrumento escondido](https://nandovalle.github.io/o-instrumento-escondido/): ensaio documentado sobre Niccolò Paganini — os nove sepultamentos entre 1840 e 1876, o preço físico do virtuosismo nos registros médicos, e o violão para o qual escreveu mais de cem peças sem quase nunca tocá-lo em público. Traz aparato de fontes afirmação por afirmação, com as ressalvas declaradas. PDF de 16 páginas disponível na própria página.
+  Versão em inglês, texto integral: https://nandovalle.github.io/en/o-instrumento-escondido/
 - [O laudo do trítono](https://nandovalle.github.io/o-tritono/): medição do intervalo
   proibido (diabolus in musica) na faixa Insane Baroque Blaze. Dois motores de transcrição
   independentes (Basic Pitch e AnthemScore) encontram 80 a 90 trítonos melódicos na guitarra;

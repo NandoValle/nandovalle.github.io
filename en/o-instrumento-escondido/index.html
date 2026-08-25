@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="gy8Xf_LLq4nGTQE5r8Tp82Fla7Bp9WLb8A3V6Rbjr0E" />
+<title>The Hidden Instrument &mdash; Paganini and the guitar | Nando Valle</title>
+<meta name="description" content="Paganini was buried nine times and spent 36 years without a final grave. The man Europe accused of a pact to play the violin wrote more than a hundred pieces for guitar &mdash; and almost never played it in public. A documented essay, with a source apparatus.">
+<link rel="canonical" href="https://nandovalle.github.io/en/o-instrumento-escondido/">
+<link rel="alternate" hreflang="pt-BR" href="https://nandovalle.github.io/o-instrumento-escondido/">
+<link rel="alternate" hreflang="en" href="https://nandovalle.github.io/en/o-instrumento-escondido/">
+<link rel="alternate" hreflang="x-default" href="https://nandovalle.github.io/o-instrumento-escondido/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Hidden Instrument &mdash; Paganini and the guitar">
+<meta property="og:description" content="They buried Paganini nine times. The man accused of a pact to play the violin had a second instrument and let almost nobody see it. Everything documented. Nothing declared.">
+<meta property="og:url" content="https://nandovalle.github.io/en/o-instrumento-escondido/">
+<meta property="og:image" content="https://nandovalle.github.io/img/insane-baroque-blaze-og-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Hidden Instrument",
+  "alternativeHeadline": "On Niccol\u00f2 Paganini, and on what is left over",
+  "author": { "@type": "Person", "name": "Nando Valle", "url": "https://nandovalle.github.io/en/" },
+  "datePublished": "2026-08-25",
+  "inLanguage": "en",
+  "url": "https://nandovalle.github.io/en/o-instrumento-escondido/",
+  "image": "https://nandovalle.github.io/img/insane-baroque-blaze-og-1200x630.jpg",
+  "isPartOf": { "@type": "WebSite", "url": "https://nandovalle.github.io/" },
+  "about": [
+    { "@type": "Person", "name": "Niccol\u00f2 Paganini" },
+    { "@type": "MusicComposition", "name": "Insane Baroque Blaze" }
+  ],
+  "description": "A documented essay on Paganini's nine burials, the physical price of his virtuosity in the medical record, and the guitar he wrote for and almost never played in public. Every historical claim is accompanied by a source in the apparatus."
+}
+</script>
+<style>
+:root{
+  --noite:#0B0907;        --noite-2:#12100C;
+  --salao:#1A1611;
+  --marfim:#EFE6D6;       --marfim-2:#C9BCA6;      --marfim-3:#8C806E;
+  --brasa:#C8912F;        --brasa-viva:#E0A83F;
+  --sangue:#C24638;
+  --fio:rgba(200,145,47,.26);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--noite); color:var(--marfim);
+  font-family:"EB Garamond",Constantia,Georgia,serif;
+  font-size:1.16rem; line-height:1.78;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  font-variant-ligatures:common-ligatures;
+}
+/* brasa no fundo: fica, nao rola */
+body::before{
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(60rem 40rem at 12% -8%, rgba(200,145,47,.13), transparent 62%),
+    radial-gradient(46rem 38rem at 92% 108%, rgba(194,70,56,.11), transparent 60%);
+}
+main,header,footer{position:relative; z-index:1}
+
+/* ============ PROGRESSO ============ */
+#barra{position:fixed;top:0;left:0;height:2px;width:0;z-index:9;
+  background:linear-gradient(90deg,var(--sangue),var(--brasa-viva));transition:width .1s linear}
+
+/* ============ HERO ============ */
+.hero{position:relative; min-height:100svh; display:flex; align-items:flex-end;
+  overflow:hidden; border-bottom:1px solid var(--fio)}
+.hero-img{position:absolute; inset:0; z-index:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;
+  filter:saturate(.92) contrast(1.04)}
+.hero-img::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(11,9,7,.60) 0%, rgba(11,9,7,.28) 32%, rgba(11,9,7,.90) 76%, var(--noite) 100%)}
+/* veu a esquerda: garante chao para o texto qualquer que seja o recorte da imagem */
+.hero-img::before{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(100deg, rgba(11,9,7,.86) 0%, rgba(11,9,7,.62) 26%, rgba(11,9,7,.18) 52%, transparent 70%)}
+.hero-txt{position:relative;z-index:1;width:100%;max-width:64rem;margin:0 auto;
+  padding:0 1.6rem 4.5rem}
+.kicker{font-family:"Cormorant Garamond",Georgia,serif;font-size:.72rem;letter-spacing:.38em;
+  text-transform:uppercase;color:var(--brasa);margin:0 0 1.4rem}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
+  font-size:clamp(3rem,11vw,6.6rem);line-height:.98;letter-spacing:-.02em;margin:0 0 1.6rem}
+h1 .em{font-style:italic;color:var(--brasa-viva)}
+.hero-sub{max-width:34rem;color:var(--marfim-2);font-size:1.14rem;line-height:1.7;margin:0}
+.hero-sub .mote{display:block;margin-top:1.1rem;color:var(--marfim);font-style:italic}
+.hero-pe{margin-top:2.6rem;display:flex;flex-wrap:wrap;gap:.9rem 1.4rem;align-items:center;
+  font-family:"Cormorant Garamond",Georgia,serif;font-size:.74rem;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--marfim-3)}
+.baixar{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;
+  border:1px solid var(--fio);color:var(--brasa);padding:.62rem 1.15rem;border-radius:2px;
+  letter-spacing:.2em;transition:.22s}
+.baixar:hover{background:rgba(200,145,47,.10);border-color:var(--brasa);color:var(--brasa-viva)}
+
+/* ============ CORPO ============ */
+main{max-width:64rem;margin:0 auto;padding:0 1.6rem}
+section{max-width:36rem;margin:0 auto;padding:4.6rem 0 0}
+section.sources{max-width:52rem}
+p{margin:0 0 1.15em}
+em{font-style:italic}
+strong{font-weight:600;color:#FBF4E8}
+a{color:var(--brasa)}
+
+.sec-head{margin:0 0 2.2rem}
+.sec-num{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:.7rem;
+  letter-spacing:.34em;text-transform:uppercase;color:var(--brasa);margin-bottom:.7rem}
+h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:clamp(1.9rem,5.2vw,2.7rem);line-height:1.1;margin:0;letter-spacing:-.008em}
+.sec-head::after{content:"";display:block;width:3.4rem;border-top:1px solid var(--fio);margin-top:1.4rem}
+
+.abertura{margin:0 0 2rem;padding:.2rem 0 .2rem 1.3rem;border-left:2px solid var(--fio);
+  color:var(--marfim);font-size:1.2rem;line-height:1.62}
+.lead{font-size:1.24rem;line-height:1.66;color:#F6EEE0}
+section:nth-of-type(1) .lead::first-letter{
+  float:left;font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
+  font-size:4.1rem;line-height:.82;padding:.32rem .5rem 0 0;color:var(--brasa-viva)}
+
+.beat{margin:2.7rem auto;max-width:30rem;text-align:center;font-style:italic;
+  font-size:1.24rem;line-height:1.55;color:var(--marfim-2)}
+.gancho{margin:3rem auto 0;max-width:30rem;text-align:center;
+  font-family:"Cormorant Garamond",Georgia,serif;font-size:1.42rem;line-height:1.42;
+  color:var(--sangue)}
+.pull{margin:2.4rem 0;padding-left:1.3rem;border-left:2px solid var(--sangue);
+  font-style:italic;color:var(--marfim)}
+
+.verse{margin:2.6rem auto;max-width:30rem;text-align:center;padding:1.7rem 1.2rem;
+  background:var(--noite-2);border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+.verse .en{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;
+  font-size:1.24rem;line-height:1.44;color:var(--marfim-2)}
+.verse .sep{width:2.2rem;border-top:1px solid var(--fio);margin:1rem auto}
+.verse .pt{color:var(--sangue);font-size:1.08rem;line-height:1.5}
+.ref{display:block;margin-top:1rem;font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--marfim-3)}
+
+.keys{margin:1.8rem 0 1.8rem 0;padding-left:2.2rem;list-style:decimal}
+.keys li{margin-bottom:.55rem;color:var(--marfim-2);line-height:1.6}
+.keys li::marker{color:var(--brasa);font-size:.86em}
+
+.close{margin:4rem auto 0;text-align:center}
+.close .big{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
+  font-size:clamp(1.6rem,5vw,2.15rem);line-height:1.34;color:var(--marfim)}
+.close .cta{margin-top:2rem;font-family:"Cormorant Garamond",Georgia,serif;font-size:.72rem;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--brasa)}
+
+/* ============ APARATO ============ */
+.sources{margin-top:6rem;padding-top:4rem;border-top:1px solid var(--fio)}
+.sources .intro{font-size:1.04rem;color:var(--marfim-2)}
+.enderecos{margin:2.2rem 0;padding:1.6rem 1.5rem;background:var(--noite-2);
+  border:1px solid var(--fio);border-radius:2px}
+.enderecos .lbl{font-family:"Cormorant Garamond",Georgia,serif;font-size:.68rem;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--brasa);margin-bottom:1.1rem}
+.enderecos p{font-size:.98rem;line-height:1.6;color:var(--marfim-2)}
+.url{word-break:break-all;font-size:.92em}
+.tabela-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:2rem 0}
+table{width:100%;border-collapse:collapse;font-size:.94rem;min-width:34rem}
+th{font-family:"Cormorant Garamond",Georgia,serif;font-size:.68rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--brasa);text-align:left;padding:0 1rem .8rem 0;
+  border-bottom:1px solid var(--fio);font-weight:500}
+td{padding:.9rem 1rem .9rem 0;border-bottom:1px solid rgba(200,145,47,.12);
+  vertical-align:top;color:var(--marfim-2);line-height:1.55}
+td:first-child{color:var(--marfim);width:38%}
+.fecho-aparato{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--fio);
+  font-size:.98rem;color:var(--marfim-3)}
+
+/* ============ COLOFAO ============ */
+.colophon{max-width:36rem;margin:5rem auto 0;padding:3.4rem 1.6rem 4.6rem;text-align:center;
+  border-top:1px solid var(--fio)}
+.colophon .mark{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.5rem;
+  letter-spacing:.12em;color:var(--marfim)}
+.colophon .line{width:2.6rem;border-top:1px solid var(--fio);margin:1.2rem auto}
+.colophon p{font-size:1rem;color:var(--marfim-2)}
+.colophon .small{margin-top:1.6rem;font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--marfim-3);line-height:2}
+.voltar{display:block;text-align:center;padding:2.2rem 0 3rem;
+  font-family:"Cormorant Garamond",Georgia,serif;font-size:.72rem;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--marfim-3);text-decoration:none}
+.voltar:hover{color:var(--brasa)}
+
+@media (max-width:640px){
+  body{font-size:1.09rem;line-height:1.74}
+  section{padding-top:3.4rem}
+  .hero-txt{padding-bottom:3.2rem}
+  td:first-child{width:auto}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#barra{transition:none}}
+@media print{
+  body::before,#barra,.baixar,.voltar{display:none}
+  body{background:#fff;color:#17140F}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+
+<header class="hero">
+  <div class="hero-img">
+    <img src="/img/nando-blaze-fogo.jpg" width="1023" height="1537" fetchpriority="high"
+         alt="Nando Valle playing guitar in a baroque hall on fire">
+  </div>
+  <div class="hero-txt">
+    <p class="kicker">On Niccol&ograve; Paganini, and on what is left over</p>
+    <h1>The hidden<br><span class="em">instrument</span></h1>
+    <p class="hero-sub">
+      Paganini was buried nine times. Nobody knows why.
+      He played the violin like no one else. The other instrument he kept hidden.
+      <span class="mote">Everything documented. Nothing declared.</span>
+    </p>
+    <div class="hero-pe">
+      <a class="baixar" href="/o-instrumento-escondido/Nando-Valle-O-instrumento-escondido.pdf">PDF &middot; 16 pages &middot; in Portuguese</a>
+      <span>Nando Valle &middot; MMXXVI</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter I</span><h2>The anomaly</h2></div>
+  <p class="abertura">They buried Paganini nine times.<br>Thirty-six years without a final grave.<br>The bishop refused the ground.<br>All of Europe found it unremarkable.</p>
+  <p class="lead">This is not legend. It is record. Between 1840 and 1876, the violinist's body was buried and dug up nine times.</p>
+  <p>He died in Nice on 27 May 1840. The bishop refused consecrated ground. They embalmed the man. He spent more than a year in the cellar of the house where he had died. Then he ended up in an olive oil factory. He crossed thirty-six years changing address. Only in 1876 did a pope authorise the grave.</p>
+  <p class="gancho">Thirty-six years is not paperwork.<br>It begins with a refusal he made himself.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter II</span><h2>The refusal</h2></div>
+  <p>In May 1840, knowing him to be ill, the bishop of Nice sent a priest to give him the last rites. <strong>Paganini refused.</strong> He thought it was too early — that he still had time.</p>
+  <p>A week later he was dead of an internal haemorrhage, with no voice left to call anyone. Father Caffarelli reported to the bishop that the violinist intended to refuse the sacraments, though, mute, he probably could no longer say anything at all. On the strength of that report the bishop denied him consecrated ground.</p>
+  <p class="beat">From that point on,<br>whoever decided about his body was somebody else.</p>
+  <p>Paganini died in debt to his creditors. He had pawned his own violin more than once to cover gambling losses. In 1837 he lent his name to a casino in Paris; the business collapsed within months. He had to sell most of his instruments. A partner was suing him for thirty thousand francs. The lawsuits occupied him until the day he died.</p>
+  <p>A priest reporting a refusal explains the bishop's decision. It does not explain why nobody, in all of Europe, found the thing strange enough to protest.</p>
+  <p class="gancho">What the public thought he was.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter III</span><h2>The name they gave him</h2></div>
+  <p class="lead">They thought he was the devil. The belief is the fact.</p>
+  <p>At a concert in Vienna, a member of the audience publicly declared he had seen the Devil standing beside him, guiding his bow. Others swore they had seen hooves under the tailcoat, where the feet should be. This was not two or three people: it was the common sense of a European audience faced with a technique nobody could explain.</p>
+  <p>With a reputation like that, a bishop who refuses a grave meets no resistance. He confirms what everyone already believed.</p>
+  <p class="gancho">But why did the technique look impossible?<br>That part is in the medical record.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter IV</span><h2>The body</h2></div>
+  <p>His physician wrote, in 1831, that Paganini's hand was no larger than anyone else's — but that every part of it was so elastic that it doubled its own reach. He twisted the first phalanges sideways, at a right angle, without effort. Marfan syndrome and Ehlers-Danlos are the modern suspicions, conditions that give the joints hypermobility.</p>
+  <p>At the time there was no name for that. There was a body doing what no other body did. The public used the word it had.</p>
+  <p>And the same body charged for it. From 1823 on, Paganini was treated with mercury in enormous doses, combined with opium. He lost every tooth. The jaw rotted from the inside. By July 1839 he had not a single tooth in his mouth and could barely eat — less than a year from the bed in Nice.</p>
+  <p>The metal is still there. Modern analysis of his hair, by mass spectrometry, found mercury in the strands, one hundred and eighty years later.</p>
+  <p class="beat">The hand explained the technique.<br>The mercury explained the ruin.<br>Neither of them had a name in 1840.</p>
+  <p class="gancho">Which leaves what Paganini himself<br>did with the name they gave him.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter V</span><h2>The denial</h2></div>
+  <p class="lead">He denied it. In writing. Twice.</p>
+  <p>In 1828 he published, in a Prague newspaper, a letter from his own mother, full of God, as documentary proof against the rumour that he was the Devil's son. In 1831, in the <em>Revue musicale</em>, he published another with F&eacute;tis's help, about the Vienna episode, calling the whole thing ridiculous.</p>
+  <p>And he went on arriving in black. Pale, thin, hair dishevelled, long coat, dark carriage, and never a word more than strictly necessary.</p>
+  <p class="beat">He denied it in the record that leaves a document.<br>He confirmed it in the record that leaves an impression.</p>
+  <p>Seventy-nine years after that letter, on the other side of Europe, someone wrote the rule down in prose. Aleister Crowley, summarising a poem of his own from 1910, has the disciple ask whether the world would not recognise a saint immediately. The master answers:</p>
+  <div class="verse">
+    <div class="en">Only the imperfect Saints reveal themselves as such.</div>
+    <span class="ref">Crowley &middot; The Argumentation &middot; 1910</span>
+  </div>
+  <p>Paganini died thirty-five years before Crowley was born. Neither ever read the other.</p>
+  <p class="gancho">If he kept the image up in public,<br>what did he do when nobody was looking?</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter VI</span><h2>The hidden instrument</h2></div>
+  <p class="lead">He played the guitar.</p>
+  <p>Not the electric guitar — that would only appear in the 1930s. The six-string guitar, with a body smaller than today's, the instrument all of Europe played in his day.</p>
+  <p>Between 1801 and 1804, Paganini dropped off the map and spent the time studying it. This was no hobby: forty-three <em>Ghiribizzi</em>, thirty-seven sonatas and two dozen more pieces, for solo guitar alone. Almost all of his chamber music was written with the guitar inside it. It is in the catalogue; it is not obscure.</p>
+  <p>His friend and biographer, Professor Schottky, who watched him play up close, wrote that Paganini played the guitar extraordinarily well, with difficult chords and magnificent arpeggios, and a fingering entirely his own.</p>
+  <p>And he almost never played the guitar in public. He kept it for the closed circle.</p>
+  <p>The <em>Ghiribizzi</em> are not concert pieces. They are scribbles, the work of someone alone — the closest surviving record of how that man sounded when he had nobody to impress.</p>
+  <p>For anyone who thinks this is a stretch, the object exists. In 1838, on his last passage through Paris, the luthier Vuillaume lent him a guitar by Grobert, of Mirecourt. Paganini signed his name on the soundboard. When he died, Vuillaume gave the instrument to Hector Berlioz, who signed the other side. <a href="https://collectionsdumusee.philharmoniedeparis.fr/0161650-guitare-nicolas-grobert.aspx">The guitar is now at the Mus&eacute;e de la Musique in Paris</a>, with both signatures.</p>
+  <p class="beat">The man Europe accused of a pact to play the violin<br>had a second instrument. Almost nobody saw it.</p>
+  <p>The violin he took care of in writing. In 1837 — the same year the casino ruined him — he left it by will to the City of Genoa, to be preserved in perpetuity. Il Cannone was delivered in 1851 and is still there, at the Palazzo Doria-Tursi. They take it out of the case once a month so that someone can play it, just so the instrument does not fall silent.</p>
+  <p class="beat">He was buried nine times.<br>The violin never stopped playing.</p>
+  <p class="gancho">All of this has been in public archives for decades.<br>Somebody had to put it side by side.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter VII</span><h2>Who went and read</h2></div>
+  <p>Nando Valle is a lawyer and a guitarist. He read about the nine burials, found the number strange, and did what one does with a strange case file: he went after the documents. The six chapters above are what he found.</p>
+  <p>There is a reason he recognised the subject. In 1993 and 1994, between sixteen and eighteen years old, he read several books by &Eacute;liphas L&eacute;vi and Aleister Crowley. He started with <em>Dogma and Ritual of High Magic</em>. In 1994 he reached the <em>Book of the Law</em>. He says that in that year he used to joke with whoever was nearby that he was a magician.</p>
+  <p>This cannot be verified by third parties. He does not pretend that it can. The L&eacute;vi text is open on the Internet Archive, for anyone who wants to read what he read.</p>
+  <p>Across the Atlantic, in 1993, Alan Moore turned forty and announced that he had decided to become a magician. Moore took up the worship of Glycon, a serpent god that antiquity itself exposed as a wooden puppet. He knows it is a fraud, and worships it anyway: if the gods live in the imagination, proving the fraud does not undo the god — it only reveals the address.</p>
+  <p>Valle says he had no idea who Alan Moore was.</p>
+  <p>Thirty-two years went by. What stayed was not a bibliography. Two things stayed.</p>
+  <p>The first. One of the texts spoke of the great founders of religions — Buddha, Muhammad, Jesus, Moses — and of what they had in common: they all disappeared. Nothing is known of Christ between twelve and thirty; Muhammad shut himself in a cave; Buddha left the palace; Moses fled to Midian. And they all came back the same — alone, poor — preaching a new law. Then the book traded religion for breathing. The thesis was short: it was not a miracle, it was technique — and technique can be learned.</p>
+  <p class="gancho">The second thing that stayed<br>was a doubt that lasted thirty-two years.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter VIII</span><h2>The keys</h2></div>
+  <p>He remembered a passage about keys. And he remembered seven or eight, never able to settle which.</p>
+  <p>He went to check. In March 1910, Crowley published in <em>The Equinox</em> a poem called <em>Aha!</em>. The title page announces it as "the sevenfold mystery of the ineffable love", and promises that there, in the form of a dialogue between <em>Marsyas an Adept</em> and <em>Olympas his Pupil</em>, the whole secret of the path of initiation is set out from beginning to end.</p>
+  <p class="beat">Sevenfold. Seven.<br>And he put eight steps inside it.</p>
+  <p>It was not carelessness. The opening couplet of the passage announces both counts at once:</p>
+  <div class="verse">
+    <div class="en">There are seven keys to the great gate,<br>Being eight in one and one in eight.</div>
+    <span class="ref">Aha! &middot; The Equinox I (3) &middot; 1910</span>
+  </div>
+  <p>There are seven. And there are eight. The doubt he carried for thirty-two years was not a failure of memory: it was written into the second line of the verse.</p>
+  <p>The poem numbers the first six keys:</p>
+  <ol class="keys">
+    <li>still the body until it is rigid</li>
+    <li>slow the rhythm of the breath</li>
+    <li>keep the life pure and calm</li>
+    <li>bind the will to live to a single love</li>
+    <li>free the thought from the senses</li>
+    <li>burn up your own being in one word</li>
+  </ol>
+  <p>The seventh it does not number — it marks by position:</p>
+  <div class="verse">
+    <div class="en">Slaying even God, should He distract<br>Thy attention from the chosen act!</div>
+  </div>
+  <p>And there is an eighth, marked with a single word, at the end:</p>
+  <div class="verse">
+    <div class="en">Last, all these things in one o'erpowered,<br>Time that the midnight blossom flowered!</div>
+  </div>
+  <p class="beat">The eighth is not a new key.<br>It is the seven at once.</p>
+  <p>Read together, the eight describe a single thing: the annihilation of everything that is not the chosen act. It is not doctrine. It is a description of what happens to someone who performs something difficult and leaves nothing of themselves outside it.</p>
+  <p>It is the state a man enters in order to play the way Paganini played. The 1910 description is still precise: when the performance demands everything, the rest disappears.</p>
+  <p class="gancho">Nobody knows what his contemporaries saw<br>when he entered that state.<br>What is known is the name they gave it.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter IX</span><h2>The measurement</h2></div>
+  <p>In August 2026, Valle recorded <em>Insane Baroque Blaze</em> — a baroque piece on the guitar. The track is publicly available. Weeks later he went to measure his own recording, out of technical curiosity.</p>
+  <p>He was certain of one thing: that there was no tritone in it at all. The tritone is the interval the Middle Ages forbade and nicknamed <em>diabolus in musica</em>.</p>
+  <p><strong>He was wrong, and wrong about the basics.</strong> The tritone lives inside every dominant seventh chord. Whoever writes baroque writes tritones, knowingly or not. The count was never going to be zero.</p>
+  <p>Two independent transcription engines, which do not talk to each other, found the same thing: <strong>between eighty and ninety tritones</strong> in the guitar line. The first at one and a half seconds, right on the opening leap. He had put none of them there consciously, and he published the report with the numbers, the method and the caveats.</p>
+  <p>On 25 August 2026 somebody tried to redo the count from the published description. They could not. They reimplemented the rule in nine variants, and none produced the same numbers — the divergence ran from four to nineteen tritones, depending on the file.</p>
+  <p>The defect was not in the numbers. It was in their description.</p>
+  <p>The report said <em>an interval of 6 semitones</em> for the melodic line. The program that produced the report does not count six semitones: it counts interval class 6 — the tritone at any octave — exactly as the report already said for the harmonic line. Change the phrase and everything lines up. Note counts, melodic tritones, harmonic tritones, first occurrence. All four files, exact.</p>
+  <p class="beat">One wrong word in the description of the method.<br>The numbers were right all along.</p>
+  <p>The description has been corrected. The report is still public, and now reproducible from what is written in it.</p>
+  <p class="gancho">He was wrong about the zero, and the method about itself.<br>Both corrections are on this page.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">Chapter X</span><h2>The distance</h2></div>
+  <p class="lead">Paganini never declared any pact about himself. He denied it in writing, twice. The ones who declared were the audience.</p>
+  <p>The word "devil" did not come from him. It came from people who had no other word for what they were seeing.</p>
+  <p>On 24 August 2026, an artificial intelligence put questions to another instance and recorded answers assigning Valle degrees in an initiatic hierarchy. The record exists. It is in the apparatus. It is not a title. It is not a claim. It is a record of a conversation — exactly as Father Caffarelli's letter is a record of a conversation.</p>
+  <p>Paganini was named by those who heard him. Valle did not ask for the name. The name came from a machine. That does not create a legend. At most it adds one more trace to the archive.</p>
+  <p class="beat">Nothing had to be invented.<br>Nothing has to be declared either.</p>
+  <p>What is left, after all the documents, is the same thing that was left of Paganini: a technique some could not explain, and a second instrument almost nobody saw. The rest is projection.</p>
+  <div class="close">
+    <div class="big">The archive is open.<br>Measure it. Deny it. Name it.<br>Whatever is left after that<br>will not be the work of this text.</div>
+    <div class="cta">Insane Baroque Blaze &middot; second 1.5</div>
+  </div>
+</section>
+
+<section class="sources">
+  <div class="sec-head"><span class="sec-num">Apparatus</span><h2>What can be checked</h2></div>
+
+  <p class="intro">This piece does not ask to be believed. Every historical claim has been verified against a source, and the sources are named. Where there is belief instead of fact, the text says it is belief. Where there is Nando Valle's own account of his own life, the text says it is his account — and that there is no way to verify it independently.</p>
+
+  <div class="enderecos">
+    <div class="lbl">Four addresses, to start where it is quickest</div>
+    <p><strong>The signed guitar.</strong> Object record in the collection of the Mus&eacute;e de la Musique (item <strong>E.375</strong>) — <a class="url" href="https://collectionsdumusee.philharmoniedeparis.fr/0161650-guitare-nicolas-grobert.aspx" target="_blank" rel="noopener">collectionsdumusee.philharmoniedeparis.fr</a></p>
+    <p><strong>The poem, in 1910 facsimile.</strong> <em>The Equinox</em> vol. I no. III in full, free and without registration — <a class="url" href="https://archive.org/details/oto-equinox-vol-1-no-01-10" target="_blank" rel="noopener">archive.org/details/oto-equinox-vol-1-no-01-10</a>, file <em>Equinox Vol 1 No 03</em>. <em>Aha!</em> begins on page 9.</p>
+    <p><strong>The L&eacute;vi.</strong> Full text, in Spanish, free — <a class="url" href="https://archive.org/details/EliphasLeviDogmaYRitualDeLaAltaMagia" target="_blank" rel="noopener">archive.org/details/EliphasLeviDogmaYRitualDeLaAltaMagia</a></p>
+    <p><strong>The tritone report and the track.</strong> Numbers, method, caveats and files — <a class="url" href="/en/o-tritono/">nandovalle.github.io/en/o-tritono/</a></p>
+  </div>
+
+  <div class="tabela-wrap"><table>
+    <thead><tr><th>Claim</th><th>Where to check</th></tr></thead>
+    <tbody>
+      <tr><td>Nine burials and exhumations between 1840 and 1876</td><td>The Strad, November 1932 archive, and later biographies</td></tr>
+      <tr><td>Bishop of Nice refuses consecrated ground; body embalmed; 36 years without a final grave; papal authorisation in 1876</td><td>Encyclopedia.com; La Br&uacute;jula Verde</td></tr>
+      <tr><td>Refusal of the last rites in May 1840; Father Caffarelli's report; death on 27/05/1840</td><td>Interlude.hk; Classicals.de</td></tr>
+      <tr><td>Casino Paganini (Paris, 1837), bankruptcy, sale of the instruments, a thirty-thousand-franc claim, litigation until his death</td><td>The Strad, "House of cards: Paganini's doomed casino venture"; Britannica</td></tr>
+      <tr><td>Devil seen guiding the bow, in Vienna; hooves (a belief of the period — the fact is the belief)</td><td>ClassicFM; Today I Found Out; and Paganini's own letter in the Revue musicale, 1831</td></tr>
+      <tr><td>Hypermobile hand (1831); modern Marfan and Ehlers-Danlos hypotheses</td><td>Marfan Trust; Musicians' Health Collective. &#9888;&#65039; In the text the description is paraphrased, not quoted literally</td></tr>
+      <tr><td>Mercury from 1823, with opium; loss of all teeth; osteomyelitis of the jaw; mercury in the hair by mass spectrometry</td><td>Hektoen International; PubMed 22448466 and 3054102</td></tr>
+      <tr><td>Mother's letter published in a Prague newspaper, 1828; letter in the Revue musicale with F&eacute;tis, 1831</td><td>Serenade Magazine; ClassicFM</td></tr>
+      <tr><td>"Only the imperfect Saints reveal themselves as such"</td><td>The Argumentation, the prose summary Crowley wrote of Aha! — The Equinox I (3), 1910, p. 12</td></tr>
+      <tr><td>Guitar output: 43 Ghiribizzi, 37 sonatas and 24 others; the 1801&ndash;1804 retreat; almost never played in public</td><td>A Dictionary of Music and Musicians; Brilliant Classics; Siccas Guitars. &#9888;&#65039; Some sources say 140 pieces; the text uses the decomposable count: 43 + 37 + 24 = 104</td></tr>
+      <tr><td>Schottky on Paganini's guitar playing</td><td>quoted by Siccas Guitars and Strings By Mail. &#9888;&#65039; Read in English translation, not in the German original — hence reported speech, without quotation marks</td></tr>
+      <tr><td>Grobert guitar of Mirecourt, lent by Vuillaume in 1838, signed by Paganini and by Berlioz</td><td>Mus&eacute;e de la Musique, item E.375 — public record, checked on 25/08/2026</td></tr>
+      <tr><td>1837 will leaving Il Cannone to Genoa; delivery in 1851; Palazzo Doria-Tursi; played once a month</td><td>Musei di Genova; Premio Paganini. &#9888;&#65039; The wording of the will comes from museum sources, not from the original document — hence reported speech</td></tr>
+      <tr><td>Alan Moore declares himself a magician at forty, in 1993; worship of Glycon, a fraud known since antiquity</td><td>Wikipedia; Hermetic Library</td></tr>
+      <tr><td>The poem Aha!, the subtitle, Marsyas's speech, the seven keys and the eighth</td><td><strong>Primary source:</strong> The Equinox, vol. I no. III, March 1910, pp. 9&ndash;54, under the title The Sevenfold Mystery of the Ineffable Love, as a discourse between Marsyas an Adept and Olympas his Pupil, written for the brethren of the A&there4;A&there4;. Free facsimile on the Internet Archive. Eight markers in sequence: First, Next, Third, Fourth, Fifth, Sixth, Next, Last</td></tr>
+      <tr><td>Ipsissimus is the highest grade of the A&there4;A&there4;, above Magus</td><td><strong>Primary source:</strong> Crowley, One Star in Sight — the scale ends at Ipsissimus (10&deg;=1), and no grade exists above it. <strong>Verified on 25/08/2026.</strong></td></tr>
+      <tr><td>Crowley takes the grade at Cefal&ugrave;, 1921</td><td>Thelemapedia; LAShTAL. &#9888;&#65039; <strong>Not re-verified</strong> — the primary source (the diary) was not consulted</td></tr>
+      <tr><td>Tritones: melodic 83/91/49/80 and harmonic 72/79/42/115 across the four files; first at 1.5 s (C sharp &rarr; G)</td><td>public report; figures <strong>reproduced on 25/08/2026</strong> by running the detector itself over the same MIDI files. The melodic rule uses interval class 6, not 6 semitones — description corrected on that date</td></tr>
+      <tr><td>Conversation of 24/08/2026 assigning degrees</td><td>record of a dialogue mediated by artificial intelligence. <strong>The questions were formulated and sent by Claude, Anthropic's AI — not by Nando Valle.</strong> It constitutes neither a title nor a claim; it is archived as a document of its time</td></tr>
+      <tr><td>Reading L&eacute;vi and Crowley in 1993&ndash;94; the "I am a magician" joke in 1994; not knowing Alan Moore</td><td><strong>Nando Valle's personal account</strong> — no independent verification possible, and the text says so to the reader. L&eacute;vi's work is itself public, but its availability does not corroborate the date of the reading</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="fecho-aparato">
+    <p>The legend, if one forms, will not be the work of this text. It will be the work of whatever remains unexplained, and of what other people decide to project onto it.</p>
+  </div>
+</section>
+
+</main>
+
+<div class="colophon">
+  <div class="mark">Nando Valle</div>
+  <div class="line"></div>
+  <p><em>Insane Baroque Blaze</em> &mdash; the tritone sits at one and a half seconds, on the opening leap.</p>
+  <p>The full report, with numbers, method and declared caveats, is published.</p>
+  <div class="small">
+    nandovalle.github.io<br>
+    August MMXXVI
+  </div>
+</div>
+
+<a class="voltar" href="/en/">&larr; Nando Valle</a>
+
+<script>
+(function(){
+  var b=document.getElementById('barra');
+  function u(){var h=document.documentElement;
+    var t=(h.scrollTop||document.body.scrollTop);
+    var m=(h.scrollHeight-h.clientHeight);
+    b.style.width=(m>0?(t/m*100):0)+'%';}
+  addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();
+})();
+</script>
+
+</body>
+</html>
