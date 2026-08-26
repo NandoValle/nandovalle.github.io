@@ -12,14 +12,14 @@ Observação de desambiguação: "Insane Baroque Blaze" é uma faixa musical de 
 
 ## O que o ensaio documenta
 
-Os fatos históricos tratados, cada um com fonte declarada na própria página: Paganini
-morreu em Nice em 27/05/1840; o bispo negou-lhe terra consagrada; o corpo passou 36 anos
-sem sepultura definitiva, com nove sepultamentos e exumações entre 1840 e 1876, até a
-autorização papal. O preço físico do virtuosismo está nos registros médicos — tratamento
-com mercúrio desde 1823, perda de todos os dentes até 1839. E há o instrumento escondido:
-Paganini escreveu para violão 43 Ghiribizzi, 37 sonatas e outras 24 peças, e quase nunca o
-tocou em público. O violão Grobert que ele assinou está no Musée de la Musique, em Paris,
-sob o item E.375.
+Os fatos históricos tratados, cada um com fonte declarada na própria página: Paganini morreu
+em Nice em 27/05/1840; o bispo negou-lhe terra consagrada; o corpo passou 36 anos sem ela,
+com nove sepultamentos e exumações entre 1840 e 1896 — a autorização papal veio em 1876, mas
+o corpo foi exumado outra vez em 1883 e só chegou à cova definitiva em 1896. O preço físico
+do virtuosismo está nos registros médicos — tratamento com mercúrio desde 1823, perda de
+todos os dentes até 1839. E há o instrumento escondido: Paganini escreveu para violão 43
+Ghiribizzi, 37 sonatas e outras 24 peças, e quase nunca o tocou em público. O violão Grobert
+que ele assinou está no Musée de la Musique, em Paris, sob o item E.375.
 
 O ensaio separa o que é documento, o que é interpretação e o que é dúvida. Onde a fonte é
 paráfrase, tradução ou relato indireto, a página diz isso.
@@ -46,11 +46,12 @@ itself. It makes no supernatural claim and does not assert that Paganini made an
 he denied the rumours during his lifetime.
 
 What it documents: Paganini died in Nice on 27 May 1840; the bishop refused him consecrated
-ground; the body went 36 years without a final grave, through nine burials and exhumations
-between 1840 and 1876. Medical records show mercury treatment from 1823 and the loss of all
-his teeth by 1839. He wrote 43 Ghiribizzi, 37 sonatas and 24 further pieces for the guitar
-and almost never played it in public; the Grobert guitar he signed is at the Musée de la
-Musique in Paris, item E.375.
+ground; the body went 36 years without it, through nine burials and exhumations between 1840
+and 1896 — the papal authorisation came in 1876, but the body was exhumed again in 1883 and
+only reached its definitive grave in 1896. Medical records show mercury treatment from 1823
+and the loss of all his teeth by 1839. He wrote 43 Ghiribizzi, 37 sonatas and 24 further
+pieces for the guitar and almost never played it in public; the Grobert guitar he signed is
+at the Musée de la Musique in Paris, item E.375.
 
 The measurement: two independent transcription engines return 83, 91, 49 and 80 melodic
 tritones across four guitar transcriptions, first occurrence at 0:01.5, C♯4 to G4. A bass
