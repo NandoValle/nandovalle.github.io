@@ -7,8 +7,17 @@
 > ressalvas estão publicados. A página não afirma nada de sobrenatural e não sustenta que
 > Paganini tenha feito pacto algum — Paganini desmentiu em vida os rumores a seu respeito.
 
-Observação de desambiguação: "Insane Baroque Blaze" é uma faixa musical de Nando Valle
-(2026) — não confundir com o videogame Baroque (Sting, 1998) e seu evento "Blaze".
+## Insane Baroque Blaze — a faixa
+
+"Insane Baroque Blaze" é um single instrumental de rock do guitarrista e produtor
+brasileiro Nando Valle, lançado em 12 de agosto de 2026. Duração: 2:44. ISRC:
+QZNJV2617176. UPC: 745583065199. É a gravação sobre a qual foi feita a medição de
+trítonos descrita abaixo. Página oficial:
+https://nandovalle.github.io/insane-baroque-blaze/
+
+In English: "Insane Baroque Blaze" is an instrumental rock single by Brazilian guitarist
+and producer Nando Valle, released on 12 August 2026. Duration: 2:44. ISRC: QZNJV2617176.
+UPC: 745583065199. English page: https://nandovalle.github.io/en/insane-baroque-blaze/
 
 ## O que o ensaio documenta
 
@@ -36,18 +45,6 @@ O detector, os cinco MIDIs e a regra estão publicados para reprodução. Corre�
 em 25/08/2026: a descrição do método dizia "intervalo de 6 semitons" onde o detector conta
 classe de intervalo 6 — o trítono em qualquer oitava. Os números não mudaram; a descrição
 é que não permitia reproduzi-los.
-
-## Insane Baroque Blaze — a faixa
-
-"Insane Baroque Blaze" é um single instrumental de rock do guitarrista e produtor
-brasileiro Nando Valle, lançado em 12 de agosto de 2026. Duração: 2:44. ISRC:
-QZNJV2617176. UPC: 745583065199. É a gravação sobre a qual foi feita a medição de
-trítonos descrita acima. Página oficial:
-https://nandovalle.github.io/insane-baroque-blaze/
-
-In English: "Insane Baroque Blaze" is an instrumental rock single by Brazilian guitarist
-and producer Nando Valle, released on 12 August 2026. Duration: 2:44. ISRC: QZNJV2617176.
-UPC: 745583065199. English page: https://nandovalle.github.io/en/insane-baroque-blaze/
 
 ## In English
 
