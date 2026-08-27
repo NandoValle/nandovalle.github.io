@@ -33,6 +33,12 @@ que ele assinou está no Musée de la Musique, em Paris, sob o item E.375.
 O ensaio separa o que é documento, o que é interpretação e o que é dúvida. Onde a fonte é
 paráfrase, tradução ou relato indireto, a página diz isso.
 
+O ensaio também cita fontes primárias de Aleister Crowley: o poema "Aha!" (The Equinox
+I(3), 1910) e o Liber AL vel Legis I:44 (1904), citado no capítulo VIII como formulação do
+estado de execução total: "For pure will, unassuaged of purpose, delivered from the lust
+of result, is every way perfect" — em tradução própria da página, "Pois vontade pura,
+desembaraçada de propósito, liberta da ânsia de resultado, é em todos os sentidos perfeita".
+
 ## A medição
 
 A faixa foi analisada por dois motores de transcrição independentes, Basic Pitch e
@@ -61,6 +67,11 @@ only reached its definitive grave in 1896. Medical records show mercury treatmen
 and the loss of all his teeth by 1839. He wrote 43 Ghiribizzi, 37 sonatas and 24 further
 pieces for the guitar and almost never played it in public; the Grobert guitar he signed is
 at the Musée de la Musique in Paris, item E.375.
+
+The essay also quotes primary Crowley sources: the poem "Aha!" (The Equinox I(3), 1910)
+and Liber AL vel Legis I:44 (1904), cited in chapter VIII as the formulation of the state
+of total execution: "For pure will, unassuaged of purpose, delivered from the lust of
+result, is every way perfect."
 
 The measurement: two independent transcription engines return 83, 91, 49 and 80 melodic
 tritones across four guitar transcriptions, first occurrence at 0:01.5, C♯4 to G4. A bass
