@@ -525,6 +525,11 @@
     .share-row { display:flex; gap:9px; justify-content:center; flex-wrap:wrap; margin-top:28px; }
 
     footer { padding:38px 20px 48px; border-top:1px solid var(--line-soft); }
+    .cite-box { width:min(var(--max),100%); margin:0 auto 30px; padding:18px 20px; border:1px solid var(--line-soft); border-radius:16px; background:rgba(255,255,255,.012); display:flex; flex-wrap:wrap; align-items:center; gap:14px 22px; }
+    .cite-box .cite-label { color:#8b6a3a; font-size:9px; letter-spacing:.2em; text-transform:uppercase; white-space:nowrap; }
+    .cite-box p { margin:0; flex:1 1 320px; color:#93887c; font-size:12px; line-height:1.6; word-break:break-word; }
+    .cite-box p em { color:#c3b49c; }
+    .cite-box .btn { padding:10px 14px; font-size:11px; }
     .footer-inner { width:min(var(--max),100%); margin:auto; display:flex; align-items:flex-end; justify-content:space-between; gap:30px; }
     .footer-name { color:#d5c7b4; font:500 26px/1 var(--serif); }
     .footer-note { margin-top:7px; color:#655f59; font-size:10px; line-height:1.5; }
@@ -543,11 +548,11 @@
     .toast.show { opacity:1; transform:translate(-50%,0); }
 
     @media (max-width: 980px) {
-      .nav-link { display:none; }
+      .nav-link { font-size:11px; padding:9px 9px; }
       .hero-content { grid-template-columns:1fr; gap:28px; padding-bottom:90px; }
       .hero-card { max-width:470px; }
       .essay-grid { grid-template-columns:90px minmax(0,1fr); }
-      .side-note { display:none; }
+      .side-note { grid-column:2; max-width:640px; margin-top:6px; padding:14px 16px 14px 18px; border-left:1px solid rgba(212,173,98,.45); background:linear-gradient(90deg,rgba(212,173,98,.035),transparent 72%); }
       .roman { font-size:54px; }
       .keys { grid-template-columns:repeat(2,1fr); }
       .experiment-head { grid-template-columns:1fr; }
@@ -560,8 +565,10 @@
       .nav { padding:0 10px; top:8px; }
       .nav-inner { min-height:50px; padding:7px 8px 7px 12px; }
       .brand-mark { width:30px; height:30px; }
-      .brand-copy small { display:none; }
-      .nav-cta { padding:10px 12px; font-size:11px; }
+      .brand-copy { display:none; }
+      .nav-link { font-size:10px; padding:8px 7px; }
+      .nav-cta { padding:10px; font-size:11px; }
+      .nav-cta .cta-txt { display:none; }
       .hero-media img { object-position:62% 34%; filter:saturate(.78) contrast(1.04) brightness(.62); }
       .hero-media::after { background:linear-gradient(0deg,#070607 0%,rgba(7,6,7,.82) 14%,rgba(7,6,7,.18) 60%,rgba(7,6,7,.48) 100%), linear-gradient(90deg,rgba(7,6,7,.67),rgba(7,6,7,.25)); }
       .hero-content { width:calc(100% - 28px); padding-top:120px; }
@@ -619,9 +626,9 @@
         <a class="nav-link" href="#dossie">O dossiê</a>
         <a class="nav-link" href="#experimento">O teste</a>
         <a class="nav-link" href="#fontes">Fontes</a>
-        <a class="nav-cta" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer">
+        <a class="nav-cta" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer" aria-label="Ouvir Insane Baroque Blaze no Spotify">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M7.3 9.2c3.3-1 7-.7 9.7.7M7.9 12.1c2.7-.7 5.8-.5 8.2.6M8.5 14.9c2.1-.5 4.5-.3 6.4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          Ouvir agora
+          <span class="cta-txt">Ouvir agora</span>
         </a>
       </nav>
     </div>
@@ -1054,6 +1061,11 @@
   </main>
 
   <footer>
+    <div class="cite-box">
+      <span class="cite-label">Como citar esta página</span>
+      <p>VALLE, Nando. <em>Tudo documentado. Nada declarado.</em> 2026. Disponível em: https://nandovalle.github.io/. Acesso em: [data do acesso].</p>
+      <button class="btn" type="button" onclick="copyCitation()">Copiar citação</button>
+    </div>
     <div class="footer-inner">
       <div><div class="footer-name">Nando Valle</div><div class="footer-note">© 2026 · Nenhuma alma foi vendida na produção deste site.<br>Emprestada, talvez.</div></div>
       <div class="footer-links">
@@ -1131,6 +1143,18 @@
         showToast('Link copiado.');
       } catch (e) {
         showToast('Copie o endereço do navegador.');
+      }
+    }
+
+    async function copyCitation() {
+      const meses = ['jan.','fev.','mar.','abr.','maio','jun.','jul.','ago.','set.','out.','nov.','dez.'];
+      const d = new Date();
+      const citacao = 'VALLE, Nando. Tudo documentado. Nada declarado. 2026. Disponível em: https://nandovalle.github.io/. Acesso em: ' + d.getDate() + ' ' + meses[d.getMonth()] + ' ' + d.getFullYear() + '.';
+      try {
+        await navigator.clipboard.writeText(citacao);
+        showToast('Citação copiada.');
+      } catch (e) {
+        showToast('Selecione e copie o texto da citação.');
       }
     }
 
