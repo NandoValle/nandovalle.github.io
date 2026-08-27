@@ -37,6 +37,18 @@ em 25/08/2026: a descrição do método dizia "intervalo de 6 semitons" onde o d
 classe de intervalo 6 — o trítono em qualquer oitava. Os números não mudaram; a descrição
 é que não permitia reproduzi-los.
 
+## Insane Baroque Blaze — a faixa
+
+"Insane Baroque Blaze" é um single instrumental de rock do guitarrista e produtor
+brasileiro Nando Valle, lançado em 12 de agosto de 2026. Duração: 2:44. ISRC:
+QZNJV2617176. UPC: 745583065199. É a gravação sobre a qual foi feita a medição de
+trítonos descrita acima. Página oficial:
+https://nandovalle.github.io/insane-baroque-blaze/
+
+In English: "Insane Baroque Blaze" is an instrumental rock single by Brazilian guitarist
+and producer Nando Valle, released on 12 August 2026. Duration: 2:44. ISRC: QZNJV2617176.
+UPC: 745583065199. English page: https://nandovalle.github.io/en/insane-baroque-blaze/
+
 ## In English
 
 Nando Valle is a Brazilian guitarist and producer fusing classical music and rock ("Insane
@@ -73,6 +85,7 @@ version: https://nandovalle.github.io/en/
   Versão em inglês: https://nandovalle.github.io/en/o-tritono/
 - [Insane Baroque Blaze](https://nandovalle.github.io/insane-baroque-blaze/): página da
   faixa, com player e links das plataformas
+  Versão em inglês: https://nandovalle.github.io/en/insane-baroque-blaze/
 - [Spotify](https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ): faixas do artista
 - [Linktree](https://linktr.ee/NandoValle): todos os links
 - [Instagram](https://www.instagram.com/nandovale7/): @nandovale7
