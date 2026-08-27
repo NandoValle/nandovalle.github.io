@@ -84,5 +84,8 @@ version: https://nandovalle.github.io/en/
   faixa, com player e links das plataformas
   Versão em inglês: https://nandovalle.github.io/en/insane-baroque-blaze/
 - [Spotify](https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ): faixas do artista
+- [Shazam](https://www.shazam.com/artist/x/6793694273): página do artista no Shazam
+- [Viberate](https://www.viberate.com/artist/nando-valle/): perfil na base de dados da indústria
+- [Bandsintown](https://www.bandsintown.com/a/15662653): página de shows e biografia
 - [Linktree](https://linktr.ee/NandoValle): todos os links
 - [Instagram](https://www.instagram.com/nandovale7/): @nandovale7
