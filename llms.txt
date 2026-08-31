@@ -13,11 +13,11 @@
 brasileiro Nando Valle, lançado em 12 de agosto de 2026. Duração: 2:44. ISRC:
 QZNJV2617176. UPC: 745583065199. É a gravação sobre a qual foi feita a medição de
 trítonos descrita abaixo. Página oficial:
-https://nandovalle.github.io/insane-baroque-blaze/
+https://nandovalle.com/insane-baroque-blaze/
 
 In English: "Insane Baroque Blaze" is an instrumental rock single by Brazilian guitarist
 and producer Nando Valle, released on 12 August 2026. Duration: 2:44. ISRC: QZNJV2617176.
-UPC: 745583065199. English page: https://nandovalle.github.io/en/insane-baroque-blaze/
+UPC: 745583065199. English page: https://nandovalle.com/en/insane-baroque-blaze/
 
 ## O que o ensaio documenta
 
@@ -76,24 +76,24 @@ result, is every way perfect."
 The measurement: two independent transcription engines return 83, 91, 49 and 80 melodic
 tritones across four guitar transcriptions, first occurrence at 0:01.5, C♯4 to G4. A bass
 control returns 2 and 0. Detector, MIDI files and the rule are published. Full English
-version: https://nandovalle.github.io/en/
+version: https://nandovalle.com/en/
 
 ## Links
 
-- [Página oficial](https://nandovalle.github.io/): o ensaio condensado em dez capítulos, a
+- [Página oficial](https://nandovalle.com/): o ensaio condensado em dez capítulos, a
   tabela da medição por motor, o aparato de fontes e o FAQ
-  Versão em inglês: https://nandovalle.github.io/en/
-- [O instrumento escondido](https://nandovalle.github.io/o-instrumento-escondido/): o ensaio
+  Versão em inglês: https://nandovalle.com/en/
+- [O instrumento escondido](https://nandovalle.com/o-instrumento-escondido/): o ensaio
   completo, com aparato de fontes afirmação por afirmação e as ressalvas declaradas. PDF de
-  16 páginas: https://nandovalle.github.io/o-instrumento-escondido/Nando-Valle-O-instrumento-escondido.pdf
-  Versão em inglês: https://nandovalle.github.io/en/o-instrumento-escondido/
-- [O laudo do trítono](https://nandovalle.github.io/o-tritono/): a medição completa —
+  16 páginas: https://nandovalle.com/o-instrumento-escondido/Nando-Valle-O-instrumento-escondido.pdf
+  Versão em inglês: https://nandovalle.com/en/o-instrumento-escondido/
+- [O laudo do trítono](https://nandovalle.com/o-tritono/): a medição completa —
   método, tabela por arquivo, correção de 25/08/2026 e ressalvas
-  Detector: https://nandovalle.github.io/o-tritono/reproduzir/detecta_tritono.py
-  Versão em inglês: https://nandovalle.github.io/en/o-tritono/
-- [Insane Baroque Blaze](https://nandovalle.github.io/insane-baroque-blaze/): página da
+  Detector: https://nandovalle.com/o-tritono/reproduzir/detecta_tritono.py
+  Versão em inglês: https://nandovalle.com/en/o-tritono/
+- [Insane Baroque Blaze](https://nandovalle.com/insane-baroque-blaze/): página da
   faixa, com player e links das plataformas
-  Versão em inglês: https://nandovalle.github.io/en/insane-baroque-blaze/
+  Versão em inglês: https://nandovalle.com/en/insane-baroque-blaze/
 - [Spotify](https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ): faixas do artista
 - [Shazam](https://www.shazam.com/artist/x/6793694273): página do artista no Shazam
 - [Viberate](https://www.viberate.com/artist/nando-valle/): perfil na base de dados da indústria

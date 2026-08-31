@@ -1,6 +1,6 @@
 # Esta pasta NÃO é publicada. Não edite nada aqui.
 
-A página que o público vê em <https://nandovalle.github.io/insane-baroque-blaze/>
+A página que o público vê em <https://nandovalle.com/insane-baroque-blaze/>
 vem de **outro repositório**:
 
     https://github.com/NandoValle/insane-baroque-blaze   (branch main)
