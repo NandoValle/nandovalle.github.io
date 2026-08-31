@@ -607,6 +607,27 @@
       *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.001ms !important; }
       .reveal { opacity:1; transform:none; }
     }
+    /* ---- WebMCP: ferramentas de leitura da pagina ---- */
+    .tools-section { border-top:1px solid var(--line-soft); }
+    .tool-panel { max-width:900px; margin:0 auto; background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:28px 26px; }
+    .tool-panel + .tool-panel { margin-top:20px; }
+    .tool-panel h3 { font-family:var(--serif); font-size:24px; color:var(--cream); margin:6px 0 8px; font-weight:600; }
+    .tool-id { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:11px; color:var(--gold); letter-spacing:.04em; }
+    .tool-panel > p { color:var(--muted); font-size:13px; line-height:1.75; margin:0; }
+    .tool-row { display:flex; flex-wrap:wrap; gap:10px; align-items:flex-end; margin:20px 0 4px; }
+    .tool-field { flex:1 1 260px; display:flex; flex-direction:column; gap:7px; }
+    .tool-field label { font-size:10px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted-2); }
+    .tool-field input, .tool-field select { background:rgba(8,7,8,.82); border:1px solid var(--line); border-radius:10px; color:var(--cream); padding:11px 12px; font:inherit; font-size:13px; }
+    .tool-field input:focus, .tool-field select:focus { outline:2px solid var(--gold-2); outline-offset:1px; }
+    .tool-btn { background:var(--gold); color:#1a1206; border:0; border-radius:10px; padding:12px 18px; font:inherit; font-size:12px; font-weight:700; letter-spacing:.05em; cursor:pointer; }
+    .tool-btn.ghost { background:transparent; color:var(--paper); border:1px solid var(--line); }
+    .tool-btn:hover { filter:brightness(1.08); }
+    .tool-status { min-height:20px; font-size:12px; color:var(--gold); margin:8px 0 0; }
+    .tool-out { margin:14px 0 0; padding:14px 16px; background:rgba(8,7,8,.82); border:1px solid var(--line-soft); border-radius:12px; color:var(--paper); font-size:12.5px; line-height:1.7; white-space:pre-wrap; overflow-x:auto; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
+    .tool-out:empty { display:none; }
+    .tool-fallback { margin:18px 0 0; padding-top:14px; border-top:1px solid var(--line-soft); font-size:12px; color:var(--muted-2); line-height:1.72; }
+    .tool-fallback a { color:var(--gold); }
+    .apparatus-table tr[hidden] { display:none; }
   </style>
   <noscript>
     <style>.reveal { opacity:1 !important; transform:none !important; }</style>
@@ -1015,6 +1036,56 @@
       </div>
     </section>
 
+
+    <section class="section tools-section" id="tools">
+      <div class="wrap reveal">
+        <div class="apparatus-head">
+          <div class="kicker">Tools &middot; WebMCP</div>
+          <h2>How does an agent read this page without making anything up?</h2>
+          <p>Through the same door you do. Two read-only tools are declared here, and both answer from what is already published on this page: they change no state, send no data and call no server. Each one carries its manual equivalent right below it, for anyone who would rather read with their eyes.</p>
+        </div>
+
+        <div class="tool-panel">
+          <span class="tool-id">consultar_aparato_de_fontes</span>
+          <h3>Search the source apparatus</h3>
+          <p>Filters the 21 rows of the table above by a term and hides the ones that do not match. Returns the claim and the place where it can be checked, with the caveat where one exists.</p>
+          <form class="tool-form" toolname="consultar_aparato_de_fontes" toolautosubmit onsubmit="return consultarAparato(event)" tooldescription="Filters the source apparatus on this page: 21 rows pairing each historical claim with the place where it can be checked and with the caveat, where one exists. Takes a term and returns only the rows whose text contains it, ignoring case and accents. Effect: it only shows and hides rows of an already published table; it changes no data, sends nothing and makes no external request. Limit: it searches this page only, and a term with no match returns zero rows until the next query. Result: the count of matching rows and the filtered table on the page itself.">
+            <div class="tool-row">
+              <div class="tool-field">
+                <label for="aparato-termo">Term</label>
+                <input id="aparato-termo" name="termo" type="search" autocomplete="off" placeholder="e.g. Grobert, mercury, tritone, Equinox" toolparamdescription="Term to look for in the apparatus, matched against the claim and against the where-to-check column. Ignores case and accents. Empty returns all 21 rows. Terms that exist on this page: Grobert, mercury, tritone, Equinox, Marsyas, Cannone." />
+              </div>
+              <button class="tool-btn" type="submit">Filter the apparatus</button>
+              <button class="tool-btn ghost" type="button" onclick="limparAparato()">Show all 21</button>
+            </div>
+            <p class="tool-status" id="aparato-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="tool-fallback">Manual path: the whole table sits right above, under <a href="#aparato">Apparatus</a>. It is plain HTML and does not need this form to be read.</p>
+        </div>
+
+        <div class="tool-panel">
+          <span class="tool-id">obter_ficha_da_faixa</span>
+          <h3>Get the track record</h3>
+          <p>Gathers what the page publishes about <em>Insane Baroque Blaze</em>: identification, date, duration, ISRC, checked links and the summary of the tritone report. Nothing is computed live.</p>
+          <div class="tool-row">
+            <div class="tool-field">
+              <label for="ficha-campo">Field</label>
+              <select id="ficha-campo">
+                <option value="tudo">tudo (all)</option>
+                <option value="identificacao">identificacao</option>
+                <option value="lancamento">lancamento</option>
+                <option value="links">links</option>
+                <option value="tritono">tritono</option>
+              </select>
+            </div>
+            <button class="tool-btn" type="button" onclick="mostrarFicha()">Show the record</button>
+          </div>
+          <pre class="tool-out" id="ficha-saida" aria-live="polite"></pre>
+          <p class="tool-fallback">Manual path: the same data sits under <a href="#ouvir">Listen before you conclude</a> and in the <a href="/en/o-tritono/">tritone report</a>. The tool adds no information — it only gathers what is already published.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="faq reveal">
         <h2>Questions this page provokes.</h2>
@@ -1166,6 +1237,140 @@
       } else {
         await copyLink();
       }
+    }
+
+    function TEXTO_STATUS(r) {
+      return r.termo
+        ? r.encontradas + ' of ' + r.total + ' apparatus rows contain "' + r.termo + '".'
+        : 'Showing all ' + r.total + ' apparatus rows.';
+    }
+    const DESCRICAO_FICHA = 'Returns the published record of the track "Insane Baroque Blaze" by Nando Valle: title, artist, genre, ISRC, release date, duration, already-checked links and the summary of the tritone report. Effect: read-only over what is already published on this page; it changes no state, sends no data and calls no server. Limit: there is only one track on this page, the tritone figures come from the public report and nothing is computed live. Result: a JSON object as text with the requested fields.';
+    const DESCRICAO_CAMPO = 'Which part of the record to return. "tudo" returns every field; "identificacao" returns title, artist, genre and ISRC; "lancamento" returns the release date and the duration; "links" returns the track page, Spotify, the platform aggregator and the report; "tritono" returns the measured summary and the report link. Omitted, it means "tudo".';
+
+    /* ------------------------------------------------------------------
+       WebMCP - duas ferramentas de leitura desta pagina.
+       Nenhuma delas altera estado, envia dados ou faz requisicao externa:
+       ambas respondem a partir do que ja esta publicado no HTML.
+
+       Feature detection: sem document.modelContext a pagina fica identica
+       e os dois caminhos manuais (formulario e botao) seguem funcionando.
+       Cancelamento: execute() recebe o AbortSignal no segundo argumento e
+       aborta antes e depois de montar a resposta.
+       ------------------------------------------------------------------ */
+
+    const FICHA_FAIXA = {
+      titulo: 'Insane Baroque Blaze',
+      artista: 'Nando Valle',
+      genero: 'rock instrumental',
+      isrc: 'QZNJV2617176',
+      lancamento: '2026-08-12',
+      duracao: '2min44s (PT2M44S)',
+      pagina: 'https://nandovalle.com/insane-baroque-blaze/',
+      spotify: 'https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN',
+      todas_as_plataformas: 'https://song.link/us/i/6794384682',
+      laudo_do_tritono: 'https://nandovalle.com/o-tritono/',
+      tritono: 'Primeira ocorrencia em 1,5 s: Do#4 -> Sol4. Contagens por transcricao: melodicos 83/91/49/80, harmonicos 72/79/42/115. A regra melodica usa classe de intervalo 6, nao "6 semitons". Numeros do laudo publico, nao calculados nesta pagina.'
+    };
+
+    const CAMPOS_FICHA = {
+      identificacao: ['titulo', 'artista', 'genero', 'isrc'],
+      lancamento: ['lancamento', 'duracao'],
+      links: ['pagina', 'spotify', 'todas_as_plataformas', 'laudo_do_tritono'],
+      tritono: ['tritono', 'laudo_do_tritono']
+    };
+
+    function normalizarTermo(valor) {
+      return (valor === null || valor === undefined ? '' : String(valor))
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+    }
+
+    function linhasDoAparato() {
+      const corpo = document.querySelector('.apparatus-table tbody');
+      return corpo ? Array.from(corpo.rows) : [];
+    }
+
+    function filtrarAparato(termo) {
+      const alvo = normalizarTermo(termo);
+      const linhas = linhasDoAparato();
+      const encontradas = [];
+      linhas.forEach(function (tr) {
+        const casa = !alvo || normalizarTermo(tr.innerText).indexOf(alvo) !== -1;
+        tr.hidden = !casa;
+        if (casa && tr.cells.length >= 2) {
+          encontradas.push({
+            afirmacao: tr.cells[0].innerText.trim(),
+            onde_conferir: tr.cells[1].innerText.trim()
+          });
+        }
+      });
+      return { termo: alvo, total: linhas.length, encontradas: encontradas.length, linhas: encontradas };
+    }
+
+    function consultarAparato(evento) {
+      if (evento && evento.preventDefault) evento.preventDefault();
+      const campo = document.getElementById('aparato-termo');
+      const resultado = filtrarAparato(campo ? campo.value : '');
+      const status = document.getElementById('aparato-status');
+      if (status) status.textContent = TEXTO_STATUS(resultado);
+      if (resultado.termo) {
+        const secao = document.getElementById('aparato');
+        if (secao) secao.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      return false;
+    }
+
+    function limparAparato() {
+      const campo = document.getElementById('aparato-termo');
+      if (campo) campo.value = '';
+      consultarAparato(null);
+    }
+
+    function fichaDaFaixa(campo) {
+      const nome = campo && campo !== 'tudo' ? campo : null;
+      const chaves = nome ? CAMPOS_FICHA[nome] : Object.keys(FICHA_FAIXA);
+      if (!chaves) return null;
+      const saida = {};
+      chaves.forEach(function (k) { if (k in FICHA_FAIXA) saida[k] = FICHA_FAIXA[k]; });
+      return saida;
+    }
+
+    function mostrarFicha() {
+      const seletor = document.getElementById('ficha-campo');
+      const saida = document.getElementById('ficha-saida');
+      const dados = fichaDaFaixa(seletor ? seletor.value : 'tudo');
+      if (saida) saida.textContent = JSON.stringify(dados, null, 2);
+      return dados;
+    }
+
+    // ---- API imperativa do WebMCP, atras de feature detection ----------
+    if (document.modelContext && typeof document.modelContext.registerTool === 'function') {
+      document.modelContext.registerTool({
+        name: 'obter_ficha_da_faixa',
+        description: DESCRICAO_FICHA,
+        inputSchema: {
+          type: 'object',
+          properties: {
+            campo: {
+              type: 'string',
+              enum: ['tudo', 'identificacao', 'lancamento', 'links', 'tritono'],
+              description: DESCRICAO_CAMPO
+            }
+          },
+          required: [],
+          additionalProperties: false
+        },
+        execute: async function (parametros, contexto) {
+          const signal = contexto && contexto.signal;
+          if (signal && signal.aborted) throw new DOMException('Consulta cancelada.', 'AbortError');
+          const campo = (parametros && parametros.campo) || 'tudo';
+          const dados = fichaDaFaixa(campo);
+          if (!dados) return 'Campo desconhecido. Use: tudo, identificacao, lancamento, links ou tritono.';
+          const seletor = document.getElementById('ficha-campo');
+          if (seletor) { seletor.value = campo; mostrarFicha(); }
+          if (signal && signal.aborted) throw new DOMException('Consulta cancelada.', 'AbortError');
+          return JSON.stringify(dados, null, 2);
+        }
+      });
     }
   </script>
 </body>
