@@ -107,6 +107,30 @@ main,header,footer{position:relative; z-index:1}
 .trilho-pe a{color:var(--brasa);letter-spacing:.16em}
 h2[id^="cap-"]{scroll-margin-top:5.5rem}
 
+/* ============ INDICE ============ */
+.indice{scroll-margin-top:5.5rem}
+.indice ol{list-style:none;margin:1.6rem 0 0;padding:0}
+.indice li{border-top:1px solid var(--fio)}
+.indice li:last-child{border-bottom:1px solid var(--fio)}
+.indice a{display:grid;grid-template-columns:2.6rem 1fr;align-items:baseline;gap:.9rem;
+  padding:1rem .4rem;text-decoration:none;color:inherit;transition:background .2s,padding .2s}
+.indice a:hover,.indice a:focus-visible{background:rgba(200,145,47,.07);padding-left:.9rem}
+.indice .n{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.15rem;color:var(--brasa);line-height:1}
+.indice .t{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:.7rem;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--brasa)}
+.indice .d{display:block;margin-top:.3rem;font-size:1.02rem;line-height:1.35;color:var(--marfim-2)}
+
+/* ============ ANTERIOR / PROXIMO ============ */
+.cap-nav{display:flex;gap:1.2rem;justify-content:space-between;align-items:flex-start;
+  margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--fio)}
+.cap-nav a{max-width:47%;text-decoration:none;color:inherit;transition:color .2s}
+.cap-nav .prox{margin-left:auto;text-align:right}
+.cap-nav b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brasa)}
+.cap-nav i{display:block;margin-top:.3rem;font-style:normal;font-size:1.02rem;
+  line-height:1.3;color:var(--marfim-2)}
+.cap-nav a:hover i,.cap-nav a:focus-visible i{color:var(--marfim)}
+
 /* ============ HERO ============ */
 .hero{position:relative; min-height:100svh; display:flex; align-items:flex-end;
   overflow:hidden; border-bottom:1px solid var(--fio)}
@@ -226,6 +250,9 @@ td:first-child{color:var(--marfim);width:38%}
   .trilho-btn{min-height:44px}
   .trilho-nome{display:none}
   .trilho-painel{top:52px}
+  .indice a{grid-template-columns:2.1rem 1fr;gap:.7rem;padding:.85rem .2rem}
+  .cap-nav{gap:.8rem;margin-top:2.4rem}
+  .cap-nav i{font-size:.95rem}
   section{padding-top:3.4rem}
   .hero-txt{padding-bottom:3.2rem}
   td:first-child{width:auto}
@@ -233,7 +260,7 @@ td:first-child{color:var(--marfim);width:38%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#barra{transition:none}
   .trilho,.trilho-cue{transition:none}}
 @media print{
-  body::before,#barra,.baixar,.voltar,.trilho{display:none}
+  body::before,#barra,.baixar,.voltar,.trilho,.cap-nav{display:none}
   body{background:#fff;color:#17140F}
 }
 </style>
@@ -292,6 +319,25 @@ td:first-child{color:var(--marfim);width:38%}
 </header>
 
 <main>
+
+<nav class="indice" id="capitulos" aria-label="Índice do ensaio">
+  <div class="sec-head">
+    <span class="sec-num">Índice</span>
+    <h2>Dez capítulos</h2>
+  </div>
+  <ol>
+    <li><a href="#cap-1"><span class="n">I</span><span><span class="t">A anomalia</span><span class="d">Enterraram Paganini nove vezes.</span></span></a></li>
+    <li><a href="#cap-2"><span class="n">II</span><span><span class="t">A recusa</span><span class="d">Ele achou que ainda não estava morrendo.</span></span></a></li>
+    <li><a href="#cap-3"><span class="n">III</span><span><span class="t">O nome que deram</span><span class="d">Diabo.</span></span></a></li>
+    <li><a href="#cap-4"><span class="n">IV</span><span><span class="t">O corpo</span><span class="d">A mão explicava uma parte do prodígio.</span></span></a></li>
+    <li><a href="#cap-5"><span class="n">V</span><span><span class="t">O desmentido</span><span class="d">Paganini não confirmou pacto algum.</span></span></a></li>
+    <li><a href="#cap-6"><span class="n">VI</span><span><span class="t">O instrumento escondido</span><span class="d">Paganini tocava violão.</span></span></a></li>
+    <li><a href="#cap-7"><span class="n">VII</span><span><span class="t">Quem foi ler</span><span class="d">A história só chega à guitarra porque alguém foi atrás dos documentos.</span></span></a></li>
+    <li><a href="#cap-8"><span class="n">VIII</span><span><span class="t">As chaves</span><span class="d">Sete. Oito. Uma.</span></span></a></li>
+    <li><a href="#cap-9"><span class="n">IX</span><span><span class="t">A medição</span><span class="d">Insane Baroque Blaze.</span></span></a></li>
+    <li><a href="#cap-10"><span class="n">X</span><span><span class="t">A distância</span><span class="d">O arquivo não obriga a conclusão.</span></span></a></li>
+  </ol>
+</nav>
 <!-- ===================== CAPA ===================== -->
 <!-- ===================== I ===================== -->
 <section>
@@ -312,6 +358,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>Ele morreu em Nice, em 27 de maio de 1840. O bispo negou terra consagrada. Embalsamaram o homem. Passou mais de um ano no porão da casa onde morrera. Depois foi parar numa fábrica de azeite. Atravessou trinta e seis anos mudando de endereço. Só em 1876 um papa autorizou a cova. E nem isso encerrou: o filho mandou desenterrá-lo outra vez em 1883, e o corpo só chegou à cova definitiva, no Cimitero della Villetta, em Parma, em 1896.</p>
 
   <p class="gancho">Trinta e seis anos não é trâmite.<br>Começa com uma recusa que ele mesmo fez.</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#capitulos"><b>Índice</b><i>Dez capítulos</i></a>
+    <a class="prox" href="#cap-2"><b>Próximo</b><i>II &middot; A recusa</i></a>
+  </nav>
 </section>
 
 <!-- ===================== II ===================== -->
@@ -330,6 +380,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>Um padre relatando uma recusa explica a decisão do bispo. Não explica por que ninguém, em toda a Europa, achou aquilo estranho o bastante para protestar.</p>
 
   <p class="gancho">O que o público achava que ele era.</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-1"><b>Anterior</b><i>I &middot; A anomalia</i></a>
+    <a class="prox" href="#cap-3"><b>Próximo</b><i>III &middot; O nome que deram</i></a>
+  </nav>
 </section>
 
 <!-- ===================== III ===================== -->
@@ -357,6 +411,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>E, algumas linhas adiante: <em>Some fool thinks names are things</em> — algum tolo pensa que nomes são coisas.</p>
 
   <p class="gancho">Mas por que a técnica parecia impossível?<br>Isso está nos registros médicos.</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-2"><b>Anterior</b><i>II &middot; A recusa</i></a>
+    <a class="prox" href="#cap-4"><b>Próximo</b><i>IV &middot; O corpo</i></a>
+  </nav>
 </section>
 
 <!-- ===================== IV ===================== -->
@@ -377,6 +435,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p class="beat">A mão explicava a técnica.<br>O mercúrio explicava a ruína.<br>Nenhum dos dois tinha nome em 1840.</p>
 
   <p class="gancho">Resta saber o que o próprio Paganini<br>fez com o nome que lhe deram.</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-3"><b>Anterior</b><i>III &middot; O nome que deram</i></a>
+    <a class="prox" href="#cap-5"><b>Próximo</b><i>V &middot; O desmentido</i></a>
+  </nav>
 </section>
 
 <!-- ===================== V ===================== -->
@@ -401,6 +463,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>Paganini morreu trinta e cinco anos antes de Crowley nascer. Um nunca leu o outro.</p>
 
   <p class="gancho">Se ele guardava a imagem em público,<br>o que fazia quando ninguém olhava?</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-4"><b>Anterior</b><i>IV &middot; O corpo</i></a>
+    <a class="prox" href="#cap-6"><b>Próximo</b><i>VI &middot; O instrumento escondido</i></a>
+  </nav>
 </section>
 
 <!-- ===================== VI ===================== -->
@@ -431,6 +497,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p class="beat">Ele foi enterrado nove vezes.<br>O violino nunca parou de tocar.</p>
 
   <p class="gancho">Tudo isso está em arquivo público há décadas.<br>Faltava alguém juntar.</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-5"><b>Anterior</b><i>V &middot; O desmentido</i></a>
+    <a class="prox" href="#cap-7"><b>Próximo</b><i>VII &middot; Quem foi ler</i></a>
+  </nav>
 </section>
 
 <!-- ===================== VII ===================== -->
@@ -455,6 +525,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p><strong>A primeira.</strong> Um dos textos falava dos grandes fundadores de religião — Buda, Maomé, Jesus, Moisés — e do que tinham em comum: todos sumiram. De Cristo não se sabe nada entre os doze e os trinta anos; Maomé se enfiou numa caverna; Buda largou o palácio; Moisés fugiu para Midiã. E todos voltaram iguais — sozinhos, pobres — pregando uma lei nova. Depois o livro trocava religião por respiração. A tese era curta: não foi milagre, foi técnica — e técnica se aprende.</p>
 
   <p class="gancho">A segunda coisa que ficou<br>foi uma dúvida que durou trinta e dois anos.</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-6"><b>Anterior</b><i>VI &middot; O instrumento escondido</i></a>
+    <a class="prox" href="#cap-8"><b>Próximo</b><i>VIII &middot; As chaves</i></a>
+  </nav>
 </section>
 
 <!-- ===================== VIII ===================== -->
@@ -526,6 +600,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>É o estado em que um homem entra para tocar como Paganini tocava. A descrição de 1910 continua precisa: quando a execução exige tudo, o resto some.</p>
 
   <p class="gancho">Não se sabe o que os contemporâneos dele viram<br>quando ele entrava nesse estado.<br>Sabe-se o nome que deram.</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-7"><b>Anterior</b><i>VII &middot; Quem foi ler</i></a>
+    <a class="prox" href="#cap-9"><b>Próximo</b><i>IX &middot; A medição</i></a>
+  </nav>
 </section>
 
 <!-- ===================== IX ===================== -->
@@ -554,6 +632,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>A descrição foi corrigida. O laudo continua público, e agora reproduzível a partir do que está escrito nele.</p>
 
   <p class="gancho">Ele errou sobre o zero, e o método sobre si mesmo.<br>As duas correções estão nesta página.</p>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-8"><b>Anterior</b><i>VIII &middot; As chaves</i></a>
+    <a class="prox" href="#cap-10"><b>Próximo</b><i>X &middot; A distância</i></a>
+  </nav>
 </section>
 
 <!-- ===================== X ===================== -->
@@ -579,10 +661,14 @@ td:first-child{color:var(--marfim);width:38%}
     <div class="big">O arquivo está aberto.<br>Meça. Negue. Nomeie.<br>O que sobrar depois disso<br>não será obra deste texto.</div>
     <div class="cta">Insane Baroque Blaze &nbsp;·&nbsp; segundo 1,5</div>
   </div>
+  <nav class="cap-nav" aria-label="Navegação entre capítulos">
+    <a class="ant" href="#cap-9"><b>Anterior</b><i>IX &middot; A medição</i></a>
+    <a class="prox" href="#aparato"><b>Aparato</b><i>O que se pode conferir</i></a>
+  </nav>
 </section>
 
 <!-- ===================== FONTES ===================== -->
-<section class="sources">
+<section class="sources" id="aparato">
   <div class="sec-head">
     <span class="sec-num">Aparato</span>
     <h2>O que se pode conferir</h2>

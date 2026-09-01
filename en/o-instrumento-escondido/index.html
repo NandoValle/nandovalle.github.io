@@ -107,6 +107,30 @@ main,header,footer{position:relative; z-index:1}
 .trilho-pe a{color:var(--brasa);letter-spacing:.16em}
 h2[id^="cap-"]{scroll-margin-top:5.5rem}
 
+/* ============ INDICE ============ */
+.indice{scroll-margin-top:5.5rem}
+.indice ol{list-style:none;margin:1.6rem 0 0;padding:0}
+.indice li{border-top:1px solid var(--fio)}
+.indice li:last-child{border-bottom:1px solid var(--fio)}
+.indice a{display:grid;grid-template-columns:2.6rem 1fr;align-items:baseline;gap:.9rem;
+  padding:1rem .4rem;text-decoration:none;color:inherit;transition:background .2s,padding .2s}
+.indice a:hover,.indice a:focus-visible{background:rgba(200,145,47,.07);padding-left:.9rem}
+.indice .n{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.15rem;color:var(--brasa);line-height:1}
+.indice .t{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:.7rem;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--brasa)}
+.indice .d{display:block;margin-top:.3rem;font-size:1.02rem;line-height:1.35;color:var(--marfim-2)}
+
+/* ============ ANTERIOR / PROXIMO ============ */
+.cap-nav{display:flex;gap:1.2rem;justify-content:space-between;align-items:flex-start;
+  margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--fio)}
+.cap-nav a{max-width:47%;text-decoration:none;color:inherit;transition:color .2s}
+.cap-nav .prox{margin-left:auto;text-align:right}
+.cap-nav b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brasa)}
+.cap-nav i{display:block;margin-top:.3rem;font-style:normal;font-size:1.02rem;
+  line-height:1.3;color:var(--marfim-2)}
+.cap-nav a:hover i,.cap-nav a:focus-visible i{color:var(--marfim)}
+
 /* ============ HERO ============ */
 .hero{position:relative; min-height:100svh; display:flex; align-items:flex-end;
   overflow:hidden; border-bottom:1px solid var(--fio)}
@@ -226,6 +250,9 @@ td:first-child{color:var(--marfim);width:38%}
   .trilho-btn{min-height:44px}
   .trilho-nome{display:none}
   .trilho-painel{top:52px}
+  .indice a{grid-template-columns:2.1rem 1fr;gap:.7rem;padding:.85rem .2rem}
+  .cap-nav{gap:.8rem;margin-top:2.4rem}
+  .cap-nav i{font-size:.95rem}
   section{padding-top:3.4rem}
   .hero-txt{padding-bottom:3.2rem}
   td:first-child{width:auto}
@@ -233,7 +260,7 @@ td:first-child{color:var(--marfim);width:38%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#barra{transition:none}
   .trilho,.trilho-cue{transition:none}}
 @media print{
-  body::before,#barra,.baixar,.voltar,.trilho{display:none}
+  body::before,#barra,.baixar,.voltar,.trilho,.cap-nav{display:none}
   body{background:#fff;color:#17140F}
 }
 </style>
@@ -293,12 +320,35 @@ td:first-child{color:var(--marfim);width:38%}
 
 <main>
 
+<nav class="indice" id="capitulos" aria-label="Contents of the essay">
+  <div class="sec-head">
+    <span class="sec-num">Contents</span>
+    <h2>Ten chapters</h2>
+  </div>
+  <ol>
+    <li><a href="#cap-1"><span class="n">I</span><span><span class="t">The anomaly</span><span class="d">They buried Paganini nine times.</span></span></a></li>
+    <li><a href="#cap-2"><span class="n">II</span><span><span class="t">The refusal</span><span class="d">He thought he was not dying yet.</span></span></a></li>
+    <li><a href="#cap-3"><span class="n">III</span><span><span class="t">The name they gave him</span><span class="d">Devil.</span></span></a></li>
+    <li><a href="#cap-4"><span class="n">IV</span><span><span class="t">The body</span><span class="d">The hand explained part of the prodigy.</span></span></a></li>
+    <li><a href="#cap-5"><span class="n">V</span><span><span class="t">The denial</span><span class="d">Paganini confirmed no pact.</span></span></a></li>
+    <li><a href="#cap-6"><span class="n">VI</span><span><span class="t">The hidden instrument</span><span class="d">Paganini played the guitar.</span></span></a></li>
+    <li><a href="#cap-7"><span class="n">VII</span><span><span class="t">Who went and read</span><span class="d">The story only reaches the guitar because somebody went after the documents.</span></span></a></li>
+    <li><a href="#cap-8"><span class="n">VIII</span><span><span class="t">The keys</span><span class="d">Seven. Eight. One.</span></span></a></li>
+    <li><a href="#cap-9"><span class="n">IX</span><span><span class="t">The measurement</span><span class="d">Insane Baroque Blaze.</span></span></a></li>
+    <li><a href="#cap-10"><span class="n">X</span><span><span class="t">The distance</span><span class="d">The file does not force a conclusion.</span></span></a></li>
+  </ol>
+</nav>
+
 <section>
   <div class="sec-head"><span class="sec-num">Chapter I</span><h2 id="cap-1">The anomaly</h2></div>
   <p class="abertura">They buried Paganini nine times.<br>Thirty-six years before the first consecrated grave.<br>The bishop refused the ground.<br>All of Europe found it unremarkable.</p>
   <p class="lead">This is not legend. It is record. Between 1840 and 1896, the violinist's body was buried and dug up nine times.</p>
   <p>He died in Nice on 27 May 1840. The bishop refused consecrated ground. They embalmed the man. He spent more than a year in the cellar of the house where he had died. Then he ended up in an olive oil factory. He crossed thirty-six years changing address. Only in 1876 did a pope authorise the grave. And not even that ended it: his son had him dug up again in 1883, and the body only reached its definitive grave, at the Cimitero della Villetta in Parma, in 1896.</p>
   <p class="gancho">Thirty-six years is not paperwork.<br>It begins with a refusal he made himself.</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#capitulos"><b>Contents</b><i>Ten chapters</i></a>
+    <a class="prox" href="#cap-2"><b>Next</b><i>II &middot; The refusal</i></a>
+  </nav>
 </section>
 
 <section>
@@ -309,6 +359,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>Paganini died in debt to his creditors. He had pawned his own violin more than once to cover gambling losses. In 1837 he lent his name to a casino in Paris; the business collapsed within months. He had to sell most of his instruments. A partner was suing him for thirty thousand francs. The lawsuits occupied him until the day he died.</p>
   <p>A priest reporting a refusal explains the bishop's decision. It does not explain why nobody, in all of Europe, found the thing strange enough to protest.</p>
   <p class="gancho">What the public thought he was.</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-1"><b>Previous</b><i>I &middot; The anomaly</i></a>
+    <a class="prox" href="#cap-3"><b>Next</b><i>III &middot; The name they gave him</i></a>
+  </nav>
 </section>
 
 <section>
@@ -323,6 +377,10 @@ td:first-child{color:var(--marfim);width:38%}
   </div>
   <p>And, a few lines further on: <em>Some fool thinks names are things.</em></p>
   <p class="gancho">But why did the technique look impossible?<br>That part is in the medical record.</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-2"><b>Previous</b><i>II &middot; The refusal</i></a>
+    <a class="prox" href="#cap-4"><b>Next</b><i>IV &middot; The body</i></a>
+  </nav>
 </section>
 
 <section>
@@ -333,6 +391,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>The metal is still there. Modern analysis of his hair, by mass spectrometry, found mercury in the strands, one hundred and eighty years later.</p>
   <p class="beat">The hand explained the technique.<br>The mercury explained the ruin.<br>Neither of them had a name in 1840.</p>
   <p class="gancho">Which leaves what Paganini himself<br>did with the name they gave him.</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-3"><b>Previous</b><i>III &middot; The name they gave him</i></a>
+    <a class="prox" href="#cap-5"><b>Next</b><i>V &middot; The denial</i></a>
+  </nav>
 </section>
 
 <section>
@@ -348,6 +410,10 @@ td:first-child{color:var(--marfim);width:38%}
   </div>
   <p>Paganini died thirty-five years before Crowley was born. Neither ever read the other.</p>
   <p class="gancho">If he kept the image up in public,<br>what did he do when nobody was looking?</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-4"><b>Previous</b><i>IV &middot; The body</i></a>
+    <a class="prox" href="#cap-6"><b>Next</b><i>VI &middot; The hidden instrument</i></a>
+  </nav>
 </section>
 
 <section>
@@ -363,6 +429,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>The violin he took care of in writing. In 1837 — the same year the casino ruined him — he left it by will to the City of Genoa, to be preserved in perpetuity. Il Cannone was delivered in 1851 and is still there, at the Palazzo Doria-Tursi. They take it out of the case once a month so that someone can play it, just so the instrument does not fall silent.</p>
   <p class="beat">He was buried nine times.<br>The violin never stopped playing.</p>
   <p class="gancho">All of this has been in public archives for decades.<br>Somebody had to put it side by side.</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-5"><b>Previous</b><i>V &middot; The denial</i></a>
+    <a class="prox" href="#cap-7"><b>Next</b><i>VII &middot; Who went and read</i></a>
+  </nav>
 </section>
 
 <section>
@@ -375,6 +445,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p>Thirty-two years went by. What stayed was not a bibliography. Two things stayed.</p>
   <p>The first. One of the texts spoke of the great founders of religions — Buddha, Muhammad, Jesus, Moses — and of what they had in common: they all disappeared. Nothing is known of Christ between twelve and thirty; Muhammad shut himself in a cave; Buddha left the palace; Moses fled to Midian. And they all came back the same — alone, poor — preaching a new law. Then the book traded religion for breathing. The thesis was short: it was not a miracle, it was technique — and technique can be learned.</p>
   <p class="gancho">The second thing that stayed<br>was a doubt that lasted thirty-two years.</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-6"><b>Previous</b><i>VI &middot; The hidden instrument</i></a>
+    <a class="prox" href="#cap-8"><b>Next</b><i>VIII &middot; The keys</i></a>
+  </nav>
 </section>
 
 <section>
@@ -414,6 +488,10 @@ td:first-child{color:var(--marfim);width:38%}
   </div>
   <p>It is the state a man enters in order to play the way Paganini played. The 1910 description is still precise: when the performance demands everything, the rest disappears.</p>
   <p class="gancho">Nobody knows what his contemporaries saw<br>when he entered that state.<br>What is known is the name they gave it.</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-7"><b>Previous</b><i>VII &middot; Who went and read</i></a>
+    <a class="prox" href="#cap-9"><b>Next</b><i>IX &middot; The measurement</i></a>
+  </nav>
 </section>
 
 <section>
@@ -428,6 +506,10 @@ td:first-child{color:var(--marfim);width:38%}
   <p class="beat">One wrong word in the description of the method.<br>The numbers were right all along.</p>
   <p>The description has been corrected. The report is still public, and now reproducible from what is written in it.</p>
   <p class="gancho">He was wrong about the zero, and the method about itself.<br>Both corrections are on this page.</p>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-8"><b>Previous</b><i>VIII &middot; The keys</i></a>
+    <a class="prox" href="#cap-10"><b>Next</b><i>X &middot; The distance</i></a>
+  </nav>
 </section>
 
 <section>
@@ -442,9 +524,13 @@ td:first-child{color:var(--marfim);width:38%}
     <div class="big">The archive is open.<br>Measure it. Deny it. Name it.<br>Whatever is left after that<br>will not be the work of this text.</div>
     <div class="cta">Insane Baroque Blaze &middot; second 1.5</div>
   </div>
+  <nav class="cap-nav" aria-label="Chapter navigation">
+    <a class="ant" href="#cap-9"><b>Previous</b><i>IX &middot; The measurement</i></a>
+    <a class="prox" href="#aparato"><b>Apparatus</b><i>What can be checked</i></a>
+  </nav>
 </section>
 
-<section class="sources">
+<section class="sources" id="aparato">
   <div class="sec-head"><span class="sec-num">Apparatus</span><h2>What can be checked</h2></div>
 
   <p class="intro">This piece does not ask to be believed. Every historical claim has been verified against a source, and the sources are named. Where there is belief instead of fact, the text says it is belief. Where there is Nando Valle's own account of his own life, the text says it is his account — and that there is no way to verify it independently.</p>
