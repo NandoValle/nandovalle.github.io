@@ -73,6 +73,40 @@ main,header,footer{position:relative; z-index:1}
 #barra{position:fixed;top:0;left:0;height:2px;width:0;z-index:9;
   background:linear-gradient(90deg,var(--sangue),var(--brasa-viva));transition:width .1s linear}
 
+/* ============ TRILHO DE CAPITULOS ============ */
+.trilho{position:fixed;top:18px;right:18px;z-index:12;opacity:0;visibility:hidden;
+  transform:translateY(-8px);transition:opacity .3s,transform .3s,visibility .3s}
+.trilho.on{opacity:1;visibility:visible;transform:none}
+.trilho[hidden]{display:none}
+.trilho-btn{display:flex;align-items:center;gap:.7rem;min-height:38px;padding:.5rem .9rem;
+  cursor:pointer;border:1px solid var(--fio);border-radius:999px;
+  background:rgba(11,9,7,.82);backdrop-filter:blur(16px);
+  box-shadow:0 10px 30px rgba(0,0,0,.42);color:inherit}
+.trilho-btn:hover,.trilho-btn:focus-visible{border-color:var(--brasa)}
+.trilho-num{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.05rem;line-height:1;
+  color:var(--brasa-viva);min-width:1.5rem;text-align:center}
+.trilho-nome{font-family:"Cormorant Garamond",Georgia,serif;font-size:.7rem;line-height:1.4;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--marfim-3)}
+.trilho-cue{width:7px;height:7px;border-right:1px solid var(--brasa);border-bottom:1px solid var(--brasa);
+  transform:rotate(45deg) translateY(-2px);transition:transform .25s}
+.trilho-btn[aria-expanded="true"] .trilho-cue{transform:rotate(225deg) translateY(-2px)}
+.trilho-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.trilho-painel{position:absolute;right:0;top:46px;width:min(20rem,calc(100vw - 36px));
+  max-height:min(62vh,520px);overflow-y:auto;padding:.4rem;
+  border:1px solid var(--fio);border-radius:14px;background:rgba(18,16,12,.94);
+  backdrop-filter:blur(18px);box-shadow:0 18px 50px rgba(0,0,0,.5)}
+.trilho-painel[hidden]{display:none}
+.trilho-painel ol{list-style:none;margin:0;padding:0}
+.trilho-painel a{display:flex;align-items:baseline;gap:.75rem;padding:.6rem .7rem;border-radius:9px;
+  text-decoration:none;font-family:"Cormorant Garamond",Georgia,serif;font-size:.78rem;
+  line-height:1.4;letter-spacing:.16em;text-transform:uppercase;color:var(--marfim-2)}
+.trilho-painel a i{font-style:normal;font-size:.95rem;color:var(--brasa);min-width:1.6rem;letter-spacing:0}
+.trilho-painel a:hover,.trilho-painel a:focus-visible{background:rgba(200,145,47,.10);color:var(--marfim)}
+.trilho-painel a.atual{background:rgba(200,145,47,.15);color:var(--marfim)}
+.trilho-pe{margin-top:.35rem;padding-top:.35rem;border-top:1px solid var(--fio)}
+.trilho-pe a{color:var(--brasa);letter-spacing:.16em}
+h2[id^="cap-"]{scroll-margin-top:5.5rem}
+
 /* ============ HERO ============ */
 .hero{position:relative; min-height:100svh; display:flex; align-items:flex-end;
   overflow:hidden; border-bottom:1px solid var(--fio)}
@@ -188,19 +222,51 @@ td:first-child{color:var(--marfim);width:38%}
 
 @media (max-width:640px){
   body{font-size:1.09rem;line-height:1.74}
+  .trilho{top:12px;right:12px}
+  .trilho-btn{min-height:44px}
+  .trilho-nome{display:none}
+  .trilho-painel{top:52px}
   section{padding-top:3.4rem}
   .hero-txt{padding-bottom:3.2rem}
   td:first-child{width:auto}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#barra{transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#barra{transition:none}
+  .trilho,.trilho-cue{transition:none}}
 @media print{
-  body::before,#barra,.baixar,.voltar{display:none}
+  body::before,#barra,.baixar,.voltar,.trilho{display:none}
   body{background:#fff;color:#17140F}
 }
 </style>
 </head>
 <body>
 <div id="barra"></div>
+
+<div class="trilho" id="trilho" hidden>
+  <button class="trilho-btn" id="trilhoBtn" type="button" aria-expanded="false" aria-controls="trilhoPainel">
+    <span class="trilho-num" id="trilhoNum">I</span>
+    <span class="trilho-nome" id="trilhoNome">The anomaly</span>
+    <span class="trilho-cue" aria-hidden="true"></span>
+    <span class="trilho-sr">Open the list of chapters</span>
+  </button>
+  <div class="trilho-painel" id="trilhoPainel" aria-label="Chapters of the essay" hidden>
+    <ol>
+      <li><a href="#cap-1"><i>I</i>The anomaly</a></li>
+      <li><a href="#cap-2"><i>II</i>The refusal</a></li>
+      <li><a href="#cap-3"><i>III</i>The name they gave him</a></li>
+      <li><a href="#cap-4"><i>IV</i>The body</a></li>
+      <li><a href="#cap-5"><i>V</i>The denial</a></li>
+      <li><a href="#cap-6"><i>VI</i>The hidden instrument</a></li>
+      <li><a href="#cap-7"><i>VII</i>Who went and read</a></li>
+      <li><a href="#cap-8"><i>VIII</i>The keys</a></li>
+      <li><a href="#cap-9"><i>IX</i>The measurement</a></li>
+      <li><a href="#cap-10"><i>X</i>The distance</a></li>
+    </ol>
+    <div class="trilho-pe">
+      <a href="/en/#ouvir">Play the track ↗</a>
+      <a href="/en/o-tritono/">Tritone report ↗</a>
+    </div>
+  </div>
+</div>
 
 <header class="hero">
   <div class="hero-img">
@@ -447,6 +513,50 @@ td:first-child{color:var(--marfim);width:38%}
     var m=(h.scrollHeight-h.clientHeight);
     b.style.width=(m>0?(t/m*100):0)+'%';}
   addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();
+})();
+
+/* Trilho de capitulos. Mesmo comportamento da home: mostra o capitulo corrente,
+   abre a lista, e some enquanto o hero esta na tela. Sem JavaScript o trilho
+   continua com o atributo hidden e a pagina nao muda. */
+(function(){
+  var romanos=['I','II','III','IV','V','VI','VII','VIII','IX','X'];
+  var caps=[].slice.call(document.querySelectorAll('h2[id^="cap-"]'));
+  var trilho=document.getElementById('trilho');
+  var btn=document.getElementById('trilhoBtn');
+  var painel=document.getElementById('trilhoPainel');
+  var num=document.getElementById('trilhoNum');
+  var nome=document.getElementById('trilhoNome');
+  if(!caps.length||!trilho||!btn||!painel) return;
+  var itens=[].slice.call(painel.querySelectorAll('a[href^="#cap-"]'));
+  trilho.hidden=false;
+
+  function fechar(){painel.hidden=true;btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(e){e.stopPropagation();
+    var abrir=painel.hidden;painel.hidden=!abrir;btn.setAttribute('aria-expanded',String(abrir));});
+  painel.addEventListener('click',function(e){if(e.target.closest('a')) fechar();});
+  document.addEventListener('click',function(e){if(!painel.hidden&&!trilho.contains(e.target)) fechar();});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&!painel.hidden){fechar();btn.focus();}});
+
+  var atual=-1;
+  function atualizar(){
+    var indice=-1;
+    for(var i=0;i<caps.length;i++){
+      if(caps[i].getBoundingClientRect().top<=150) indice=i; else break;
+    }
+    var ligado=indice>=0;
+    trilho.classList.toggle('on',ligado);
+    if(!ligado){if(!painel.hidden) fechar(); return;}
+    if(indice===atual) return;
+    atual=indice;
+    var alvo='#'+caps[indice].id;
+    num.textContent=romanos[indice]||'';
+    nome.textContent=caps[indice].textContent;
+    itens.forEach(function(a){a.classList.toggle('atual',a.getAttribute('href')===alvo);});
+  }
+  addEventListener('scroll',atualizar,{passive:true});
+  addEventListener('resize',atualizar,{passive:true});
+  atualizar();
 })();
 </script>
 
