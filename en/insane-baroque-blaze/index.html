@@ -166,6 +166,7 @@ main {
 @media (prefers-reduced-motion: reduce) {
   .capa-moldura::before { animation: none; }
 }
+.capa-moldura picture { display: block; }
 .capa {
   position: relative;
   z-index: 1;
@@ -343,8 +344,11 @@ footer .sep { margin: 0 .55rem; color: var(--gold-dim); }
 
   <header class="hero">
     <div class="capa-moldura">
-      <img class="capa" src="https://nandovalle.com/img/nando-blaze-fogo.jpg"
-           alt="Nando Valle playing his red Stratocaster in a burning baroque hall" width="1023" height="1537">
+      <picture>
+        <source type="image/webp" srcset="https://nandovalle.com/img/nando-blaze-fogo.webp">
+        <img class="capa" src="https://nandovalle.com/img/nando-blaze-fogo.jpg"
+             alt="Nando Valle playing his red Stratocaster in a burning baroque hall" width="1023" height="1537">
+      </picture>
     </div>
     <p class="selo">Nando Valle · Single · Aug 12, 2026</p>
     <h1>Insane Baroque Blaze</h1>
