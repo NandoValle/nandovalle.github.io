@@ -1,0 +1,5 @@
+# Sondas de medicao e captura, criadas para auditar a pagina e apagadas depois.
+# Ficam de fora do commit para nunca irem ao ar por um `git add -A` distraido.
+_audit*
+_shot*
+__*.html
