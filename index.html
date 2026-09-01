@@ -654,6 +654,16 @@
     .apparatus-table tr[hidden] { display:none; }
     .cite-dates { margin:10px 0 0; color:#6b635b; font-size:11px; line-height:1.7; }
     .cite-dates time { color:#8f8479; }
+    .faq-item { border-top:1px solid var(--line-soft); padding:24px 0; }
+    .faq-item:last-child { border-bottom:1px solid var(--line-soft); }
+    .faq-item > h3 { margin:0 0 12px; color:#d8ccbb; font:500 24px/1.15 var(--serif); letter-spacing:-.01em; }
+    .faq-item > p.faq-lead { color:#d8ccbb; font-size:16px; line-height:1.7; margin:0 0 14px; max-width:780px; }
+    .faq-item details, .faq-item details:last-child { border:0; }
+    .faq-item summary { padding:0 0 0 22px; font:600 11px/1.6 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:#9a7540; }
+    .faq-item summary::after { content:none; }
+    .faq-item summary::before { content:"+"; position:absolute; left:0; top:-4px; color:#9a7540; font:400 22px/1 var(--serif); transition:.2s; }
+    .faq-item details[open] summary::before { transform:rotate(45deg); }
+    .faq-item details p { margin:16px 0 0; }
   </style>
   <noscript>
     <style>.reveal { opacity:1 !important; transform:none !important; }</style>
@@ -1124,31 +1134,46 @@
     <section class="section">
       <div class="faq reveal">
         <h2>Perguntas que a página provoca.</h2>
-        <details>
-          <summary><h3>Nando Valle vendeu a alma ao diabo?</h3></summary>
+        <div class="faq-item">
+          <h3>Nando Valle vendeu a alma ao diabo?</h3>
           <p class="faq-lead">Não — e o ensaio também não afirma isso de Paganini.</p>
-          <p>Paganini desmentiu em vida os rumores que circulavam a seu respeito. O objeto desta página é outro: mostrar como uma reputação histórica se formou, quais documentos sobreviveram e o que acontece quando fatos, interpretação e imaginação são colocados lado a lado sem fingir que são a mesma coisa.</p>
-        </details>
-        <details>
-          <summary><h3>O site afirma alguma relação sobrenatural entre Paganini, Crowley e a música?</h3></summary>
+          <details>
+            <summary>Ver o desenvolvimento</summary>
+            <p>Paganini desmentiu em vida os rumores que circulavam a seu respeito. O objeto desta página é outro: mostrar como uma reputação histórica se formou, quais documentos sobreviveram e o que acontece quando fatos, interpretação e imaginação são colocados lado a lado sem fingir que são a mesma coisa.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <h3>O site afirma alguma relação sobrenatural entre Paganini, Crowley e a música?</h3>
           <p class="faq-lead">Não. A relação construída aqui é narrativa, não histórica.</p>
-          <p>Paganini fornece o caso; Crowley fornece outra linguagem para algumas perguntas — vontade, experiência e silêncio; a gravação fornece aquilo que pode ser efetivamente testado.</p>
-        </details>
-        <details>
-          <summary><h3>Por que Aleister Crowley aparece aqui?</h3></summary>
+          <details>
+            <summary>Ver o desenvolvimento</summary>
+            <p>Paganini fornece o caso; Crowley fornece outra linguagem para algumas perguntas — vontade, experiência e silêncio; a gravação fornece aquilo que pode ser efetivamente testado.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <h3>Por que Aleister Crowley aparece aqui?</h3>
           <p class="faq-lead">Por causa de <em>AHA!</em>, de 1910: três ideias dele atravessam o projeto. Nenhuma prova nada — elas formulam a pergunta.</p>
-          <p>Porque <em>AHA!</em>, publicado em 1910, contém três ideias que atravessam o projeto de maneira incomum: o paradoxo das sete chaves e oito etapas; a imagem da alma tocada pela “palheta da Vontade”; e a exigência de submeter a doutrina ao teste da experiência. Nenhuma delas prova algo sobre Paganini ou sobre esta música. Elas formulam a pergunta.</p>
-        </details>
-        <details>
-          <summary><h3>Insane Baroque Blaze contém realmente trítonos?</h3></summary>
+          <details>
+            <summary>Ver o desenvolvimento</summary>
+            <p>Porque <em>AHA!</em>, publicado em 1910, contém três ideias que atravessam o projeto de maneira incomum: o paradoxo das sete chaves e oito etapas; a imagem da alma tocada pela “palheta da Vontade”; e a exigência de submeter a doutrina ao teste da experiência. Nenhuma delas prova algo sobre Paganini ou sobre esta música. Elas formulam a pergunta.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <h3>Insane Baroque Blaze contém realmente trítonos?</h3>
           <p class="faq-lead">Sim: 83, 91, 49 e 80 trítonos melódicos em quatro transcrições publicadas. E isso é menos extraordinário do que “diabolus” sugere.</p>
-          <p>Quatro transcrições de guitarra publicadas retornam <strong>83, 91, 49 e 80</strong> trítonos melódicos, apresentados por arquivo e por motor; a primeira ocorrência reportada está em aproximadamente <strong>0:01,5</strong>. Como contraprova, a linha de baixo pelo mesmo método devolve 2 melódicos e 0 harmônicos. O laudo traz o contexto musical, a métrica usada e as correções — e o ponto forte é que o método, o detector e os arquivos foram publicados para conferência.</p>
-        </details>
-        <details>
-          <summary><h3>O clipe foi feito com inteligência artificial?</h3></summary>
+          <details>
+            <summary>Ver o desenvolvimento</summary>
+            <p>Quatro transcrições de guitarra publicadas retornam <strong>83, 91, 49 e 80</strong> trítonos melódicos, apresentados por arquivo e por motor; a primeira ocorrência reportada está em aproximadamente <strong>0:01,5</strong>. Como contraprova, a linha de baixo pelo mesmo método devolve 2 melódicos e 0 harmônicos. O laudo traz o contexto musical, a métrica usada e as correções — e o ponto forte é que o método, o detector e os arquivos foram publicados para conferência.</p>
+          </details>
+        </div>
+        <div class="faq-item">
+          <h3>O clipe foi feito com inteligência artificial?</h3>
           <p class="faq-lead">Em parte: a execução na guitarra é real, de Nando Valle; a imagem é sintética.</p>
-          <p>A execução musical original é de Nando Valle na guitarra. No clipe, um clone digital reproduz a performance a partir dessa gravação real com auxílio de inteligência artificial. A imagem é sintética; a execução que a originou, não.</p>
-        </details>
+          <details>
+            <summary>Ver o desenvolvimento</summary>
+            <p>A execução musical original é de Nando Valle na guitarra. No clipe, um clone digital reproduz a performance a partir dessa gravação real com auxílio de inteligência artificial. A imagem é sintética; a execução que a originou, não.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -1386,6 +1411,12 @@
       document.modelContext.registerTool({
         name: 'obter_ficha_da_faixa',
         description: 'Devolve a ficha publicada da faixa "Insane Baroque Blaze", de Nando Valle: título, artista, gênero, ISRC, data de lançamento, duração, links já conferidos e o resumo do laudo do trítono. Efeito: apenas leitura do que já está publicado nesta página; não altera estado, não envia dados e não faz requisição a servidor nenhum. Limite: só existe uma faixa nesta página, os números do trítono vêm do laudo público e nada é calculado ao vivo. Resultado: um objeto JSON em texto com os campos pedidos.',
+        annotations: {
+          readOnlyHint: true,
+          idempotentHint: true,
+          openWorldHint: false,
+          untrustedContentHint: false
+        },
         inputSchema: {
           type: 'object',
           properties: {
