@@ -109,8 +109,7 @@
         "albumReleaseType": "https://schema.org/SingleRelease",
         "byArtist": {
           "@id": "https://nandovalle.com/#artist"
-        },
-        "datePublished": "2026-10-09"
+        }
       },
       {
         "@type": "WebPage",
@@ -525,6 +524,19 @@
     .source-card h3 { color:#dfd3c2; font:500 26px/1.05 var(--serif); margin:28px 0 8px; }
     .source-card p { color:#786f67; font-size:11px; line-height:1.55; margin:0 0 20px; }
     .source-card .arrow { margin-top:auto; color:#b58d4d; font-size:18px; }
+    .discog { padding:70px 20px 62px; }
+    .discog-head { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:26px; }
+    .discog-head h2 { margin:10px 0 0; color:#ede1cf; font:500 clamp(30px,3.4vw,44px)/1 var(--serif); letter-spacing:-.035em; }
+    .discog-head p { max-width:460px; color:#8e8378; font-size:13px; line-height:1.65; margin:0; }
+    .discog-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+    .discog-card { display:flex; gap:18px; align-items:center; border:1px solid var(--line-soft); border-radius:18px; padding:16px; background:rgba(255,255,255,.012); transition:.25s ease; }
+    .discog-card:hover { transform:translateY(-4px); border-color:rgba(212,173,98,.25); background:rgba(212,173,98,.026); }
+    .discog-card img { width:108px; height:108px; flex:none; border-radius:12px; object-fit:cover; border:1px solid rgba(255,255,255,.06); }
+    .discog-card small { display:block; color:#7f6034; text-transform:uppercase; font-size:9px; letter-spacing:.17em; }
+    .discog-card h3 { color:#dfd3c2; font:500 24px/1.06 var(--serif); margin:9px 0 7px; }
+    .discog-card p { color:#786f67; font-size:11px; line-height:1.55; margin:0; }
+    .discog-tag { display:inline-block; margin-top:12px; color:#b58d4d; font-size:11px; letter-spacing:.05em; }
+
 
     .faq { width:min(900px,100%); margin:auto; }
     .faq > h2 { color:#eee2cf; font:500 clamp(46px,6vw,76px)/1 var(--serif); letter-spacing:-.04em; text-align:center; margin:0 0 34px; }
@@ -618,6 +630,9 @@
       .spotify-wrap { gap:28px; }
       .spotify-frame { padding:7px; border-radius:20px; }
       .spotify-frame iframe { border-radius:15px; }
+      .discog-head { display:block; }
+      .discog-head p { margin-top:12px; }
+      .discog-grid { grid-template-columns:1fr; }
       .sources-head { display:block; }
       .sources-head p { margin-top:14px; }
       .finale h2 { font-size:74px; }
@@ -826,6 +841,38 @@
       </aside>
     </div>
     <div class="scroll-cue"><i></i> desça sem acreditar</div>
+  </section>
+
+  <section class="section discog" id="gravacoes" aria-label="Discografia de Nando Valle">
+    <div class="wrap reveal">
+      <div class="discog-head">
+        <div>
+          <div class="eyebrow">Discografia</div>
+          <h2>O que já está gravado.</h2>
+        </div>
+        <p>Rock instrumental entre o barroco e o cinematográfico. Uma faixa no ar; a próxima sai em 11 de setembro de 2026.</p>
+      </div>
+      <div class="discog-grid">
+        <a class="discog-card" href="https://nandovalle.com/insane-baroque-blaze/">
+          <img src="/img/capa-insane-baroque-blaze-600.jpg" alt="Capa do single Insane Baroque Blaze, de Nando Valle" width="600" height="600" loading="lazy">
+          <div>
+            <small>Single &middot; 12 ago 2026 &middot; Rock</small>
+            <h3>Insane Baroque Blaze</h3>
+            <p>2 min 44. No ar em todas as plataformas.</p>
+            <span class="discog-tag">Ouvir ↗</span>
+          </div>
+        </a>
+        <a class="discog-card" href="https://music.apple.com/us/album/the-unbroken-single/6797797612" target="_blank" rel="noopener noreferrer">
+          <img src="/img/capa-the-unbroken-600.jpg" alt="Capa do single The Unbroken, de Nando Valle" width="600" height="600" loading="lazy">
+          <div>
+            <small>Single &middot; 11 set 2026 &middot; Instrumental</small>
+            <h3>The Unbroken</h3>
+            <p>2 min 24. Pr&eacute;-lan&ccedil;amento aberto na Apple Music.</p>
+            <span class="discog-tag">Pr&eacute;-salvar ↗</span>
+          </div>
+        </a>
+      </div>
+    </div>
   </section>
 
   <main id="dossie">
