@@ -53,6 +53,8 @@
         "@id": "https://nandovalle.com/#artist",
         "name": "Nando Valle",
         "url": "https://nandovalle.com/",
+        "description": "Guitarrista e produtor brasileiro, advogado de formação. Grava rock instrumental com forma e vocabulário emprestados da música erudita, e publica junto o método: a regra, os arquivos e as ressalvas.",
+        "image": "https://nandovalle.com/img/nando-blaze-guitarra-1200x630.jpg",
         "genre": [
           "Baroque rock",
           "Rock instrumental",
@@ -545,6 +547,7 @@
     .discog-card { display:flex; gap:18px; align-items:center; border:1px solid var(--line-soft); border-radius:18px; padding:16px; background:rgba(255,255,255,.012); transition:.25s ease; }
     .discog-card:hover { transform:translateY(-4px); border-color:rgba(212,173,98,.25); background:rgba(212,173,98,.026); }
     .discog-card img { width:108px; height:108px; flex:none; border-radius:12px; object-fit:cover; border:1px solid rgba(255,255,255,.06); }
+    .discog-card picture { flex:none; display:block; line-height:0; }
     .discog-card small { display:block; color:#7f6034; text-transform:uppercase; font-size:9px; letter-spacing:.17em; }
     .discog-card h3 { color:#dfd3c2; font:500 24px/1.06 var(--serif); margin:9px 0 7px; }
     .discog-card p { color:#786f67; font-size:11px; line-height:1.55; margin:0; }
@@ -796,6 +799,18 @@
       .rail-panel { top:46px; }
     }
 
+    /* ---- Bloco do artista ---- */
+    .artist-wrap { display:grid; grid-template-columns:.78fr 1.22fr; gap:52px; align-items:center; }
+    .artist-portrait { margin:0; border-radius:24px; overflow:hidden; border:1px solid rgba(255,255,255,.075);
+      background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.008)); box-shadow:var(--shadow); }
+    .artist-portrait img { width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 34%; filter:saturate(.92) contrast(1.03); }
+    .artist-copy h2 { margin:12px 0 20px; color:#f1e6d4; font:500 clamp(42px,5.2vw,68px)/.98 var(--serif); letter-spacing:-.045em; }
+    .artist-copy p { color:#a99d90; line-height:1.75; font-size:15px; margin:0 0 14px; }
+    .artist-copy .artist-lead { color:#cdbfab; font-size:17px; }
+    .artist-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+    @media (max-width: 980px) { .artist-wrap { grid-template-columns:1fr; gap:32px; } }
+    @media (max-width: 640px) { .nav-link.nav-artista { display:none; } }
+
   </style>
   <noscript>
     <style>.reveal { opacity:1 !important; transform:none !important; }</style>
@@ -814,6 +829,7 @@
       <nav class="nav-actions">
         <a class="nav-link" href="#dossie">O dossiê</a>
         <a class="nav-link" href="#experimento">O teste</a>
+        <a class="nav-link nav-artista" href="#artista">Artista</a>
         <a class="nav-link" href="#fontes">Fontes</a>
         <a class="nav-cta" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer" aria-label="Ouvir Insane Baroque Blaze no Spotify">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M7.3 9.2c3.3-1 7-.7 9.7.7M7.9 12.1c2.7-.7 5.8-.5 8.2.6M8.5 14.9c2.1-.5 4.5-.3 6.4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
@@ -856,6 +872,7 @@
     <div class="hero-media">
       <picture>
         <source type="image/webp" media="(max-width: 700px)" srcset="/img/nando-blaze-fogo-600.webp">
+        <source type="image/webp" srcset="/img/nando-blaze-fogo.webp">
         <img src="/img/nando-blaze-fogo.jpg" alt="Nando Valle tocando sua Stratocaster vermelha em um salão barroco em chamas" width="1023" height="1537" fetchpriority="high">
       </picture>
     </div>
@@ -897,7 +914,10 @@
       </div>
       <div class="discog-grid">
         <a class="discog-card" href="https://nandovalle.com/insane-baroque-blaze/">
-          <img src="/img/capa-insane-baroque-blaze-600.jpg" alt="Capa do single Insane Baroque Blaze, de Nando Valle" width="600" height="600" loading="lazy">
+          <picture>
+            <source type="image/webp" srcset="/img/capa-insane-baroque-blaze-600.webp">
+            <img src="/img/capa-insane-baroque-blaze-600.jpg" alt="Capa do single Insane Baroque Blaze, de Nando Valle" width="600" height="600" loading="lazy">
+          </picture>
           <div>
             <small>Single &middot; 12 ago 2026 &middot; Rock</small>
             <h3>Insane Baroque Blaze</h3>
@@ -906,7 +926,10 @@
           </div>
         </a>
         <a class="discog-card" href="https://music.apple.com/us/album/the-unbroken-single/6797797612" target="_blank" rel="noopener noreferrer">
-          <img src="/img/capa-the-unbroken-600.jpg" alt="Capa do single The Unbroken, de Nando Valle" width="600" height="600" loading="lazy">
+          <picture>
+            <source type="image/webp" srcset="/img/capa-the-unbroken-600.webp">
+            <img src="/img/capa-the-unbroken-600.jpg" alt="Capa do single The Unbroken, de Nando Valle" width="600" height="600" loading="lazy">
+          </picture>
           <div>
             <small>Single &middot; 11 set 2026 &middot; Instrumental</small>
             <h3>The Unbroken</h3>
@@ -914,6 +937,27 @@
             <span class="discog-tag">Pr&eacute;-salvar ↗</span>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="artista" aria-label="Sobre Nando Valle">
+    <div class="wrap artist-wrap reveal">
+      <figure class="artist-portrait">
+        <img src="/img/nando-blaze-guitarra-1200x630.jpg" alt="Nando Valle tocando guitarra em um salão barroco em chamas" width="1200" height="630" loading="lazy" decoding="async">
+      </figure>
+      <div class="artist-copy">
+        <div class="eyebrow">Quem gravou</div>
+        <h2>Nando Valle</h2>
+        <p class="artist-lead">Guitarrista e produtor brasileiro. Advogado de formação — daí o hábito de não aceitar história sem documento, que é exatamente como esta página começou.</p>
+        <p>Grava rock instrumental com forma e vocabulário emprestados da música erudita. Cada faixa sai com o método junto: a regra usada, os arquivos e as ressalvas — para quem quiser refazer a conta.</p>
+        <div class="track-meta"><span>ROCK INSTRUMENTAL</span><span>BAROQUE ROCK</span><span>NEOCLÁSSICO</span><span>BRASIL</span></div>
+        <div class="artist-links">
+          <a class="btn" href="https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+          <a class="btn" href="https://music.apple.com/us/artist/nando-valle/6793694273" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
+          <a class="btn" href="https://www.instagram.com/nandovale7/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        </div>
       </div>
     </div>
   </section>
