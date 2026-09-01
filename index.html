@@ -664,6 +664,84 @@
     .faq-item summary::before { content:"+"; position:absolute; left:0; top:-4px; color:#9a7540; font:400 22px/1 var(--serif); transition:.2s; }
     .faq-item details[open] summary::before { transform:rotate(45deg); }
     .faq-item details p { margin:16px 0 0; }
+    /* ---- Capitulos navegaveis: indice, trilho fixo e prev/proximo ---- */
+    .toc { max-width:var(--max); margin:0 auto; padding:104px 14px 0; }
+    .toc-head { display:flex; align-items:flex-end; justify-content:space-between; gap:28px; flex-wrap:wrap;
+                border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:8px; }
+    .toc-eyebrow { color:#9b783f; font:700 11px/1.6 var(--sans); letter-spacing:.22em; text-transform:uppercase; }
+    .toc h2 { margin:10px 0 0; color:#f0e5d3; font:500 clamp(34px,4vw,54px)/1 var(--serif); letter-spacing:-.035em; }
+    .toc-deck { color:var(--muted); font-size:14px; line-height:1.75; max-width:430px; margin:0; }
+    .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:0 40px; }
+    .toc-item a { display:grid; grid-template-columns:46px 1fr; align-items:baseline; gap:12px;
+                  padding:17px 12px 17px 6px; border-bottom:1px solid var(--line-soft); text-decoration:none;
+                  transition:background .22s, padding .22s; }
+    .toc-item a:hover, .toc-item a:focus-visible { background:rgba(212,173,98,.07); padding-left:14px; }
+    .toc-num { color:var(--gold-2); font:500 24px/1 var(--serif); letter-spacing:-.02em; }
+    .toc-copy b { display:block; color:#9b783f; font:700 11px/1.5 var(--sans); letter-spacing:.2em; text-transform:uppercase; }
+    .toc-copy i { display:block; color:#e0d4c1; font:500 21px/1.2 var(--serif); font-style:normal; letter-spacing:-.02em; margin-top:5px; text-wrap:balance; }
+    .toc-foot { display:flex; flex-wrap:wrap; gap:10px 28px; padding:22px 6px 0; }
+    .toc-foot a { color:#c2b09a; font:600 12px/1.6 var(--sans); letter-spacing:.06em; text-decoration:none;
+                  border-bottom:1px solid var(--line); padding-bottom:3px; transition:.2s; }
+    .toc-foot a:hover, .toc-foot a:focus-visible { color:var(--gold); border-color:var(--gold); }
+
+    .cap-nav { max-width:var(--max); margin:70px auto 0; display:flex; align-items:flex-start;
+               justify-content:space-between; gap:18px; border-top:1px solid var(--line-soft); padding-top:20px; }
+    .cap-nav a { text-decoration:none; max-width:47%; transition:.2s; }
+    .cap-nav b { display:block; color:#9b783f; font:700 11px/1.6 var(--sans); letter-spacing:.2em; text-transform:uppercase; }
+    .cap-nav i { display:block; color:#cdbfab; font:500 19px/1.24 var(--serif); font-style:normal; letter-spacing:-.02em; margin-top:4px; }
+    .cap-nav a:hover i, .cap-nav a:focus-visible i { color:var(--gold); }
+    .cap-nav .cap-next { margin-left:auto; text-align:right; }
+    .section:has(.essay-grid) > .cap-nav { padding-left:220px; padding-right:220px; }
+
+    .rail { position:fixed; inset:84px 0 auto; z-index:999; padding:0 20px; pointer-events:none;
+            opacity:0; visibility:hidden; transform:translateY(-8px);
+            transition:opacity .3s, transform .3s, visibility .3s; }
+    .rail.on { opacity:1; visibility:visible; transform:none; }
+    .rail[hidden] { display:none; }
+    .rail-inner { max-width:var(--max); margin:auto; display:flex; justify-content:flex-end; position:relative; }
+    .rail-btn { pointer-events:auto; display:flex; align-items:center; gap:10px; min-height:36px; padding:8px 15px;
+                border:1px solid rgba(255,255,255,.085); background:rgba(7,6,7,.72);
+                backdrop-filter:blur(18px) saturate(115%); border-radius:999px; cursor:pointer;
+                box-shadow:0 10px 28px rgba(0,0,0,.3); font-family:var(--sans); }
+    .rail-btn:hover, .rail-btn:focus-visible { border-color:var(--line); }
+    .rail-num { color:var(--gold); font:500 17px/1 var(--serif); letter-spacing:-.02em; min-width:22px; text-align:center; }
+    .rail-name { color:#cdbfab; font:600 11px/1.4 var(--sans); letter-spacing:.16em; text-transform:uppercase; }
+    .rail-cue { width:8px; height:8px; border-right:1.5px solid #9b783f; border-bottom:1.5px solid #9b783f;
+                transform:rotate(45deg) translateY(-2px); transition:transform .25s; }
+    .rail-btn[aria-expanded="true"] .rail-cue { transform:rotate(225deg) translateY(-2px); }
+    .rail-sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+    .rail-panel { pointer-events:auto; position:absolute; right:0; top:48px; width:min(340px, calc(100vw - 40px));
+                  max-height:min(62vh,520px); overflow-y:auto; border:1px solid var(--line);
+                  background:var(--panel-strong); backdrop-filter:blur(20px) saturate(115%);
+                  border-radius:16px; box-shadow:var(--shadow); padding:8px; }
+    .rail-panel[hidden] { display:none; }
+    .rail-panel ol { list-style:none; margin:0; padding:0; }
+    .rail-panel a { display:flex; align-items:baseline; gap:12px; padding:11px 12px; border-radius:10px;
+                    text-decoration:none; color:#cdbfab; font:600 12px/1.5 var(--sans); letter-spacing:.05em; }
+    .rail-panel a i { color:var(--gold-2); font:500 15px/1 var(--serif); font-style:normal; min-width:24px; }
+    .rail-panel a:hover, .rail-panel a:focus-visible { background:rgba(212,173,98,.09); color:var(--cream); }
+    .rail-panel a.atual { background:rgba(212,173,98,.13); color:var(--cream); }
+    .rail-panel a.atual i { color:var(--gold); }
+    [data-cap] { scroll-margin-top:58px; }
+
+    @media (max-width: 980px) {
+      .section:has(.essay-grid) > .cap-nav { padding-left:130px; padding-right:0; }
+    }
+    @media (max-width: 640px) {
+      .toc { padding-top:84px; }
+      .toc-list { grid-template-columns:1fr; gap:0; }
+      .toc h2 { font-size:38px; }
+      .toc-copy i { font-size:19px; }
+      .toc-foot { gap:10px 20px; }
+      .cap-nav { margin-top:52px; gap:14px; padding-top:16px; }
+      .cap-nav i { font-size:16px; }
+      .section:has(.essay-grid) > .cap-nav { padding-left:0; padding-right:0; }
+      .rail { inset:64px 0 auto; padding:0 10px; }
+      .rail-btn { min-height:44px; padding:11px 15px; }
+      .rail-name { display:none; }
+      .rail-panel { top:46px; }
+    }
+
   </style>
   <noscript>
     <style>.reveal { opacity:1 !important; transform:none !important; }</style>
@@ -690,6 +768,31 @@
       </nav>
     </div>
   </header>
+
+  <div class="rail" id="rail" hidden>
+    <div class="rail-inner">
+      <button class="rail-btn" id="railBtn" type="button" aria-expanded="false" aria-controls="railPanel">
+        <span class="rail-num" id="railNum">I</span>
+        <span class="rail-name" id="railName">A anomalia</span>
+        <span class="rail-cue" aria-hidden="true"></span>
+        <span class="rail-sr">Abrir a lista de capítulos</span>
+      </button>
+      <div class="rail-panel" id="railPanel" aria-label="Capítulos do dossiê" hidden>
+        <ol>
+          <li><a href="#cap-1"><i>I</i>A anomalia</a></li>
+          <li><a href="#cap-2"><i>II</i>A recusa</a></li>
+          <li><a href="#cap-3"><i>III</i>O nome que deram</a></li>
+          <li><a href="#cap-4"><i>IV</i>O corpo</a></li>
+          <li><a href="#cap-5"><i>V</i>O desmentido</a></li>
+          <li><a href="#cap-6"><i>VI</i>O instrumento escondido</a></li>
+          <li><a href="#cap-7"><i>VII</i>Quem foi ler</a></li>
+          <li><a href="#cap-8"><i>VIII</i>As chaves</a></li>
+          <li><a href="#experimento"><i>IX</i>A medição</a></li>
+          <li><a href="#cap-10"><i>X</i>A distância</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
 
   <section class="hero" id="top">
     <div class="hero-media">
@@ -726,7 +829,34 @@
   </section>
 
   <main id="dossie">
-    <section class="section dark-band">
+    <nav class="toc" id="capitulos" aria-label="Capítulos do dossiê">
+      <div class="toc-head">
+        <div>
+          <div class="toc-eyebrow">Índice do dossiê</div>
+          <h2>Dez capítulos.</h2>
+        </div>
+        <p class="toc-deck">Do primeiro sepultamento até a medição de 2026. Leia na ordem, ou vá direto ao capítulo que interessa — cada um se sustenta sozinho.</p>
+      </div>
+      <ol class="toc-list">
+        <li class="toc-item"><a href="#cap-1"><span class="toc-num">I</span><span class="toc-copy"><b>A anomalia</b><i>Enterraram Paganini nove vezes.</i></span></a></li>
+        <li class="toc-item"><a href="#cap-2"><span class="toc-num">II</span><span class="toc-copy"><b>A recusa</b><i>Ele achou que ainda não estava morrendo.</i></span></a></li>
+        <li class="toc-item"><a href="#cap-3"><span class="toc-num">III</span><span class="toc-copy"><b>O nome que deram</b><i>Diabo.</i></span></a></li>
+        <li class="toc-item"><a href="#cap-4"><span class="toc-num">IV</span><span class="toc-copy"><b>O corpo</b><i>A mão explicava uma parte do prodígio.</i></span></a></li>
+        <li class="toc-item"><a href="#cap-5"><span class="toc-num">V</span><span class="toc-copy"><b>O desmentido</b><i>Paganini não confirmou pacto algum.</i></span></a></li>
+        <li class="toc-item"><a href="#cap-6"><span class="toc-num">VI</span><span class="toc-copy"><b>O instrumento escondido</b><i>Paganini tocava violão.</i></span></a></li>
+        <li class="toc-item"><a href="#cap-7"><span class="toc-num">VII</span><span class="toc-copy"><b>Quem foi ler</b><i>A história só chega à guitarra porque alguém foi atrás dos documentos.</i></span></a></li>
+        <li class="toc-item"><a href="#cap-8"><span class="toc-num">VIII</span><span class="toc-copy"><b>As chaves</b><i>Sete. Oito. Uma.</i></span></a></li>
+        <li class="toc-item"><a href="#experimento"><span class="toc-num">IX</span><span class="toc-copy"><b>A medição</b><i>Insane Baroque Blaze</i></span></a></li>
+        <li class="toc-item"><a href="#cap-10"><span class="toc-num">X</span><span class="toc-copy"><b>A distância</b><i>O arquivo não obriga a conclusão.</i></span></a></li>
+      </ol>
+      <div class="toc-foot">
+        <a href="https://nandovalle.com/o-instrumento-escondido/" target="_blank" rel="noopener noreferrer">Ensaio completo ↗</a>
+        <a href="#ouvir">Ouvir a faixa ↓</a>
+        <a href="#fontes">Fontes e aparato ↓</a>
+      </div>
+    </nav>
+
+    <section id="cap-1" data-cap="1" data-cap-num="I" data-cap-name="A anomalia" class="section dark-band">
       <div class="wrap essay-grid reveal">
         <div class="roman">I</div>
         <article class="chapter">
@@ -739,9 +869,13 @@
         </article>
         <aside class="side-note"><span>Regra da página</span>Onde há documento, documento. Onde há interpretação, interpretação. Onde há dúvida, dúvida.</aside>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-next" href="#cap-2"><b>Próximo</b><i>II &middot; A recusa</i></a>
+      </nav>
     </section>
 
-    <section class="section">
+    <section id="cap-2" data-cap="2" data-cap-num="II" data-cap-name="A recusa" class="section">
       <div class="wrap essay-grid reveal">
         <div class="roman">II</div>
         <article class="chapter">
@@ -755,9 +889,14 @@
         </article>
         <aside class="side-note"><span>Próxima peça</span>O fato histórico não é que o Diabo estava lá. É que havia gente convencida de que estava.</aside>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#cap-1"><b>Anterior</b><i>I &middot; A anomalia</i></a>
+        <a class="cap-next" href="#cap-3"><b>Próximo</b><i>III &middot; O nome que deram</i></a>
+      </nav>
     </section>
 
-    <section class="section dark-band">
+    <section id="cap-3" data-cap="3" data-cap-num="III" data-cap-name="O nome que deram" class="section dark-band">
       <div class="wrap essay-grid reveal">
         <div class="roman">III</div>
         <article class="chapter">
@@ -778,9 +917,14 @@
         </article>
         <aside class="side-note"><span>Hipótese do ensaio</span>Quando a técnica excede o vocabulário de quem vê, a imaginação preenche a distância.</aside>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#cap-2"><b>Anterior</b><i>II &middot; A recusa</i></a>
+        <a class="cap-next" href="#cap-4"><b>Próximo</b><i>IV &middot; O corpo</i></a>
+      </nav>
     </section>
 
-    <section class="section">
+    <section id="cap-4" data-cap="4" data-cap-num="IV" data-cap-name="O corpo" class="section">
       <div class="wrap essay-grid reveal">
         <div class="roman">IV</div>
         <article class="chapter">
@@ -794,9 +938,14 @@
         </article>
         <aside class="side-note"><span>Separação necessária</span>O texto não transforma hipótese médica em diagnóstico retroativo.</aside>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#cap-3"><b>Anterior</b><i>III &middot; O nome que deram</i></a>
+        <a class="cap-next" href="#cap-5"><b>Próximo</b><i>V &middot; O desmentido</i></a>
+      </nav>
     </section>
 
-    <section class="section dark-band">
+    <section id="cap-5" data-cap="5" data-cap-num="V" data-cap-name="O desmentido" class="section dark-band">
       <div class="wrap essay-grid reveal">
         <div class="roman">V</div>
         <article class="chapter">
@@ -810,9 +959,14 @@
         </article>
         <aside class="side-note"><span>Não confundir</span>Imagem pública não é confissão. Atmosfera não é evidência.</aside>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#cap-4"><b>Anterior</b><i>IV &middot; O corpo</i></a>
+        <a class="cap-next" href="#cap-6"><b>Próximo</b><i>VI &middot; O instrumento escondido</i></a>
+      </nav>
     </section>
 
-    <section class="section">
+    <section id="cap-6" data-cap="6" data-cap-num="VI" data-cap-name="O instrumento escondido" class="section">
       <div class="wrap essay-grid reveal">
         <div class="roman">VI</div>
         <article class="chapter">
@@ -827,6 +981,11 @@
         </article>
         <aside class="side-note"><span>Objeto verificável</span>Musée de la Musique · Paris · violão Grobert · <strong>item E.375</strong>. O número de inventário faz parte da prova.</aside>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#cap-5"><b>Anterior</b><i>V &middot; O desmentido</i></a>
+        <a class="cap-next" href="#cap-7"><b>Próximo</b><i>VII &middot; Quem foi ler</i></a>
+      </nav>
     </section>
 
 
@@ -839,7 +998,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section id="cap-7" data-cap="7" data-cap-num="VII" data-cap-name="Quem foi ler" class="section">
       <div class="wrap essay-grid reveal">
         <div class="roman">VII</div>
         <article class="chapter">
@@ -855,9 +1014,14 @@
         </article>
         <aside class="side-note"><span>Regra de verificabilidade</span>Biografia própria não vira fato externo só porque está impressa. Aqui, o que só Nando pode relatar continua marcado como relato dele.</aside>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#cap-6"><b>Anterior</b><i>VI &middot; O instrumento escondido</i></a>
+        <a class="cap-next" href="#cap-8"><b>Próximo</b><i>VIII &middot; As chaves</i></a>
+      </nav>
     </section>
 
-    <section class="section dark-band">
+    <section id="cap-8" data-cap="8" data-cap-num="VIII" data-cap-name="As chaves" class="section dark-band">
       <div class="wrap reveal">
         <div class="distance">
           <div class="kicker">VIII · as chaves · AHA! · 1910</div>
@@ -877,6 +1041,11 @@
           <div class="key final"><b>08 / 01</b><p>Por fim, todas as anteriores dominadas em uma só.</p></div>
         </div>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#cap-7"><b>Anterior</b><i>VII &middot; Quem foi ler</i></a>
+        <a class="cap-next" href="#experimento"><b>Próximo</b><i>IX &middot; A medição</i></a>
+      </nav>
     </section>
 
     <section class="quote-section">
@@ -888,7 +1057,7 @@
       </div>
     </section>
 
-    <section class="section experiment" id="experimento">
+    <section data-cap="9" data-cap-num="IX" data-cap-name="A medição" class="section experiment" id="experimento">
       <div class="wrap reveal">
         <div class="experiment-card">
           <div class="experiment-head">
@@ -975,6 +1144,11 @@
           </div>
         </div>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#cap-8"><b>Anterior</b><i>VIII &middot; As chaves</i></a>
+        <a class="cap-next" href="#cap-10"><b>Próximo</b><i>X &middot; A distância</i></a>
+      </nav>
     </section>
 
     <section class="section" id="ouvir">
@@ -994,7 +1168,7 @@
     </section>
 
 
-    <section class="section dark-band">
+    <section id="cap-10" data-cap="10" data-cap-num="X" data-cap-name="A distância" class="section dark-band">
       <div class="wrap distance reveal">
         <div class="kicker">X · a distância</div>
         <h2>O arquivo não obriga a conclusão.</h2>
@@ -1010,6 +1184,11 @@
         <p>O que sobrar depois de todos os documentos não será obra deste texto. Será obra do que permanecer inexplicado — e do que cada leitor decidir projetar sobre isso.</p>
         <div class="command" aria-label="Comandos finais"><span>Meça.</span><span>Negue.</span><span class="active">Nomeie.</span></div>
       </div>
+    
+      <nav class="cap-nav" aria-label="Navegação entre capítulos">
+        <a class="cap-prev" href="#experimento"><b>Anterior</b><i>IX &middot; A medição</i></a>
+        <a class="cap-next" href="#fontes"><b>Próximo</b><i>Fontes &middot; O arquivo está aberto</i></a>
+      </nav>
     </section>
 
     <section class="section sources" id="fontes">
@@ -1442,6 +1621,63 @@
         }
       });
     }
+  </script>
+
+  <script>
+    /* Capitulos navegaveis: marca o capitulo atual no trilho fixo e abre a lista.
+       Sem JavaScript o trilho nunca aparece (nasce com o atributo hidden); o indice
+       e os links anterior/proximo sao ancoras comuns e continuam funcionando. */
+    (function () {
+      const caps = Array.prototype.slice.call(document.querySelectorAll('[data-cap]'));
+      const rail = document.getElementById('rail');
+      if (!caps.length || !rail) return;
+
+      const btn = document.getElementById('railBtn');
+      const painel = document.getElementById('railPanel');
+      const num = document.getElementById('railNum');
+      const nome = document.getElementById('railName');
+      const itens = Array.prototype.slice.call(painel.querySelectorAll('a'));
+      rail.hidden = false;
+
+      function fechar() {
+        painel.hidden = true;
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const abrir = painel.hidden;
+        painel.hidden = !abrir;
+        btn.setAttribute('aria-expanded', String(abrir));
+      });
+      painel.addEventListener('click', function (e) { if (e.target.closest('a')) fechar(); });
+      document.addEventListener('click', function (e) {
+        if (!painel.hidden && !rail.contains(e.target)) fechar();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !painel.hidden) { fechar(); btn.focus(); }
+      });
+
+      let atual = -1;
+      function atualizarTrilho() {
+        let indice = -1;
+        for (let i = 0; i < caps.length; i++) {
+          if (caps[i].getBoundingClientRect().top <= 150) indice = i; else break;
+        }
+        const ligado = indice >= 0 && caps[caps.length - 1].getBoundingClientRect().bottom > 0;
+        rail.classList.toggle('on', ligado);
+        if (!ligado) { if (!painel.hidden) fechar(); return; }
+        if (indice === atual) return;
+        atual = indice;
+        num.textContent = caps[indice].getAttribute('data-cap-num');
+        nome.textContent = caps[indice].getAttribute('data-cap-name');
+        itens.forEach(function (a, i) { a.classList.toggle('atual', i === indice); });
+      }
+
+      document.addEventListener('scroll', atualizarTrilho, { passive: true });
+      window.addEventListener('resize', atualizarTrilho, { passive: true });
+      atualizarTrilho();
+    })();
   </script>
 </body>
 </html>
