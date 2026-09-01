@@ -1259,8 +1259,6 @@
         ? r.encontradas + ' of ' + r.total + ' apparatus rows contain "' + r.termo + '".'
         : 'Showing all ' + r.total + ' apparatus rows.';
     }
-    const DESCRICAO_FICHA = 'Returns the published record of the track "Insane Baroque Blaze" by Nando Valle: title, artist, genre, ISRC, release date, duration, already-checked links and the summary of the tritone report. Effect: read-only over what is already published on this page; it changes no state, sends no data and calls no server. Limit: there is only one track on this page, the tritone figures come from the public report and nothing is computed live. Result: a JSON object as text with the requested fields.';
-    const DESCRICAO_CAMPO = 'Which part of the record to return. "tudo" returns every field; "identificacao" returns title, artist, genre and ISRC; "lancamento" returns the release date and the duration; "links" returns the track page, Spotify, the platform aggregator and the report; "tritono" returns the measured summary and the report link. Omitted, it means "tudo".';
 
     /* ------------------------------------------------------------------
        WebMCP - duas ferramentas de leitura desta pagina.
@@ -1361,14 +1359,14 @@
     if (document.modelContext && typeof document.modelContext.registerTool === 'function') {
       document.modelContext.registerTool({
         name: 'obter_ficha_da_faixa',
-        description: DESCRICAO_FICHA,
+        description: 'Returns the published record of the track "Insane Baroque Blaze" by Nando Valle: title, artist, genre, ISRC, release date, duration, already-checked links and the summary of the tritone report. Effect: read-only over what is already published on this page; it changes no state, sends no data and calls no server. Limit: there is only one track on this page, the tritone figures come from the public report and nothing is computed live. Result: a JSON object as text with the requested fields.',
         inputSchema: {
           type: 'object',
           properties: {
             campo: {
               type: 'string',
               enum: ['tudo', 'identificacao', 'lancamento', 'links', 'tritono'],
-              description: DESCRICAO_CAMPO
+              description: 'Which part of the record to return. "tudo" returns every field; "identificacao" returns title, artist, genre and ISRC; "lancamento" returns the release date and the duration; "links" returns the track page, Spotify, the platform aggregator and the report; "tritono" returns the measured summary and the report link. Omitted, it means "tudo".'
             }
           },
           required: [],

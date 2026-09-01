@@ -1278,8 +1278,6 @@
         ? r.encontradas + ' de ' + r.total + ' linhas do aparato contêm "' + r.termo + '".'
         : 'Mostrando as ' + r.total + ' linhas do aparato.';
     }
-    const DESCRICAO_FICHA = 'Devolve a ficha publicada da faixa "Insane Baroque Blaze", de Nando Valle: título, artista, gênero, ISRC, data de lançamento, duração, links já conferidos e o resumo do laudo do trítono. Efeito: apenas leitura do que já está publicado nesta página; não altera estado, não envia dados e não faz requisição a servidor nenhum. Limite: só existe uma faixa nesta página, os números do trítono vêm do laudo público e nada é calculado ao vivo. Resultado: um objeto JSON em texto com os campos pedidos.';
-    const DESCRICAO_CAMPO = 'Que parte da ficha devolver. "tudo" devolve todos os campos; "identificacao" devolve título, artista, gênero e ISRC; "lancamento" devolve a data de lançamento e a duração; "links" devolve a página da faixa, o Spotify, o agregador de plataformas e o laudo; "tritono" devolve o resumo medido e o link do laudo. Omitido, equivale a "tudo".';
 
     /* ------------------------------------------------------------------
        WebMCP - duas ferramentas de leitura desta pagina.
@@ -1380,14 +1378,14 @@
     if (document.modelContext && typeof document.modelContext.registerTool === 'function') {
       document.modelContext.registerTool({
         name: 'obter_ficha_da_faixa',
-        description: DESCRICAO_FICHA,
+        description: 'Devolve a ficha publicada da faixa "Insane Baroque Blaze", de Nando Valle: título, artista, gênero, ISRC, data de lançamento, duração, links já conferidos e o resumo do laudo do trítono. Efeito: apenas leitura do que já está publicado nesta página; não altera estado, não envia dados e não faz requisição a servidor nenhum. Limite: só existe uma faixa nesta página, os números do trítono vêm do laudo público e nada é calculado ao vivo. Resultado: um objeto JSON em texto com os campos pedidos.',
         inputSchema: {
           type: 'object',
           properties: {
             campo: {
               type: 'string',
               enum: ['tudo', 'identificacao', 'lancamento', 'links', 'tritono'],
-              description: DESCRICAO_CAMPO
+              description: 'Que parte da ficha devolver. "tudo" devolve todos os campos; "identificacao" devolve título, artista, gênero e ISRC; "lancamento" devolve a data de lançamento e a duração; "links" devolve a página da faixa, o Spotify, o agregador de plataformas e o laudo; "tritono" devolve o resumo medido e o link do laudo. Omitido, equivale a "tudo".'
             }
           },
           required: [],
