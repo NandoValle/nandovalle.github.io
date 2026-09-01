@@ -680,6 +680,13 @@
     .faq-item details[open] summary::before { transform:rotate(45deg); }
     .faq-item details p { margin:16px 0 0; }
     /* ---- Capitulos navegaveis: indice, trilho fixo e prev/proximo ---- */
+    .intro { max-width:var(--max); margin:0 auto; padding:104px 14px 0; }
+    .intro-lead { max-width:830px; margin:16px 0 22px; color:#e2d5c2;
+                  font:500 clamp(22px,2.4vw,31px)/1.3 var(--serif); letter-spacing:-.022em; text-wrap:pretty; }
+    .intro-lead strong { color:#f3e8d6; font-weight:600; }
+    .intro-body { max-width:760px; margin:0; color:#b4a696; font-size:16px; line-height:1.8; }
+    .intro-cta { display:flex; flex-wrap:wrap; gap:12px; margin:26px 0 0; }
+    .intro + .toc { padding-top:58px; }
     .toc { max-width:var(--max); margin:0 auto; padding:104px 14px 0; }
     .toc-head { display:flex; align-items:flex-end; justify-content:space-between; gap:28px; flex-wrap:wrap;
                 border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:8px; }
@@ -743,6 +750,11 @@
       .section:has(.essay-grid) > .cap-nav { padding-left:130px; padding-right:0; }
     }
     @media (max-width: 640px) {
+      .intro { padding-top:84px; }
+      .intro-lead { font-size:21px; }
+      .intro-body { font-size:15px; }
+      .intro-cta { gap:10px; margin-top:22px; }
+      .intro + .toc { padding-top:46px; }
       .toc { padding-top:84px; }
       .toc-list { grid-template-columns:1fr; gap:0; }
       .toc h2 { font-size:38px; }
@@ -876,6 +888,16 @@
   </section>
 
   <main id="dossie">
+    <div class="intro">
+      <div class="toc-eyebrow">Antes do dossiê</div>
+      <p class="intro-lead"><strong>Nando Valle é um guitarrista e produtor brasileiro que funde música erudita e rock em faixas como “Insane Baroque Blaze” (2026).</strong> Esta página não é divulgação: é um ensaio documentado sobre Niccolò Paganini, com aparato de fontes afirmação por afirmação, e uma medição reproduzível feita sobre a própria gravação.</p>
+      <p class="intro-body">São dez capítulos. No meio deles estão a faixa — instrumental, 2min44, lançada em 12 de agosto de 2026 — e o laudo do trítono, com o detector, os cinco MIDIs e as contagens de quatro transcrições. Nada aqui é sobrenatural, e nada aqui pede fé: os arquivos estão abertos.</p>
+      <div class="intro-cta">
+        <a class="btn" href="#ouvir"><span aria-hidden="true">▶</span> Ir direto à faixa</a>
+        <a class="btn" href="#cap-1">Começar pelo capítulo I</a>
+      </div>
+    </div>
+
     <nav class="toc" id="capitulos" aria-label="Capítulos do dossiê">
       <div class="toc-head">
         <div>
