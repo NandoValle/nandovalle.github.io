@@ -482,6 +482,19 @@
     .track-meta span { padding:8px 10px; border:1px solid var(--line-soft); border-radius:999px; color:#8f8479; font-size:10px; letter-spacing:.07em; }
     .spotify-frame { padding:10px; border-radius:28px; border:1px solid rgba(255,255,255,.075); background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.008)); box-shadow:var(--shadow); }
     .spotify-frame iframe { width:100%; border:0; border-radius:20px; display:block; min-height:352px; }
+    .player-slot { position:relative; }
+    .dock-close { display:none; }
+    .spotify-frame.docked { position:fixed; z-index:985; left:20px; bottom:20px;
+                            width:min(420px, calc(100vw - 108px)); padding:8px; border-radius:18px;
+                            background:rgba(9,7,8,.86); backdrop-filter:blur(18px) saturate(115%);
+                            border-color:rgba(255,255,255,.09); box-shadow:0 22px 60px rgba(0,0,0,.5); }
+    .spotify-frame.docked iframe { min-height:0; height:152px; border-radius:12px; }
+    .spotify-frame.docked .dock-close { display:grid; place-items:center; position:absolute; top:-11px; left:-11px;
+                                        width:26px; height:26px; padding:0; border-radius:50%; cursor:pointer;
+                                        border:1px solid rgba(212,173,98,.3); background:rgba(11,8,9,.94);
+                                        color:#c8aa6e; font:600 15px/1 var(--sans); }
+    .spotify-frame.docked .dock-close:hover,
+    .spotify-frame.docked .dock-close:focus-visible { color:var(--gold); border-color:var(--gold); }
 
     .distance { text-align:center; max-width:930px; margin:auto; }
     .distance .kicker { color:#8f6c3d; font-size:10px; letter-spacing:.23em; text-transform:uppercase; }
@@ -558,6 +571,11 @@
 
     .reveal { opacity:0; transform:translateY(22px); transition:opacity .8s ease, transform .8s ease; }
     .reveal.visible { opacity:1; transform:none; }
+    /* .spotify-wrap entra na tela com translateY, e ancestral transformado vira o bloco de
+       contencao de position:fixed. Enquanto acoplado, zera a transformacao. A regra fica
+       aqui, depois de .reveal, para vencer por ordem de origem -- nao por especificidade
+       de :has(), que o Chrome nao resolve a nosso favor neste caso. */
+    .spotify-wrap:has(.spotify-frame.docked) { transform:none; transition:none; }
 
     .floating-share { position:fixed; right:20px; bottom:20px; z-index:980; }
     .share-fab { width:48px; height:48px; border-radius:50%; border:1px solid rgba(212,173,98,.22); background:rgba(11,8,9,.78); color:#d4ad62; display:grid; place-items:center; cursor:pointer; backdrop-filter:blur(16px); box-shadow:0 10px 30px rgba(0,0,0,.35); transition:.2s; }
@@ -614,6 +632,11 @@
       .spotify-wrap { gap:28px; }
       .spotify-frame { padding:7px; border-radius:20px; }
       .spotify-frame iframe { border-radius:15px; }
+      /* No celular o embed do Spotify nao cabe ao lado do botao de compartilhar: o
+         player ocupa a largura toda e o botao sobe enquanto ele estiver acoplado. */
+      .spotify-frame.docked { left:10px; right:10px; bottom:10px; width:auto; padding:6px; }
+      .spotify-frame.docked iframe { border-radius:11px; }
+      body.com-dock .floating-share { bottom:190px; }
       .discog-head { display:block; }
       .discog-head p { margin-top:12px; }
       .discog-grid { grid-template-columns:1fr; }
@@ -1219,8 +1242,11 @@
           <div class="track-meta"><span>NANDO VALLE</span><span>INSTRUMENTAL ROCK</span><span>ISRC QZNJV2617176</span></div>
           <a class="btn" href="https://song.link/us/i/6794384682" target="_blank" rel="noopener noreferrer">Every platform &nearr;</a>
         </div>
-        <div class="spotify-frame">
-          <iframe style="border-radius:20px" src="https://open.spotify.com/embed/track/0tVaSUQuKdwRk9m4wdM1wN?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Insane Baroque Blaze &mdash; Spotify"></iframe>
+        <div class="player-slot" id="playerSlot">
+          <div class="spotify-frame" id="playerFrame">
+            <button class="dock-close" id="dockClose" type="button" aria-label="Close the sticky player">&times;</button>
+            <iframe style="border-radius:20px" src="https://open.spotify.com/embed/track/0tVaSUQuKdwRk9m4wdM1wN?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Insane Baroque Blaze &mdash; Spotify"></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -1735,6 +1761,46 @@
       document.addEventListener('scroll', atualizarTrilho, { passive: true });
       window.addEventListener('resize', atualizarTrilho, { passive: true });
       atualizarTrilho();
+    })();
+
+    // Player fixo. A moldura do Spotify vira fixa por CSS quando a secao dela sai
+    // da tela; o iframe nunca muda de lugar no DOM, porque mover o no recarregaria
+    // o embed e cortaria o som. So acopla depois que a pessoa mexeu no player, e
+    // some de vez se ela fechar.
+    (function () {
+      const slot = document.getElementById('playerSlot');
+      const frame = document.getElementById('playerFrame');
+      const botaoFechar = document.getElementById('dockClose');
+      const iframe = frame && frame.querySelector('iframe');
+      if (!slot || !frame || !iframe || !botaoFechar) return;
+
+      let tocou = false;
+      let dispensado = false;
+      let acoplado = false;
+
+      function acoplar(ligar) {
+        if (ligar === acoplado) return;
+        if (ligar) slot.style.height = frame.offsetHeight + 'px';
+        acoplado = ligar;
+        frame.classList.toggle('docked', ligar);
+        document.body.classList.toggle('com-dock', ligar);
+        if (!ligar) slot.style.height = '';
+      }
+
+      function avaliar() {
+        if (!tocou || dispensado) { acoplar(false); return; }
+        const r = slot.getBoundingClientRect();
+        acoplar(r.bottom < 8 || r.top > window.innerHeight - 8);
+      }
+
+      // Iframe de outra origem nao avisa que recebeu clique. O que da para observar
+      // e a janela perder o foco com o iframe como elemento ativo.
+      window.addEventListener('blur', function () {
+        if (document.activeElement === iframe) { tocou = true; avaliar(); }
+      });
+      botaoFechar.addEventListener('click', function () { dispensado = true; acoplar(false); });
+      document.addEventListener('scroll', avaliar, { passive: true });
+      window.addEventListener('resize', avaliar, { passive: true });
     })();
   </script>
 </body>
