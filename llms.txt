@@ -80,8 +80,9 @@ version: https://nandovalle.com/en/
 
 ## Links
 
-- [Página oficial](https://nandovalle.com/): o ensaio condensado em dez capítulos, a
-  tabela da medição por motor, o aparato de fontes e o FAQ
+- [Página oficial](https://nandovalle.com/): a abertura do dossiê, o índice dos dez
+  capítulos (os oito primeiros abrem o ensaio completo), a medição por motor, o aparato
+  de fontes e o FAQ
   Versão em inglês: https://nandovalle.com/en/
 - [O instrumento escondido](https://nandovalle.com/o-instrumento-escondido/): o ensaio
   completo, com aparato de fontes afirmação por afirmação e as ressalvas declaradas. PDF de
@@ -94,6 +95,9 @@ version: https://nandovalle.com/en/
 - [Insane Baroque Blaze](https://nandovalle.com/insane-baroque-blaze/): página da
   faixa, com player e links das plataformas
   Versão em inglês: https://nandovalle.com/en/insane-baroque-blaze/
+- [Para agentes](https://nandovalle.com/para-agentes/): fatos canônicos, o que o site não
+  afirma, as ferramentas WebMCP declaradas e onde conferir cada dado
+  Versão em inglês: https://nandovalle.com/en/para-agentes/
 - [Spotify](https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ): faixas do artista
 - [Shazam](https://www.shazam.com/artist/x/6793694273): página do artista no Shazam
 - [Viberate](https://www.viberate.com/artist/nando-valle/): perfil na base de dados da indústria
