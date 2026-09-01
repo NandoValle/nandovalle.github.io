@@ -46,10 +46,11 @@
 :root{
   --noite:#0B0907;        --noite-2:#12100C;
   --salao:#1A1611;
-  --marfim:#EFE6D6;       --marfim-2:#C9BCA6;      --marfim-3:#8C806E;
-  --brasa:#C8912F;        --brasa-viva:#E0A83F;
-  --sangue:#C24638;
-  --fio:rgba(200,145,47,.26);
+  --marfim:#F4EDE0;       --marfim-2:#D6C9B4;      --marfim-3:#9C8F7B;
+  --brasa:#DFA13A;        --brasa-viva:#F2BC55;
+  --sangue:#D9503F;
+  --sangue-texto:#E06152;
+  --fio:rgba(223,161,58,.34);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -64,8 +65,8 @@ body{
 body::before{
   content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
   background:
-    radial-gradient(60rem 40rem at 12% -8%, rgba(200,145,47,.13), transparent 62%),
-    radial-gradient(46rem 38rem at 92% 108%, rgba(194,70,56,.11), transparent 60%);
+    radial-gradient(60rem 40rem at 12% -8%, rgba(223,161,58,.20), transparent 62%),
+    radial-gradient(46rem 38rem at 92% 108%, rgba(217,80,63,.17), transparent 60%);
 }
 main,header,footer{position:relative; z-index:1}
 
@@ -101,8 +102,8 @@ main,header,footer{position:relative; z-index:1}
   text-decoration:none;font-family:"Cormorant Garamond",Georgia,serif;font-size:.78rem;
   line-height:1.4;letter-spacing:.16em;text-transform:uppercase;color:var(--marfim-2)}
 .trilho-painel a i{font-style:normal;font-size:.95rem;color:var(--brasa);min-width:1.6rem;letter-spacing:0}
-.trilho-painel a:hover,.trilho-painel a:focus-visible{background:rgba(200,145,47,.10);color:var(--marfim)}
-.trilho-painel a.atual{background:rgba(200,145,47,.15);color:var(--marfim)}
+.trilho-painel a:hover,.trilho-painel a:focus-visible{background:rgba(223,161,58,.10);color:var(--marfim)}
+.trilho-painel a.atual{background:rgba(223,161,58,.15);color:var(--marfim)}
 .trilho-pe{margin-top:.35rem;padding-top:.35rem;border-top:1px solid var(--fio)}
 .trilho-pe a{color:var(--brasa);letter-spacing:.16em}
 h2[id^="cap-"]{scroll-margin-top:5.5rem}
@@ -114,7 +115,7 @@ h2[id^="cap-"]{scroll-margin-top:5.5rem}
 .indice li:last-child{border-bottom:1px solid var(--fio)}
 .indice a{display:grid;grid-template-columns:2.6rem 1fr;align-items:baseline;gap:.9rem;
   padding:1rem .4rem;text-decoration:none;color:inherit;transition:background .2s,padding .2s}
-.indice a:hover,.indice a:focus-visible{background:rgba(200,145,47,.07);padding-left:.9rem}
+.indice a:hover,.indice a:focus-visible{background:rgba(223,161,58,.07);padding-left:.9rem}
 .indice .n{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.15rem;color:var(--brasa);line-height:1}
 .indice .t{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:.7rem;
   letter-spacing:.3em;text-transform:uppercase;color:var(--brasa)}
@@ -139,16 +140,16 @@ h2[id^="cap-"]{scroll-margin-top:5.5rem}
 .hero-img{position:absolute; inset:0; z-index:0}
 .hero-img picture{display:block;width:100%;height:100%}
 .hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;
-  filter:saturate(.92) contrast(1.04)}
+  filter:saturate(1.10) contrast(1.06) brightness(1.06)}
 .hero-img::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg, rgba(11,9,7,.60) 0%, rgba(11,9,7,.28) 32%, rgba(11,9,7,.90) 76%, var(--noite) 100%)}
+  background:linear-gradient(180deg, rgba(11,9,7,.46) 0%, rgba(11,9,7,.12) 32%, rgba(11,9,7,.86) 76%, var(--noite) 100%), radial-gradient(34rem 26rem at 62% 34%, rgba(255,168,74,.10), transparent 68%)}
 /* veu a esquerda: garante chao para o texto qualquer que seja o recorte da imagem */
 .hero-img::before{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(100deg, rgba(11,9,7,.86) 0%, rgba(11,9,7,.62) 26%, rgba(11,9,7,.18) 52%, transparent 70%)}
+  background:linear-gradient(100deg, rgba(11,9,7,.88) 0%, rgba(11,9,7,.66) 26%, rgba(11,9,7,.12) 55%, transparent 72%)}
 .hero-txt{position:relative;z-index:1;width:100%;max-width:64rem;margin:0 auto;
   padding:0 1.6rem 4.5rem}
 .kicker{font-family:"Cormorant Garamond",Georgia,serif;font-size:.72rem;letter-spacing:.38em;
-  text-transform:uppercase;color:var(--brasa);margin:0 0 1.4rem}
+  text-transform:uppercase;color:var(--brasa-viva);margin:0 0 1.4rem}
 h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
   font-size:clamp(3rem,11vw,6.6rem);line-height:.98;letter-spacing:-.02em;margin:0 0 1.6rem}
 h1 .em{font-style:italic;color:var(--brasa-viva)}
@@ -160,7 +161,7 @@ h1 .em{font-style:italic;color:var(--brasa-viva)}
 .baixar{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;
   border:1px solid var(--fio);color:var(--brasa);padding:.62rem 1.15rem;border-radius:2px;
   letter-spacing:.2em;transition:.22s}
-.baixar:hover{background:rgba(200,145,47,.10);border-color:var(--brasa);color:var(--brasa-viva)}
+.baixar:hover{background:rgba(223,161,58,.10);border-color:var(--brasa);color:var(--brasa-viva)}
 
 /* ============ CORPO ============ */
 main{max-width:64rem;margin:0 auto;padding:0 1.6rem}
@@ -189,7 +190,7 @@ section:nth-of-type(1) .lead::first-letter{
   font-size:1.24rem;line-height:1.55;color:var(--marfim-2)}
 .gancho{margin:3rem auto 0;max-width:30rem;text-align:center;
   font-family:"Cormorant Garamond",Georgia,serif;font-size:1.42rem;line-height:1.42;
-  color:var(--sangue)}
+  color:var(--sangue-texto)}
 .pull{margin:2.4rem 0;padding-left:1.3rem;border-left:2px solid var(--sangue);
   font-style:italic;color:var(--marfim)}
 
@@ -198,7 +199,7 @@ section:nth-of-type(1) .lead::first-letter{
 .verse .en{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;
   font-size:1.24rem;line-height:1.44;color:var(--marfim-2)}
 .verse .sep{width:2.2rem;border-top:1px solid var(--fio);margin:1rem auto}
-.verse .pt{color:var(--sangue);font-size:1.08rem;line-height:1.5}
+.verse .pt{color:var(--sangue-texto);font-size:1.08rem;line-height:1.5}
 .ref{display:block;margin-top:1rem;font-family:"Cormorant Garamond",Georgia,serif;
   font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--marfim-3)}
 
@@ -226,7 +227,7 @@ table{width:100%;border-collapse:collapse;font-size:.94rem;min-width:34rem}
 th{font-family:"Cormorant Garamond",Georgia,serif;font-size:.68rem;letter-spacing:.24em;
   text-transform:uppercase;color:var(--brasa);text-align:left;padding:0 1rem .8rem 0;
   border-bottom:1px solid var(--fio);font-weight:500}
-td{padding:.9rem 1rem .9rem 0;border-bottom:1px solid rgba(200,145,47,.12);
+td{padding:.9rem 1rem .9rem 0;border-bottom:1px solid rgba(223,161,58,.12);
   vertical-align:top;color:var(--marfim-2);line-height:1.55}
 td:first-child{color:var(--marfim);width:38%}
 .fecho-aparato{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--fio);
@@ -696,7 +697,7 @@ td:first-child{color:var(--marfim);width:38%}
       <tr><td>Bispo de Nice nega terra consagrada; 36 anos sem ela; autorização papal em 1876; exumado de novo em 1883; cova definitiva em 1896</td><td>Encyclopedia.com; La Brújula Verde</td></tr>
       <tr><td>Recusa da extrema-unção em maio de 1840; relato do padre Caffarelli; morte em 27/05/1840</td><td>Interlude.hk; Classicals.de</td></tr>
       <tr><td>Casino Paganini (Paris, 1837), falência, venda dos instrumentos, demanda de trinta mil francos, litígio até a morte</td><td>The Strad, <em>“House of cards: Paganini’s doomed casino venture”</em>; Britannica</td></tr>
-      <tr><td>Diabo visto guiando o arco, em Viena; cascos <span style="color:#8B8173">(crença de época — o fato é a crença)</span></td><td>ClassicFM; Today I Found Out; e a carta do próprio Paganini na <em>Revue musicale</em>, 1831</td></tr>
+      <tr><td>Diabo visto guiando o arco, em Viena; cascos <span style="color:#9C8F7B">(crença de época — o fato é a crença)</span></td><td>ClassicFM; Today I Found Out; e a carta do próprio Paganini na <em>Revue musicale</em>, 1831</td></tr>
       <tr><td>Mão hipermóvel (1831); hipóteses modernas de Marfan e Ehlers-Danlos</td><td>Marfan Trust; Musicians’ Health Collective. ⚠️ No texto a descrição está <strong>parafraseada</strong>, não é citação literal</td></tr>
       <tr><td>Mercúrio desde 1823, com ópio; perda de todos os dentes; osteomielite da mandíbula; mercúrio no cabelo por espectrometria de massa</td><td>Hektoen International; PubMed 22448466 e 3054102</td></tr>
       <tr><td>Carta da mãe publicada em jornal de Praga, 1828; carta na <em>Revue musicale</em> com Fétis, 1831</td><td>Serenade Magazine; ClassicFM</td></tr>
