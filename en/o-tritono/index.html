@@ -188,14 +188,27 @@
             .rolo-ol { grid-template-columns: 1fr; }
             .rolo-tela { height: 200px; }
         }
-    </style>
+
+    /* Skip link: primeiro foco do teclado pula a navegacao e cai no conteudo (WCAG 2.4.1) */
+    .skip-link {
+      position: fixed; top: 0; left: 0; z-index: 100;
+      padding: .7rem 1.15rem;
+      background: var(--gold); color: var(--bg);
+      font-weight: 600; font-size: .95rem; line-height: 1.2;
+      text-decoration: none; border-radius: 0 0 8px 0;
+      transform: translateY(-130%);
+    }
+    .skip-link:focus { transform: translateY(0); outline: 3px solid var(--bg); outline-offset: -6px; }
+    [tabindex="-1"]:focus { outline: none; }
+  </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Skip to content</a>
     <div class="wrap">
         <a class="voltar" href="/en/">&larr; Nando Valle</a>
         <p class="lang"><a href="/o-tritono/">PT</a> &middot; <strong>EN</strong></p>
         <p class="kicker">The case files of the legend &bull; expert report</p>
-        <h1>The tritone in <em>Insane Baroque Blaze</em></h1>
+        <h1 id="conteudo" tabindex="-1">The tritone in <em>Insane Baroque Blaze</em></h1>
         <p class="muted" style="margin-top:0.6rem;">Report dated August 24, 2026 &bull;
         instrumental track by Nando Valle, released August 12, 2026 (ISRC QZNJV2617176)</p>
 

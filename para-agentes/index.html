@@ -116,16 +116,29 @@
       td { border: 0; padding: 4px 0; }
       tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--line-soft); }
     }
+
+    /* Skip link: primeiro foco do teclado pula a navegacao e cai no conteudo (WCAG 2.4.1) */
+    .skip-link {
+      position: fixed; top: 0; left: 0; z-index: 100;
+      padding: .7rem 1.15rem;
+      background: var(--gold); color: var(--bg);
+      font-weight: 600; font-size: .95rem; line-height: 1.2;
+      text-decoration: none; border-radius: 0 0 8px 0;
+      transform: translateY(-130%);
+    }
+    .skip-link:focus { transform: translateY(0); outline: 3px solid var(--bg); outline-offset: -6px; }
+    [tabindex="-1"]:focus { outline: none; }
   </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <div class="wrap">
     <header class="top">
       <a class="back" href="/">← Nando Valle</a>
     </header>
 
     <div class="eyebrow">Camada de máquina</div>
-    <h1>Para agentes</h1>
+    <h1 id="conteudo" tabindex="-1">Para agentes</h1>
     <p class="deck">Esta página existe para que um agente ou um modelo de linguagem consiga responder sobre este site <strong>sem inventar</strong>. Ela reúne o que o site afirma, o que ele explicitamente não afirma, as ferramentas declaradas na página inicial e o endereço de cada fonte.</p>
     <p class="deck">Regra da casa, válida também aqui: tudo documentado, nada declarado. Onde a página tem só paráfrase, tradução própria ou relato indireto, isso está dito.</p>
 

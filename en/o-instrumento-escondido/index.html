@@ -291,9 +291,22 @@ td:first-child{color:var(--marfim);width:38%}
   body::before,#barra,.baixar,.voltar,.trilho,.cap-nav{display:none}
   body{background:#fff;color:#17140F}
 }
-</style>
+
+    /* Skip link: primeiro foco do teclado pula a navegacao e cai no conteudo (WCAG 2.4.1) */
+    .skip-link {
+      position: fixed; top: 0; left: 0; z-index: 100;
+      padding: .7rem 1.15rem;
+      background: var(--brasa); color: var(--noite);
+      font-weight: 600; font-size: .95rem; line-height: 1.2;
+      text-decoration: none; border-radius: 0 0 8px 0;
+      transform: translateY(-130%);
+    }
+    .skip-link:focus { transform: translateY(0); outline: 3px solid var(--noite); outline-offset: -6px; }
+    [tabindex="-1"]:focus { outline: none; }
+  </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Skip to content</a>
 <div id="barra"></div>
 
 <div class="trilho" id="trilho" hidden>
@@ -346,7 +359,7 @@ td:first-child{color:var(--marfim);width:38%}
   </div>
 </header>
 
-<main>
+<main id="conteudo" tabindex="-1">
 
 <nav class="indice" id="capitulos" aria-label="Contents of the essay">
   <div class="sec-head">

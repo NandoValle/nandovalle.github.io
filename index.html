@@ -870,12 +870,25 @@
       .apparatus-table tr[hidden] { display:none; }
     }
 
+
+    /* Skip link: primeiro foco do teclado pula a navegacao e cai no conteudo (WCAG 2.4.1) */
+    .skip-link {
+      position: fixed; top: 0; left: 0; z-index: 1200;
+      padding: .7rem 1.15rem;
+      background: var(--gold); color: var(--bg);
+      font-weight: 600; font-size: .95rem; line-height: 1.2;
+      text-decoration: none; border-radius: 0 0 8px 0;
+      transform: translateY(-130%);
+    }
+    .skip-link:focus { transform: translateY(0); outline: 3px solid var(--bg); outline-offset: -6px; }
+    [tabindex="-1"]:focus { outline: none; }
   </style>
   <noscript>
     <style>.reveal { opacity:1 !important; transform:none !important; }</style>
   </noscript>
 </head>
 <body>
+<a class="skip-link" href="#top">Pular para o conteúdo</a>
   <div class="noise" aria-hidden="true"></div>
   <div class="top-progress" aria-hidden="true"><span id="progressBar"></span></div>
 
@@ -927,7 +940,7 @@
     </div>
   </div>
 
-  <section class="hero" id="top">
+  <section class="hero" id="top" tabindex="-1">
     <div class="hero-media">
       <picture>
         <source type="image/webp" media="(max-width: 700px)" srcset="/img/nando-blaze-fogo-600.webp">

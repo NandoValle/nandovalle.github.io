@@ -116,16 +116,29 @@
       td { border: 0; padding: 4px 0; }
       tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--line-soft); }
     }
+
+    /* Skip link: primeiro foco do teclado pula a navegacao e cai no conteudo (WCAG 2.4.1) */
+    .skip-link {
+      position: fixed; top: 0; left: 0; z-index: 100;
+      padding: .7rem 1.15rem;
+      background: var(--gold); color: var(--bg);
+      font-weight: 600; font-size: .95rem; line-height: 1.2;
+      text-decoration: none; border-radius: 0 0 8px 0;
+      transform: translateY(-130%);
+    }
+    .skip-link:focus { transform: translateY(0); outline: 3px solid var(--bg); outline-offset: -6px; }
+    [tabindex="-1"]:focus { outline: none; }
   </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Skip to content</a>
   <div class="wrap">
     <header class="top">
       <a class="back" href="/en/">&larr; Nando Valle</a>
     </header>
 
     <div class="eyebrow">Machine layer</div>
-    <h1>For agents</h1>
+    <h1 id="conteudo" tabindex="-1">For agents</h1>
     <p class="deck">This page exists so that an agent or a language model can answer about this site <strong>without inventing</strong>. It gathers what the site claims, what it explicitly does not claim, the tools declared on the home page, and the address of every source.</p>
     <p class="deck">House rule, in force here too: everything documented, nothing declared. Where the page only has a paraphrase, its own translation or a second-hand account, it says so.</p>
 
