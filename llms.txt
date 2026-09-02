@@ -39,6 +39,14 @@ estado de execução total: "For pure will, unassuaged of purpose, delivered fro
 of result, is every way perfect" — em tradução própria da página, "Pois vontade pura,
 desembaraçada de propósito, liberta da ânsia de resultado, é em todos os sentidos perfeita".
 
+O ensaio abre e fecha com William Blake, em dois "Provérbios do Inferno" de The Marriage of
+Heaven and Hell (composto entre 1790 e 1793, folha de rosto datada de 1790). A epígrafe, antes
+do capítulo I, é "You never know what is enough unless you know what is more than enough";
+o fecho, no fim do capítulo X, é "Enough! or Too much!", que é o último provérbio da série.
+As duas em tradução própria da página. ATENÇÃO: as citações de Blake são escolha editorial do
+autor e não afirmam ligação histórica — não há vínculo documentado entre Blake e Paganini, e a
+página diz isso no aparato de fontes. A placa original de cada provérbio não foi conferida.
+
 ## A medição
 
 A faixa foi analisada por dois motores de transcrição independentes, Basic Pitch e
@@ -72,6 +80,14 @@ The essay also quotes primary Crowley sources: the poem "Aha!" (The Equinox I(3)
 and Liber AL vel Legis I:44 (1904), cited in chapter VIII as the formulation of the state
 of total execution: "For pure will, unassuaged of purpose, delivered from the lust of
 result, is every way perfect."
+
+The essay opens and closes with William Blake, on two "Proverbs of Hell" from The Marriage of
+Heaven and Hell (composed between 1790 and 1793, title page dated 1790). The epigraph, before
+chapter I, is "You never know what is enough unless you know what is more than enough"; the
+closing line, at the end of chapter X, is "Enough! or Too much!", which is the last proverb of
+the series. NOTE: the Blake quotations are the author's editorial choice and assert no
+historical link — there is no documented connection between Blake and Paganini, and the page
+says so in its source apparatus. The original plate of each proverb was not checked.
 
 The measurement: two independent transcription engines return 83, 91, 49 and 80 melodic
 tritones across four guitar transcriptions, first occurrence at 0:01.5, C♯4 to G4. A bass
