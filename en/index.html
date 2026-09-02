@@ -743,6 +743,11 @@
             transition:opacity .3s, transform .3s, visibility .3s; }
     .rail.on { opacity:1; visibility:visible; transform:none; }
     .rail[hidden] { display:none; }
+    /* O trilho e' fixo e cruzava o "0:01,5" do cabecalho do experimento durante a
+       rolagem. Em vez de mover a composicao, o trilho cede a vez enquanto os dois
+       se sobrepoem. Vale para qualquer elemento marcado com data-nao-cobrir. */
+    .rail.on.cede { opacity:0; visibility:hidden; transform:translateY(-8px); pointer-events:none;
+                   transition:opacity .12s, transform .12s, visibility .12s; }
     .rail-inner { max-width:var(--max); margin:auto; display:flex; justify-content:flex-end; position:relative; }
     .rail-btn { pointer-events:auto; display:flex; align-items:center; gap:10px; min-height:36px; padding:8px 15px;
                 border:1px solid rgba(255,255,255,.085); background:rgba(7,6,7,.72);
@@ -1029,7 +1034,7 @@
         <div class="experiment-card">
           <div class="experiment-head">
             <div><small>IX &middot; the measurement &middot; August 2026</small><h2>Insane Baroque Blaze</h2></div>
-            <div class="time">0:01<span>.5</span></div>
+            <div class="time" data-nao-cobrir>0:01<span>.5</span></div>
           </div>
 
           <div class="wave" aria-hidden="true" id="wave"></div>
@@ -1646,6 +1651,8 @@
         if (e.key === 'Escape' && !painel.hidden) { fechar(); btn.focus(); }
       });
 
+      const protegidos = Array.prototype.slice.call(document.querySelectorAll('[data-nao-cobrir]'));
+
       let atual = -1;
       function atualizarTrilho() {
         let indice = -1;
@@ -1654,6 +1661,19 @@
         }
         const ligado = indice >= 0 && caps[caps.length - 1].getBoundingClientRect().bottom > 0;
         rail.classList.toggle('on', ligado);
+        // Nao cobrir o que estiver marcado: o trilho some enquanto cruza esses elementos.
+        // btn mantem caixa mesmo com visibility:hidden, entao a medida nao oscila.
+        let cede = false;
+        if (ligado && protegidos.length) {
+          const caixa = btn.getBoundingClientRect();
+          for (let i = 0; i < protegidos.length; i++) {
+            const r = protegidos[i].getBoundingClientRect();
+            if (!(caixa.right < r.left || caixa.left > r.right ||
+                  caixa.bottom < r.top || caixa.top > r.bottom)) { cede = true; break; }
+          }
+        }
+        rail.classList.toggle('cede', cede);
+        if (cede && !painel.hidden) fechar();
         if (!ligado) { if (!painel.hidden) fechar(); return; }
         if (indice === atual) return;
         atual = indice;
