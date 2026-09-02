@@ -146,6 +146,42 @@
         .nota { font-size: 0.88rem; color: var(--muted); }
         ul.lista { margin: 0.6rem 0 1rem 1.2rem; }
         ul.lista li { margin-bottom: 0.45rem; }
+        /* piano roll com o detector no navegador */
+        .rolo { border: 1px solid var(--line); padding: 1.1rem 1.1rem 1rem; margin: 1.6rem 0 2rem; background: rgba(226, 183, 51, 0.03); }
+        .rolo-topo { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin-bottom: 0.9rem; }
+        .rolo-rot { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+        .rolo-sel { background: #171223; color: var(--ink); border: 1px solid var(--line); padding: 0.4rem 0.5rem; font: inherit; font-size: 0.85rem; border-radius: 4px; flex: 1 1 200px; }
+        .rolo-bt { background: transparent; color: var(--gold); border: 1px solid var(--line); padding: 0.35rem 0.75rem; font: inherit; font-size: 0.82rem; line-height: 1.4; cursor: pointer; border-radius: 4px; }
+        .rolo-bt:hover, .rolo-bt:focus-visible { border-color: var(--gold); }
+        .rolo-bt-forte { border-color: rgba(226, 183, 51, 0.6); }
+        .rolo-placar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-bottom: 0.9rem; }
+        .rolo-cel { border: 1px solid var(--line); padding: 0.55rem 0.65rem; display: flex; flex-direction: column; gap: 0.15rem; }
+        .rolo-cel-rot { font-size: 0.68rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); }
+        .rolo-cel-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; line-height: 1.1; color: var(--ink); font-variant-numeric: tabular-nums; }
+        .rolo-ok { font-size: 0.72rem; color: var(--gold); }
+        .rolo-nok { font-size: 0.72rem; color: #ff8f6b; }
+        .rolo-mapa, .rolo-tela { display: block; width: 100%; background: rgba(0, 0, 0, 0.28); border: 1px solid var(--line); }
+        .rolo-mapa { height: 46px; cursor: ew-resize; margin-bottom: 0.35rem; touch-action: none; }
+        .rolo-tela { height: 260px; }
+        .rolo-eixo { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 0.25rem; }
+        .rolo-ctrl { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; margin-top: 0.8rem; }
+        .rolo-janela { font-size: 0.8rem; color: var(--ink); min-width: 5.5rem; text-align: center; font-variant-numeric: tabular-nums; }
+        .rolo-check { font-size: 0.8rem; color: var(--muted); display: flex; align-items: center; gap: 0.35rem; cursor: pointer; }
+        .rolo-check input { accent-color: var(--gold); }
+        .rolo-legenda, .rolo-mais, .rolo-espera, .rolo-erro { font-size: 0.8rem; color: var(--muted); margin: 0.7rem 0 0; }
+        .rolo-erro { color: #ff8f6b; }
+        .rolo-lista-tit { margin: 1.2rem 0 0.5rem; }
+        .rolo-ol { list-style: none; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.1rem 1rem; }
+        .rolo-ol li { margin: 0; }
+        .rolo-ir { width: 100%; text-align: left; background: transparent; border: 0; border-bottom: 1px dashed var(--line); color: var(--ink); font: inherit; font-size: 0.85rem; padding: 0.35rem 0.1rem; cursor: pointer; }
+        .rolo-ir:hover, .rolo-ir:focus-visible { color: var(--gold); }
+        .rolo-ir .rolo-t { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05rem; color: var(--gold); }
+        .rolo-ir em { color: var(--muted); font-size: 0.78rem; }
+        @media (max-width: 560px) {
+            .rolo-placar { grid-template-columns: 1fr; }
+            .rolo-ol { grid-template-columns: 1fr; }
+            .rolo-tela { height: 200px; }
+        }
     </style>
 </head>
 <body>
@@ -236,6 +272,24 @@
         arquivo, com o instante e as duas notas de cada ocorrência. Se der número diferente
         do publicado aqui, o erro é nosso e queremos saber.</p>
 
+        <h2>Reproduzir aqui mesmo</h2>
+        <p>Sem instalar nada: a página baixa o MIDI escolhido, aplica a mesma regra e
+        mostra o que contou ao lado do número que este laudo publica. O desenho abaixo é
+        o piano roll do arquivo transcrito — em dourado, as notas que formam trítono.</p>
+
+        <div class="rolo" id="rolo" data-idioma="pt"></div>
+        <noscript>
+            <p class="nota">Esta conferência roda no navegador e precisa de JavaScript.
+            Sem ele, os cinco MIDIs e o detector em Python continuam disponíveis acima.</p>
+        </noscript>
+        <p class="nota">O detector que roda aqui é
+        <a href="/o-tritono/reproduzir/detecta_tritono.js">detecta_tritono.js</a> — porte
+        direto do <a href="/o-tritono/reproduzir/detecta_tritono.py">detecta_tritono.py</a>,
+        mesma regra e mesmos limiares, também aberto para leitura. Ele devolve, nos cinco
+        arquivos, as mesmas linhas da tabela abaixo, que saíram do detector em Python.
+        O que ele não faz: tocar ou analisar áudio. O que se vê é o MIDI transcrito, não a
+        forma de onda da gravação.</p>
+
         <h2>Números</h2>
         <div class="tabela-wrap">
         <table>
@@ -314,5 +368,7 @@
             <a href="/en/o-tritono/">English version</a>.</p>
         </footer>
     </div>
+    <script src="/o-tritono/reproduzir/detecta_tritono.js" defer></script>
+    <script src="/o-tritono/piano-roll.js" defer></script>
 </body>
 </html>
