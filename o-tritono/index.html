@@ -252,12 +252,20 @@
             completamente diferente. É a contraprova.</li>
             <li><strong>Critérios de contagem:</strong> trítono <em>melódico</em> = duas notas
             consecutivas com <strong>classe de intervalo 6</strong> — o trítono em qualquer oitava —,
-            quando a nota seguinte começa até 0,6 s depois de a anterior terminar; trítono
+            quando a nota seguinte começa até 0,6 s depois de a anterior terminar. Duas precisões
+            sobre o que conta como <em>consecutiva</em>, sem as quais a contagem não fecha:
+            notas cujo início cai dentro de <strong>0,02 s</strong> do início da anterior são
+            tratadas como simultâneas e vão para a conta harmônica, não para a melódica; e de
+            cada nota se examina apenas o <strong>primeiro</strong> evento melódico seguinte, não
+            todos os pares dentro da janela. Trítono
             <em>harmônico</em> = duas notas soando juntas por pelo menos 30 ms com classe de
             intervalo 6. <em>(Correção de 25/08/2026: até esta data a regra melódica estava
             descrita como "intervalo de 6 semitons". O detector sempre usou classe de intervalo 6,
-            como já constava na regra harmônica. Os números da tabela não mudaram; a descrição
-            é que não permitia reproduzi-los.)</em></li>
+            como já constava na regra harmônica. Correção de 02/09/2026: as duas precisões sobre
+            "consecutiva" acima estavam no detector desde o início, mas não nesta descrição — uma
+            reimplementação feita só a partir do texto retornava 69 e 73 onde a tabela traz 83 e 91.
+            Os números da tabela não mudaram em nenhuma das duas datas; a descrição é que não
+            permitia reproduzi-los.)</em></li>
         </ul>
 
         <h2>Reproduzir</h2>

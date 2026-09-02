@@ -256,12 +256,20 @@
             different architecture. This is the cross-check.</li>
             <li><strong>Counting criteria:</strong> a <em>melodic</em> tritone = two consecutive
             notes with <strong>interval class 6</strong> — the tritone at any octave — where the
-            next note begins at most 0.6 s after the previous one ends; a <em>harmonic</em>
+            next note begins at most 0.6 s after the previous one ends. Two precisions about what
+            counts as <em>consecutive</em>, without which the count does not come out right:
+            notes whose onset falls within <strong>0.02 s</strong> of the previous onset are
+            treated as simultaneous and go to the harmonic count, not the melodic one; and for
+            each note only the <strong>first</strong> following melodic event is examined, not
+            every pair inside the window. A <em>harmonic</em>
             tritone = two notes sounding together for at least 30 ms with interval class 6.
             <em>(Correction, 2026-08-25: until this date the melodic rule was described as
             "six semitones apart". The detector always used interval class 6, as the harmonic
-            rule already stated. The figures in the table did not change; the description simply
-            did not allow them to be reproduced.)</em></li>
+            rule already stated. Correction, 2026-09-02: the two precisions about "consecutive"
+            above were in the detector from the start, but not in this description — a
+            reimplementation made from the text alone returned 69 and 73 where the table reads
+            83 and 91. The figures in the table did not change on either date; the description
+            simply did not allow them to be reproduced.)</em></li>
         </ul>
 
         <h2>Reproduce it</h2>
