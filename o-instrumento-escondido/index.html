@@ -259,6 +259,9 @@ td:first-child{color:var(--marfim);width:38%}
   .cap-nav a{padding-top:.2rem;padding-bottom:.2rem}
   section{padding-top:3.4rem}
   .hero-txt{padding-bottom:3.2rem}
+  /* o kicker atravessava a parte clara da foto e ficava ilegivel em 375px:
+     estreitar mantem a linha sobre o lado escuro, sem escurecer a imagem */
+  .hero-txt .kicker{max-width:55%}
   td:first-child{width:auto}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#barra{transition:none}
