@@ -259,10 +259,15 @@ td:first-child{color:var(--marfim);width:38%}
   .cap-nav a{padding-top:.2rem;padding-bottom:.2rem}
   section{padding-top:3.4rem}
   .hero-txt{padding-bottom:3.2rem}
-  /* o kicker atravessava a parte clara da foto e ficava ilegivel em 375px:
-     estreitar mantem a linha sobre o lado escuro, sem escurecer a imagem */
-  .hero-txt .kicker{max-width:55%}
+  /* o kicker atravessava a parte clara da foto e ficava ilegivel abaixo de 640px:
+     estreitar mantem as linhas sobre o lado escuro, sem escurecer a imagem.
+     balance evita a palavra orfa na ultima linha e ainda encurta a linha mais
+     longa; a regra de 441-640px abaixo e' o piso para quem nao tem balance */
+  .hero-txt .kicker{max-width:60%; text-wrap:balance}
   td:first-child{width:auto}
+}
+@media (min-width:441px) and (max-width:640px){
+  .hero-txt .kicker{max-width:50%}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#barra{transition:none}
   .trilho,.trilho-cue{transition:none}}
