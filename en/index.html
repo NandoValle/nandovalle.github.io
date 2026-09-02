@@ -699,6 +699,17 @@
     .intro-body { max-width:760px; margin:0; color:#b4a696; font-size:16px; line-height:1.8; }
     .intro-cta { display:flex; flex-wrap:wrap; gap:12px; margin:26px 0 0; }
     .intro + .toc { padding-top:58px; }
+    /* ---- Bloco de correcao: a porta de saida, sem formulario ---- */
+    .correcao { padding-top:0; }
+    .correcao-card { max-width:820px; margin:0 auto; padding:38px 40px;
+                     border:1px solid var(--line); border-radius:20px; background:var(--panel); }
+    .correcao-card h2 { margin:12px 0 18px; color:#f0e5d3;
+                        font:500 clamp(30px,3.4vw,44px)/1.04 var(--serif); letter-spacing:-.03em; }
+    .correcao-card p { max-width:640px; margin:0 0 16px; color:#b4a696; font-size:16px; line-height:1.8; }
+    .correcao-card p.correcao-tambem { color:#968b7e; font-size:15px; margin-bottom:0; }
+    .correcao-acoes { display:flex; flex-wrap:wrap; gap:12px; margin:26px 0 22px; }
+    .correcao-card p.correcao-nota { margin:0; padding-top:16px; font-size:12px; color:#968b7e;
+                                     border-top:1px solid var(--line-soft); max-width:none; }
     .toc { max-width:var(--max); margin:0 auto; padding:104px 14px 0; }
     .toc-head { display:flex; align-items:flex-end; justify-content:space-between; gap:28px; flex-wrap:wrap;
                 border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:8px; }
@@ -771,6 +782,9 @@
       .intro-body { font-size:15px; }
       .intro-cta { gap:10px; margin-top:22px; }
       .intro + .toc { padding-top:46px; }
+      .correcao-card { padding:26px 20px; border-radius:16px; }
+      .correcao-card p { font-size:15px; }
+      .correcao-acoes { gap:10px; }
       .toc { padding-top:84px; }
       .toc-list { grid-template-columns:1fr; gap:0; }
       .toc h2 { font-size:38px; }
@@ -1323,6 +1337,22 @@
           <button class="btn btn-gold" type="button" onclick="sharePage()">Share the mystery</button>
           <button class="btn" type="button" onclick="copyLink()">Copy link</button>
           <a class="btn" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer">Listen on Spotify &nearr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section correcao" id="corrigir">
+      <div class="wrap reveal">
+        <div class="correcao-card">
+          <div class="toc-eyebrow">After checking</div>
+          <h2>The file accepts correction.</h2>
+          <p>If you opened one of the sources and it does not support what is written here, write. A correction received becomes a correction published, with a date — that is what happened on <time datetime="2026-08-25">25 August 2026</time>, and the mark is still in the report.</p>
+          <p class="correcao-tambem">It also works for anyone who wants to use the track, ask for the score, or simply disagree.</p>
+          <div class="correcao-acoes">
+            <a class="btn btn-gold" href="mailto:contato@nandovalle.com?subject=Correction%20%E2%80%94%20nandovalle.com">Write <span aria-hidden="true">&nearr;</span></a>
+            <a class="btn" href="https://www.instagram.com/nandovale7/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">&nearr;</span></a>
+          </div>
+          <p class="correcao-nota">No form, no list, no tracker: this page collects nothing. The link opens your own mail client.</p>
         </div>
       </div>
     </section>
