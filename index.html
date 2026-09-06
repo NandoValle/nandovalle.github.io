@@ -123,7 +123,7 @@
         "url": "https://nandovalle.com/",
         "name": "Nando Valle — Insane Baroque Blaze | Nada declarado.",
         "datePublished": "2026-08-24",
-        "dateModified": "2026-08-31",
+        "dateModified": "2026-09-06",
         "description": "Nove sepultamentos. Sete chaves. Um trítono em 1,5 segundo. Método, arquivos e ressalvas publicados.",
         "inLanguage": "pt-BR",
         "author": {
@@ -621,6 +621,26 @@
     .toast { position:fixed; left:50%; bottom:30px; z-index:1100; transform:translate(-50%,20px); opacity:0; pointer-events:none; color:#e8dbc8; background:rgba(18,13,15,.92); border:1px solid rgba(230,189,107,.2); border-radius:999px; padding:11px 15px; font-size:11px; box-shadow:0 12px 34px rgba(0,0,0,.4); transition:.25s ease; }
     .toast.show { opacity:1; transform:translate(-50%,0); }
 
+
+    /* Lançamento em destaque, legenda da imagem e seletor de idioma */
+    .nav-lang { border:1px solid rgba(255,255,255,.10); padding:9px 11px; font-size:11px; letter-spacing:.12em; font-weight:700; }
+    .release-strip {
+      display:inline-flex; align-items:center; gap:12px; margin-top:18px; padding:10px 15px 10px 13px; border-radius:999px;
+      border:1px solid rgba(230,189,107,.28); background:rgba(9,7,8,.62); backdrop-filter:blur(12px);
+      color:#e7dbc9; font-size:12px; transition:.25s ease;
+    }
+    .release-strip:hover { border-color:rgba(230,189,107,.52); transform:translateY(-1px); background:rgba(25,18,19,.76); }
+    .release-strip .pulse-dot { flex:0 0 auto; }
+    .release-txt { color:#d2b477; font-weight:700; font-size:10px; letter-spacing:.18em; text-transform:uppercase; white-space:nowrap; }
+    .release-name { font-family:var(--serif); font-size:16px; color:#f7efe2; letter-spacing:-.01em; }
+    .release-cta { color:#c8aa6e; font-weight:650; white-space:nowrap; }
+    .hero-credit { margin:16px 0 0; max-width:52ch; color:#8f8479; font-size:11px; line-height:1.5; letter-spacing:.02em; }
+    @media (max-width: 640px) {
+      .release-strip { display:flex; width:100%; flex-wrap:wrap; gap:8px 12px; margin-top:14px; }
+      .release-cta { margin-left:auto; }
+      .release-name { font-size:15px; }
+    }
+
     @media (max-width: 980px) {
       .nav-link { font-size:11px; padding:9px 9px; }
       .hero-content { grid-template-columns:1fr; gap:28px; padding-bottom:90px; }
@@ -844,6 +864,9 @@
     .artist-copy p { color:#b5a899; line-height:1.75; font-size:15px; margin:0 0 14px; }
     .artist-copy .artist-lead { color:#cdbfab; font-size:17px; }
     .artist-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+    .artist-contact { margin:18px 0 0; color:#968b7e; font-size:12px; letter-spacing:.02em; }
+    .artist-contact a { color:#c8aa6e; text-decoration:underline; text-underline-offset:3px; }
+    .artist-contact a:hover { color:#f2d9a4; }
     #artista { padding-top:42px; padding-bottom:26px; }
     @media (max-width: 980px) { .artist-wrap { grid-template-columns:1fr; gap:32px; } }
     @media (max-width: 640px) { .nav-link.nav-artista { display:none; } section.discog { padding-bottom:48px; } #artista { padding-top:24px; padding-bottom:12px; } }
@@ -903,6 +926,7 @@
         <a class="nav-link" href="#experimento">O teste</a>
         <a class="nav-link nav-artista" href="#artista">Artista</a>
         <a class="nav-link" href="#fontes">Fontes</a>
+        <a class="nav-link nav-lang" href="/en/" hreflang="en" lang="en" aria-label="Read this site in English">EN</a>
         <a class="nav-cta" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer" aria-label="Ouvir Insane Baroque Blaze no Spotify">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M7.3 9.2c3.3-1 7-.7 9.7.7M7.9 12.1c2.7-.7 5.8-.5 8.2.6M8.5 14.9c2.1-.5 4.5-.3 6.4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
           <span class="cta-txt">Ouvir agora</span>
@@ -955,9 +979,16 @@
         <h1>Tudo documentado.<br><em>Nada declarado.</em></h1>
         <p class="hero-deck">Sobre Niccolò Paganini, Aleister Crowley, uma guitarra — e o que sobra quando a lenda encontra o <strong>experimento.</strong></p>
         <div class="hero-buttons">
-          <a class="btn btn-gold" href="#dossie">Abrir o dossiê <span aria-hidden="true">↓</span></a>
-          <a class="btn" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer" aria-label="Ouvir Insane Baroque Blaze no Spotify"><span aria-hidden="true">▶</span> Ouvir a faixa</a>
+          <a class="btn btn-gold" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer" aria-label="Ouvir Insane Baroque Blaze no Spotify"><span aria-hidden="true">▶</span> Ouvir a faixa</a>
+          <a class="btn" href="#dossie">Abrir o dossiê <span aria-hidden="true">↓</span></a>
         </div>
+        <a class="release-strip" id="releaseStrip" href="https://music.apple.com/us/album/the-unbroken-single/6797797612" target="_blank" rel="noopener noreferrer" aria-label="Pré-salvar The Unbroken na Apple Music">
+          <i class="pulse-dot" aria-hidden="true"></i>
+          <span class="release-txt">Novo single em 11 de setembro</span>
+          <span class="release-name">The Unbroken</span>
+          <span class="release-cta">Pré-salvar ↗</span>
+        </a>
+        <p class="hero-credit">Sobre a imagem: é sintética, feita com inteligência artificial. A execução na guitarra que a originou é real, de Nando Valle.</p>
       </div>
       <aside class="hero-card" aria-label="Primeira ocorrência medida">
         <div class="stamp"><i class="pulse-dot"></i> ocorrência medida</div>
@@ -1029,7 +1060,9 @@
           <a class="btn" href="https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
           <a class="btn" href="https://music.apple.com/us/artist/nando-valle/6793694273" target="_blank" rel="noopener noreferrer">Apple Music ↗</a>
           <a class="btn" href="https://www.instagram.com/nandovale7/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+          <a class="btn" href="mailto:contato@nandovalle.com?subject=Contato%20%E2%80%94%20nandovalle.com">Contato ↗</a>
         </div>
+        <p class="artist-contact">Imprensa, booking, trilha, arranjo ou sessão: <a href="mailto:contato@nandovalle.com">contato@nandovalle.com</a>.</p>
       </div>
     </div>
   </section>
@@ -1414,14 +1447,14 @@
     <div class="cite-box">
       <span class="cite-label">Como citar esta página</span>
       <p>VALLE, Nando. <em>Tudo documentado. Nada declarado.</em> 2026. Disponível em: https://nandovalle.com/. Acesso em: [data do acesso].</p>
-      <p class="cite-dates byline">Por <strong class="author">Nando Valle</strong> &middot; Publicada em <time datetime="2026-08-24">24 de agosto de 2026</time> &middot; &Uacute;ltima atualiza&ccedil;&atilde;o em <time datetime="2026-08-31">31 de agosto de 2026</time></p>
+      <p class="cite-dates byline">Por <strong class="author">Nando Valle</strong> &middot; Publicada em <time datetime="2026-08-24">24 de agosto de 2026</time> &middot; &Uacute;ltima atualiza&ccedil;&atilde;o em <time datetime="2026-09-06">6 de setembro de 2026</time></p>
       <button class="btn" type="button" onclick="copyCitation()">Copiar citação</button>
     </div>
     <div class="footer-inner">
       <div><div class="footer-name">Nando Valle</div><div class="footer-note">© 2026 · Nenhuma alma foi vendida na produção deste site.<br>Emprestada, talvez.</div></div>
       <div class="footer-links">
         <a href="#artista">Sobre</a>
-        <a href="https://nandovalle.com/" target="_blank" rel="noopener noreferrer">Site oficial</a>
+        <a href="mailto:contato@nandovalle.com">Contato</a>
         <a href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer">Spotify</a>
         <a href="https://www.instagram.com/nandovale7/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://linktr.ee/NandoValle" target="_blank" rel="noopener noreferrer">Linktree</a>
@@ -1498,6 +1531,28 @@
         showToast('Copie o endereço do navegador.');
       }
     }
+
+
+    // Faixa de lançamento: conta os dias até The Unbroken e, depois da data, vira "no ar".
+    (function () {
+      const strip = document.getElementById('releaseStrip');
+      if (!strip) return;
+      const txt = strip.querySelector('.release-txt');
+      const cta = strip.querySelector('.release-cta');
+      const lang = document.documentElement.lang || 'pt-BR';
+      const en = lang.toLowerCase().startsWith('en');
+      const release = new Date(2026, 8, 11); // 11 set 2026, meia-noite local
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+      const days = Math.round((release - today) / 86400000);
+      if (days > 1) txt.textContent = en ? `New single in ${days} days` : `Novo single em ${days} dias`;
+      else if (days === 1) txt.textContent = en ? 'New single tomorrow' : 'Novo single amanhã';
+      else {
+        if (days === 0) txt.textContent = en ? 'New single out today' : 'Novo single sai hoje';
+        else txt.textContent = en ? 'New single out now' : 'Novo single no ar';
+        cta.textContent = en ? 'Listen \u2197' : 'Ouvir \u2197';
+        strip.setAttribute('aria-label', en ? 'The Unbroken is out. Listen on Apple Music' : 'The Unbroken está no ar. Ouvir na Apple Music');
+      }
+    })();
 
     async function copyCitation() {
       const meses = ['jan.','fev.','mar.','abr.','maio','jun.','jul.','ago.','set.','out.','nov.','dez.'];
