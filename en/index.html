@@ -312,8 +312,6 @@
       width:min(var(--max), calc(100% - 40px)); margin:0 auto; padding:150px 0 72px; position:relative; z-index:5;
       display:grid; grid-template-columns:minmax(0, 1.15fr) minmax(280px, .52fr); gap:50px; align-items:end;
     }
-    .eyebrow { display:flex; align-items:center; gap:12px; color:#d2b477; font-size:11px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; }
-    .eyebrow::before { content:""; width:34px; height:1px; background:linear-gradient(90deg, transparent, var(--gold)); }
     .hero h1 { margin:18px 0 0; max-width:860px; color:#f7efe2; font-family:var(--serif); font-weight:500; letter-spacing:-.055em; line-height:.88; font-size:clamp(64px, 8.8vw, 112px); text-wrap:balance; }
     /* Teto 112px: a coluna do titulo tem 778px e "Tudo documentado." mede 6,9em; acima disso
        a primeira linha quebrava e o titulo saia com 3 linhas a partir de 1366px (medido 09/09/2026). */
@@ -354,7 +352,6 @@
     .essay-grid { display:grid; grid-template-columns:180px minmax(0, 740px) 1fr; gap:40px; align-items:start; }
     .roman { position:sticky; top:110px; color:rgba(230,189,107,.52); font:500 74px/1 var(--serif); letter-spacing:-.04em; }
     .chapter { max-width:740px; }
-    .chapter .kicker { color:#9b783f; font-size:10px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; }
     .chapter h2 { margin:13px 0 24px; color:#f0e5d3; font:500 clamp(42px,5vw,70px)/.98 var(--serif); letter-spacing:-.035em; text-wrap:balance; }
     .chapter .lead { color:#e2d5c2; font:500 clamp(25px,3vw,38px)/1.16 var(--serif); letter-spacing:-.025em; margin:0 0 28px; }
     .chapter p { color:#b4a696; font-size:16px; line-height:1.83; margin:0 0 22px; }
@@ -428,7 +425,6 @@
       background:linear-gradient(180deg,rgba(230,189,107,.025),rgba(94,17,18,.035),transparent);
     }
     .apparatus-head { max-width:900px; margin:0 auto 34px; text-align:center; }
-    .apparatus-head .kicker { color:#9b783f; font-size:10px; letter-spacing:.22em; text-transform:uppercase; font-weight:700; }
     .apparatus-head h2 {
       margin:14px 0 16px; color:#f0e4d1; font:500 clamp(48px,6vw,82px)/.95 var(--serif);
       letter-spacing:-.045em;
@@ -461,7 +457,6 @@
     .quote-section { padding:140px 20px; position:relative; overflow:hidden; }
     .quote-section::before { content:"AHA!"; position:absolute; right:-.04em; top:-.17em; color:rgba(230,189,107,.025); font:600 min(33vw,520px)/1 var(--serif); letter-spacing:-.08em; pointer-events:none; }
     .quote-shell { width:min(1020px,100%); margin:auto; text-align:center; position:relative; z-index:2; }
-    .quote-label { color:#9f7b42; font-size:10px; letter-spacing:.24em; text-transform:uppercase; font-weight:700; }
     .quote { margin:26px auto 0; max-width:910px; color:#f0e2cf; font:500 clamp(42px,6vw,86px)/.99 var(--serif); letter-spacing:-.04em; }
     .quote em { color:var(--gold); font-style:italic; }
     .translation { margin:24px auto 0; color:#92877b; font:italic 500 clamp(18px,2vw,26px)/1.4 var(--serif); max-width:720px; }
@@ -484,7 +479,6 @@
     .experiment-card { position:relative; overflow:hidden; border-radius:32px; border:1px solid rgba(230,189,107,.15); background:linear-gradient(155deg,rgba(30,20,21,.84),rgba(8,7,8,.92)); box-shadow:var(--shadow); }
     .experiment-card::before { content:""; position:absolute; inset:0; background:linear-gradient(120deg,transparent 0 49.5%,rgba(230,189,107,.04) 50%,transparent 50.5%); pointer-events:none; }
     .experiment-head { padding:50px 50px 28px; display:grid; grid-template-columns:1fr auto; gap:28px; align-items:end; }
-    .experiment-head small { color:#a78147; font-size:10px; letter-spacing:.22em; text-transform:uppercase; }
     .experiment-head h2 { margin:10px 0 0; color:#f5ead8; font:500 clamp(46px,6vw,82px)/.95 var(--serif); letter-spacing:-.045em; }
     .experiment-head .time { color:#e1bc77; font:500 clamp(58px,8vw,104px)/.9 var(--serif); letter-spacing:-.055em; }
     .experiment-head .time span { font-size:.3em; color:var(--gold-2); margin-left:5px; letter-spacing:.04em; }
@@ -523,7 +517,6 @@
     .spotify-frame.docked .dock-close:focus-visible { color:var(--gold); border-color:var(--gold); }
 
     .distance { text-align:center; max-width:930px; margin:auto; }
-    .distance .kicker { color:#b98a3e; font-size:10px; letter-spacing:.23em; text-transform:uppercase; }
     .distance h2 { color:#f3e6d2; font:500 clamp(50px,7vw,94px)/.94 var(--serif); letter-spacing:-.05em; margin:14px 0 26px; }
     .distance p { color:#aa9e91; font-size:17px; line-height:1.8; }
     .three-objects { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:40px; text-align:left; }
@@ -577,7 +570,6 @@
     .finale { min-height:78vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden; background:radial-gradient(circle at 50% 50%,rgba(100,22,20,.16),transparent 40rem); }
     .finale::before { content:""; position:absolute; width:1px; height:45%; top:0; left:50%; background:linear-gradient(var(--gold),transparent); opacity:.3; }
     .finale-inner { width:min(920px,calc(100% - 40px)); position:relative; z-index:2; }
-    .finale .small { color:#b98a3e; text-transform:uppercase; font-size:10px; letter-spacing:.23em; }
     .finale blockquote { margin:26px 0 0; color:#ddd0be; font:italic 500 clamp(28px,4vw,48px)/1.2 var(--serif); }
     .finale h2 { margin:52px 0 0; color:#f5e8d4; font:500 clamp(64px,9vw,132px)/.83 var(--serif); letter-spacing:-.06em; }
     .finale h2 span { display:block; color:var(--gold); }
@@ -735,7 +727,6 @@
     .toc { max-width:var(--max); margin:0 auto; padding:104px 14px 0; }
     .toc-head { display:flex; align-items:flex-end; justify-content:space-between; gap:28px; flex-wrap:wrap;
                 border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:8px; }
-    .toc-eyebrow { color:#9b783f; font:700 11px/1.6 var(--sans); letter-spacing:.22em; text-transform:uppercase; }
     .toc h2 { margin:10px 0 0; color:#f0e5d3; font:500 clamp(34px,4vw,54px)/1 var(--serif); letter-spacing:-.035em; }
     .toc-deck { color:var(--muted); font-size:14px; line-height:1.75; max-width:430px; margin:0; }
     .toc-list { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:0 40px; }
@@ -949,7 +940,6 @@
     <div class="hero-lines" aria-hidden="true"></div>
     <div class="hero-content">
       <div>
-        <div class="eyebrow">A file on technique, myth and silence</div>
         <h1>Everything documented.<br><em>Nothing declared.</em></h1>
         <p class="hero-deck">On Niccol&ograve; Paganini, Aleister Crowley, a guitar &mdash; and what is left when legend meets the <strong>experiment.</strong></p>
         <div class="hero-buttons">
@@ -976,7 +966,6 @@
     <div class="wrap reveal">
       <div class="discog-head">
         <div>
-          <div class="eyebrow">Discography</div>
           <h2>What is already recorded.</h2>
         </div>
         <p>Instrumental rock between the baroque and the cinematic. One track out; the next arrives on 11 September 2026.</p>
@@ -1017,7 +1006,6 @@
         <img src="/img/nando-blaze-guitarra-1200x630.jpg" alt="Nando Valle playing guitar in a burning baroque hall" width="1200" height="630" loading="lazy" decoding="async">
       </figure>
       <div class="artist-copy">
-        <div class="eyebrow">Who recorded it</div>
         <h2>Nando Valle</h2>
         <p class="artist-lead">Brazilian guitarist and producer. A lawyer by training &mdash; hence the habit of refusing a story without a document, which is exactly how this page started.</p>
         <p>Records instrumental rock with form and vocabulary borrowed from classical music. Every track ships with its method: the rule used, the files and the caveats &mdash; for anyone who wants to redo the count.</p>
@@ -1033,7 +1021,6 @@
 
   <main id="dossie">
     <div class="intro">
-      <div class="toc-eyebrow">Before the dossier</div>
       <p class="intro-lead"><strong>Nando Valle is a Brazilian guitarist and producer fusing classical music and rock (“Insane Baroque Blaze”, 2026).</strong> This page is not promotion: it is a documented essay on Niccolò Paganini, with a source-by-source apparatus, and a reproducible measurement carried out on the recording itself.</p>
       <p class="intro-body">Ten chapters. Along the way, the track — instrumental, 2 min 44 s, released 12 August 2026 — and the tritone report, with the detector, the five MIDIs and the counts from four transcriptions. Nothing here is supernatural, and nothing here asks for belief: the files are open.</p>
       <div class="intro-cta">
@@ -1045,7 +1032,6 @@
     <nav class="toc" id="capitulos" aria-label="Chapters of the dossier">
       <div class="toc-head">
         <div>
-          <div class="toc-eyebrow">Dossier index</div>
           <h2>Ten chapters.</h2>
         </div>
         <p class="toc-deck">From the first burial to the 2026 measurement. The first eight open the full essay, where they live; the measurement and the distance stay on this page.</p>
@@ -1074,7 +1060,7 @@
       <div class="wrap reveal">
         <div class="experiment-card">
           <div class="experiment-head">
-            <div><small>IX &middot; the measurement &middot; August 2026</small><h2>Insane Baroque Blaze</h2></div>
+            <div><h2>Insane Baroque Blaze</h2></div>
             <div class="time" data-nao-cobrir>0:01<span>.5</span></div>
           </div>
 
@@ -1167,7 +1153,6 @@
     <section class="section" id="ouvir">
       <div class="wrap spotify-wrap reveal">
         <div class="spotify-copy">
-          <div class="eyebrow">The recording exists</div>
           <h2>Hear it before concluding.</h2>
           <p><a href="/insane-baroque-blaze/"><strong>Insane Baroque Blaze</strong></a> is an instrumental rock track, 2 min 44 s, released on 12 August 2026.</p>
           <p>The player below is the public record. The rest of this page can be read as narrative. The music cannot.</p>
@@ -1189,7 +1174,6 @@
 
     <section id="cap-10" data-cap="10" data-cap-num="X" data-cap-name="The distance" class="section dark-band">
       <div class="wrap distance reveal">
-        <div class="kicker">X &middot; the distance</div>
         <h2>The file does not force a conclusion.</h2>
         <p>Paganini never declared any pact about himself. <strong style="color:#dfd2c0">He denied it in writing, twice.</strong> The ones who declared were the audience.</p>
         <p>The word &ldquo;devil&rdquo; did not come from him. It came from people who had no other word for what they were seeing.</p>
@@ -1229,7 +1213,6 @@
     <section class="section apparatus-section" id="aparato">
       <div class="wrap reveal">
         <div class="apparatus-head">
-          <div class="kicker">Apparatus &middot; what can be checked</div>
           <h2>The promise of verifiability is inside the page.</h2>
           <p>Every relevant historical claim is given the place where it can be checked. Where the source is indirect, incomplete or was not re-verified, the caveat appears &mdash; including when it weakens the narrative itself.</p>
         </div>
@@ -1277,7 +1260,6 @@
     <section class="section tools-section" id="tools">
       <div class="wrap">
         <div class="apparatus-head">
-          <div class="kicker">Tools &middot; WebMCP</div>
           <h2>How does an agent read this page without making anything up?</h2>
           <p>Through the same door you do. Two read-only tools are declared here, and both answer from what is already published on this page: they change no state, send no data and call no server. Each one carries its manual equivalent right below it, for anyone who would rather read with their eyes.</p>
         </div>
@@ -1377,7 +1359,6 @@
 
     <section class="finale">
       <div class="finale-inner reveal">
-        <div class="small">One last instruction</div>
         <blockquote>&ldquo;Follow thyself, not me.&rdquo;</blockquote>
         <p style="margin-top:10px;color:#968b7e;font-size:10px;letter-spacing:.14em;text-transform:uppercase">Marsyas &middot; Aha! &middot; 1910</p>
         <h2>Everything documented.<span>Nothing declared.</span></h2>
@@ -1393,7 +1374,6 @@
     <section class="section correcao" id="corrigir">
       <div class="wrap reveal">
         <div class="correcao-card">
-          <div class="toc-eyebrow">After checking</div>
           <h2>The file accepts correction.</h2>
           <p>If you opened one of the sources and it does not support what is written here, write. A correction received becomes a correction published, with a date — that is what happened on <time datetime="2026-08-25">25 August 2026</time>, and the mark is still in the report.</p>
           <p class="correcao-tambem">It also works for anyone who wants to use the track, ask for the score, or simply disagree.</p>
