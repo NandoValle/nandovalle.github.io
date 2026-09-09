@@ -354,8 +354,6 @@
     }
     .hero-card::before { content:""; position:absolute; inset:0 0 auto; height:1px; background:linear-gradient(90deg,transparent,#f2d9a4,transparent); opacity:.6; }
     .stamp { display:inline-flex; align-items:center; gap:8px; padding:7px 10px; border-radius:999px; border:1px solid rgba(230,189,107,.18); color:#c8aa6e; font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
-    .pulse-dot { width:6px; height:6px; border-radius:50%; background:#bd3b26; box-shadow:0 0 0 0 rgba(189,59,38,.55); animation:pulse 2.2s infinite; }
-    @keyframes pulse { 70% { box-shadow:0 0 0 10px rgba(189,59,38,0); } 100% { box-shadow:0 0 0 0 rgba(189,59,38,0); } }
     .hero-card-number { margin:18px 0 2px; color:#f7efe3; font:500 clamp(58px,7vw,100px)/.85 var(--serif); letter-spacing:-.055em; }
     .hero-card-number span { font-size:.38em; color:var(--gold); letter-spacing:-.01em; }
     .hero-card p { margin:12px 0 0; color:#b7a897; font-size:12px; line-height:1.6; }
@@ -976,7 +974,7 @@
         </div>
       </div>
       <aside class="hero-card" aria-label="Primeira ocorrência medida">
-        <div class="stamp"><i class="pulse-dot"></i> ocorrência medida</div>
+        <div class="stamp">ocorrência medida</div>
         <div class="hero-card-number">0:01<span>,5</span></div>
         <p>O primeiro resultado aparece praticamente no primeiro gesto da guitarra.</p>
         <div class="tiny-rule"></div>
