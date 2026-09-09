@@ -13,7 +13,7 @@ do site. Tudo sob `/insane-baroque-blaze/` é servido de lá, inclusive este arq
 ## Por que este aviso existe
 
 Havia aqui uma cópia do `index.html` que ninguém nunca viu. Ela foi editada por engano
-mais de uma vez — em 24/08/2026 um link para `/o-tritono/` ficou preso nesta pasta e
+mais de uma vez, em 24/08/2026 um link para `/o-tritono/` ficou preso nesta pasta e
 não chegou ao ar. A cópia foi apagada nessa data; o histórico do Git ainda a tem.
 
 ## Como saber se uma pasta está sombreada
