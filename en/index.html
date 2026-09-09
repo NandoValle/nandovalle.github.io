@@ -348,9 +348,6 @@
     .mini-grid span { display:block; color:#968b7e; font-size:11px; text-transform:uppercase; letter-spacing:.16em; }
     .mini-grid strong { display:block; margin-top:5px; color:#e7dbc9; font-size:12px; font-weight:600; }
 
-    .scroll-cue { position:absolute; left:50%; bottom:20px; z-index:7; transform:translateX(-50%); color:#968b7e; font-size:11px; letter-spacing:.22em; text-transform:uppercase; display:flex; align-items:center; gap:9px; }
-    .scroll-cue i { width:1px; height:26px; background:linear-gradient(var(--gold),transparent); display:block; animation:drop 1.8s ease-in-out infinite; transform-origin:top; }
-    @keyframes drop { 0%,100%{transform:scaleY(.4);opacity:.35} 50%{transform:scaleY(1);opacity:1} }
 
     main { position:relative; z-index:4; }
     .section { position:relative; padding:120px 20px; }
@@ -679,7 +676,6 @@
       .footer-inner { display:block; }
       .footer-links { justify-content:flex-start; margin-top:22px; }
       .floating-share { right:12px; bottom:12px; }
-      .scroll-cue { display:none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -976,7 +972,6 @@
         </div>
       </aside>
     </div>
-    <div class="scroll-cue"><i></i> scroll without believing</div>
   </section>
 
   <section class="section discog" id="gravacoes" aria-label="Discography of Nando Valle">
