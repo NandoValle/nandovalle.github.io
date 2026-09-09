@@ -18,11 +18,11 @@
 
   /* arquivos e os numeros que a tabela deste laudo publica */
   var ARQUIVOS = [
-    { f: 'guitar_basic_pitch.mid',    pt: 'Basic Pitch — guitarra (solo)',           en: 'Basic Pitch — guitar (solo)',            notas: 1735, mel: 83, harm: 72 },
-    { f: 'guitar_40ms.mid',           pt: 'Basic Pitch — guitarra (corte 40 ms)',    en: 'Basic Pitch — guitar (40 ms cut)',       notas: 1929, mel: 91, harm: 79 },
-    { f: 'guitar_registro_grave.mid', pt: 'Basic Pitch — guitarra (passada grave)',  en: 'Basic Pitch — guitar (low-register run)', notas: 1133, mel: 49, harm: 42 },
-    { f: 'guitar_anthemscore.mid',    pt: 'AnthemScore — guitarra (motor independente)', en: 'AnthemScore — guitar (independent engine)', notas: 2320, mel: 80, harm: 115 },
-    { f: 'bass_basic_pitch.mid',      pt: 'Basic Pitch — baixo (contraprova interna)',   en: 'Basic Pitch — bass (internal control)',     notas: 790,  mel: 2,  harm: 0 }
+    { f: 'guitar_basic_pitch.mid',    pt: 'Basic Pitch · guitarra (solo)',           en: 'Basic Pitch · guitar (solo)',            notas: 1735, mel: 83, harm: 72 },
+    { f: 'guitar_40ms.mid',           pt: 'Basic Pitch · guitarra (corte 40 ms)',    en: 'Basic Pitch · guitar (40 ms cut)',       notas: 1929, mel: 91, harm: 79 },
+    { f: 'guitar_registro_grave.mid', pt: 'Basic Pitch · guitarra (passada grave)',  en: 'Basic Pitch · guitar (low-register run)', notas: 1133, mel: 49, harm: 42 },
+    { f: 'guitar_anthemscore.mid',    pt: 'AnthemScore · guitarra (motor independente)', en: 'AnthemScore · guitar (independent engine)', notas: 2320, mel: 80, harm: 115 },
+    { f: 'bass_basic_pitch.mid',      pt: 'Basic Pitch · baixo (contraprova interna)',   en: 'Basic Pitch · bass (internal control)',     notas: 790,  mel: 2,  harm: 0 }
   ];
 
   var TXT = {
@@ -39,10 +39,10 @@
       notas: 'Notas analisadas',
       tabela: 'tabela deste laudo:',
       confere: 'confere',
-      diverge: 'DIVERGE — o erro é nosso, e queremos saber',
+      diverge: 'DIVERGE: o erro é nosso, e queremos saber',
       ocorrencias: 'Primeiras ocorrências melódicas',
       mais: 'e mais {n}.',
-      legenda: 'Piano roll do MIDI transcrito — não é a forma de onda do áudio. Eixo horizontal: tempo. Eixo vertical: altura. Em dourado, as notas que formam trítono.',
+      legenda: 'Piano roll do MIDI transcrito: não é a forma de onda do áudio. Eixo horizontal: tempo. Eixo vertical: altura. Em dourado, as notas que formam trítono.',
       erro: 'Não foi possível ler o MIDI aqui. O arquivo continua disponível para download acima.',
       arrasta: 'Clique ou arraste na barra acima para andar pela faixa.',
       primeira: 'primeira ocorrência'
@@ -60,10 +60,10 @@
       notas: 'Notes analysed',
       tabela: 'table in this report:',
       confere: 'matches',
-      diverge: 'MISMATCH — the error is ours, and we want to know',
+      diverge: 'MISMATCH: the error is ours, and we want to know',
       ocorrencias: 'First melodic occurrences',
       mais: 'and {n} more.',
-      legenda: 'Piano roll of the transcribed MIDI — not the audio waveform. Horizontal axis: time. Vertical axis: pitch. In gold, the notes forming a tritone.',
+      legenda: 'Piano roll of the transcribed MIDI: not the audio waveform. Horizontal axis: time. Vertical axis: pitch. In gold, the notes forming a tritone.',
       erro: 'The MIDI could not be read here. The file is still available for download above.',
       arrasta: 'Click or drag the bar above to move along the track.',
       primeira: 'first occurrence'
@@ -137,7 +137,7 @@
 
   /* faixa de alturas do desenho: percentis 1 e 99, para que uma nota fantasma
      solta em outra oitava nao esmague o resto do desenho no meio da tela.
-     O que cair fora fica na borda — nada some, nada e descartado da contagem. */
+     O que cair fora fica na borda, nada some, nada e descartado da contagem. */
   var cacheEx = null;
   function extremos(notas) {
     if (cacheEx && cacheEx.ref === notas) { return cacheEx.v; }

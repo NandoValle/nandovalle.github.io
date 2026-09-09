@@ -2,7 +2,7 @@
  * Detector de tritonos (classe de intervalo 6) em MIDIs transcritos.
  *
  * Porte em JavaScript de detecta_tritono.py, publicado no mesmo diretorio.
- * Mesma regra, mesmos limiares, mesma ordenacao — para que o navegador do
+ * Mesma regra, mesmos limiares, mesma ordenacao, para que o navegador do
  * leitor chegue ao mesmo numero da tabela do laudo sem instalar nada.
  *
  * Melodico: notas consecutivas (onset seguinte ate 0,6 s do fim da anterior)
@@ -18,7 +18,7 @@
  * Limite conhecido: quando duas notas tem exatamente o mesmo inicio e a mesma
  * altura, a ordem entre elas depende da ordem de leitura, que nao e a mesma no
  * pretty_midi e aqui. Nos cinco MIDIs publicados isso nao muda contagem alguma
- * — as cinco linhas da tabela batem. Em outro arquivo, pode mudar.
+ * : as cinco linhas da tabela batem. Em outro arquivo, pode mudar.
  */
 (function (global) {
   'use strict';
@@ -38,7 +38,7 @@
     function u16() { var v = dv.getUint16(p); p += 2; return v; }
     function u8() { return dv.getUint8(p++); }
 
-    if (texto(4) !== 'MThd') { throw new Error('arquivo sem cabecalho MThd — nao e um MIDI'); }
+    if (texto(4) !== 'MThd') { throw new Error('arquivo sem cabecalho MThd, nao e um MIDI'); }
     var tamCabecalho = u32();
     var formato = u16();
     var nTrilhas = u16();
