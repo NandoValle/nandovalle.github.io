@@ -166,8 +166,6 @@ h2[id^="cap-"]{scroll-margin-top:5.5rem}
   background:linear-gradient(100deg, rgba(11,9,7,.88) 0%, rgba(11,9,7,.66) 26%, rgba(11,9,7,.12) 55%, transparent 72%)}
 .hero-txt{position:relative;z-index:1;width:100%;max-width:64rem;margin:0 auto;
   padding:0 1.6rem 4.5rem}
-.kicker{font-family:"Cormorant Garamond","Cormorant Fallback",Georgia,serif;font-size:.72rem;letter-spacing:.38em;
-  text-transform:uppercase;color:var(--brasa-viva);margin:0 0 1.4rem}
 h1{font-family:"Cormorant Garamond","Cormorant Fallback",Georgia,serif;font-weight:300;
   font-size:clamp(3rem,11vw,6.6rem);line-height:.98;letter-spacing:-.02em;margin:0 0 1.6rem}
 h1 .em{font-style:italic;color:var(--brasa-viva)}
@@ -191,8 +189,6 @@ strong{font-weight:600;color:#FBF4E8}
 a{color:var(--brasa)}
 
 .sec-head{margin:0 0 2.2rem}
-.sec-num{display:block;font-family:"Cormorant Garamond","Cormorant Fallback",Georgia,serif;font-size:.7rem;
-  letter-spacing:.34em;text-transform:uppercase;color:var(--brasa);margin-bottom:.7rem}
 h2{font-family:"Cormorant Garamond","Cormorant Fallback",Georgia,serif;font-weight:400;
   font-size:clamp(1.9rem,5.2vw,2.7rem);line-height:1.1;margin:0;letter-spacing:-.008em}
 .sec-head::after{content:"";display:block;width:3.4rem;border-top:1px solid var(--fio);margin-top:1.4rem}
@@ -277,15 +273,7 @@ td:first-child{color:var(--marfim);width:38%}
   .cap-nav a{padding-top:.2rem;padding-bottom:.2rem}
   section{padding-top:3.4rem}
   .hero-txt{padding-bottom:3.2rem}
-  /* o kicker atravessava a parte clara da foto e ficava ilegivel abaixo de 640px:
-     estreitar mantem as linhas sobre o lado escuro, sem escurecer a imagem.
-     balance evita a palavra orfa na ultima linha e ainda encurta a linha mais
-     longa; a regra de 441-640px abaixo e' o piso para quem nao tem balance */
-  .hero-txt .kicker{max-width:60%; text-wrap:balance}
   td:first-child{width:auto}
-}
-@media (min-width:441px) and (max-width:640px){
-  .hero-txt .kicker{max-width:50%}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#barra{transition:none}
   .trilho,.trilho-cue{transition:none}}
@@ -347,7 +335,6 @@ td:first-child{color:var(--marfim);width:38%}
     </picture>
   </div>
   <div class="hero-txt">
-    <p class="kicker">Sobre Niccol&ograve; Paganini, e sobre o que sobra</p>
     <h1>O instrumento<br><span class="em">escondido</span></h1>
     <p class="hero-sub">
       Paganini foi enterrado nove vezes. Ningu&eacute;m sabe por qu&ecirc;.
@@ -365,7 +352,6 @@ td:first-child{color:var(--marfim);width:38%}
 
 <nav class="indice" id="capitulos" aria-label="Índice do ensaio">
   <div class="sec-head">
-    <span class="sec-num">Índice</span>
     <h2>Dez capítulos</h2>
   </div>
   <ol>
@@ -394,7 +380,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== I ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo I</span>
     <h2 id="cap-1">A anomalia</h2>
   </div>
 
@@ -419,7 +404,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== II ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo II</span>
     <h2 id="cap-2">A recusa</h2>
   </div>
 
@@ -441,7 +425,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== III ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo III</span>
     <h2 id="cap-3">O nome que deram</h2>
   </div>
 
@@ -472,7 +455,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== IV ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo IV</span>
     <h2 id="cap-4">O corpo</h2>
   </div>
 
@@ -496,7 +478,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== V ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo V</span>
     <h2 id="cap-5">O desmentido</h2>
   </div>
 
@@ -524,7 +505,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== VI ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo VI</span>
     <h2 id="cap-6">O instrumento escondido</h2>
   </div>
 
@@ -558,7 +538,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== VII ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo VII</span>
     <h2 id="cap-7">Quem foi ler</h2>
   </div>
 
@@ -586,7 +565,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== VIII ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo VIII</span>
     <h2 id="cap-8">As chaves</h2>
   </div>
 
@@ -661,7 +639,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== IX ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo IX</span>
     <h2 id="cap-9">A medição</h2>
   </div>
 
@@ -693,7 +670,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== X ===================== -->
 <section>
   <div class="sec-head">
-    <span class="sec-num">Capítulo X</span>
     <h2 id="cap-10">A distância</h2>
   </div>
 
@@ -730,7 +706,6 @@ td:first-child{color:var(--marfim);width:38%}
 <!-- ===================== FONTES ===================== -->
 <section class="sources" id="aparato">
   <div class="sec-head">
-    <span class="sec-num">Aparato</span>
     <h2>O que se pode conferir</h2>
   </div>
 
