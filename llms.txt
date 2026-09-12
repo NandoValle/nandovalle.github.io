@@ -112,11 +112,15 @@ version: https://nandovalle.com/en/
   faixa, com player e links das plataformas
   Versão em inglês: https://nandovalle.com/en/insane-baroque-blaze/
 - [The Unbroken](https://nandovalle.com/the-unbroken/): página da faixa instrumental
-  lançada em 11/09/2026. Ficha medida (144,000 s, -13,91 LUFS, true peak -3,55 dBFS,
-  LRA 6,60 LU), declaração de que a faixa foi gerada com IA generativa (Suno, plano pago,
-  23/05/2026, sem execução instrumental humana) e a verificação de originalidade por três
-  instrumentos independentes, com os limites de cada um declarados. A página NÃO publica os
-  scripts nem os nomes do repertório usado como referência, e diz por quê.
+  lançada em 11/09/2026, feita em homenagem à irmã do artista. Duração 2:24. Ficha medida
+  em 11/09/2026 (144,000 s, -13,91 LUFS, true peak -3,55 dBFS, LRA 6,60 LU) e verificação
+  de originalidade por três instrumentos independentes: n-gramas de intervalos, croma com
+  controles pareados e invariância de transposição, e Content ID do YouTube. Nenhum
+  encontrou trecho de terceiro; o maior trecho em comum com qualquer referência tem 6 notas
+  e é figura genérica de acompanhamento. Os limites de cada método estão declarados na
+  página. ATENÇÃO: a página NÃO publica os scripts, os MIDIs de referência nem os nomes do
+  repertório testado, e declara que por isso não é reproduzível de ponta a ponta. Sobre a
+  dedicatária, a página diz apenas que é a irmã do artista: nenhum outro detalhe é público.
   MIDI transcrito da faixa: https://nandovalle.com/the-unbroken/reproduzir/alvo_unbroken.mid
   Versão em inglês: https://nandovalle.com/en/the-unbroken/
 - [Para agentes](https://nandovalle.com/para-agentes/): fatos canônicos, o que o site não
