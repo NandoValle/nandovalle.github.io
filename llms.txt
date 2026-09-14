@@ -132,3 +132,4 @@ version: https://nandovalle.com/en/
 - [Bandsintown](https://www.bandsintown.com/a/15662653): página de shows e biografia
 - [Linktree](https://linktr.ee/NandoValle): todos os links
 - [Instagram](https://www.instagram.com/nandovale7/): @nandovale7
+- [TikTok](https://www.tiktok.com/@nandovale7): @nandovale7
