@@ -342,7 +342,11 @@
     }
     .hero-card::before { content:""; position:absolute; inset:0 0 auto; height:1px; background:linear-gradient(90deg,transparent,#f2d9a4,transparent); opacity:.6; }
     .stamp { display:inline-flex; align-items:center; gap:8px; padding:7px 10px; border-radius:999px; border:1px solid rgba(230,189,107,.18); color:#c8aa6e; font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
-    .hero-card-number { margin:18px 0 2px; color:#f7efe3; font:500 clamp(58px,7vw,100px)/.85 var(--serif); letter-spacing:-.055em; }
+    .hero-card-number {
+      display:block; margin:18px 0 2px; color:#f7efe3; font:500 clamp(58px,7vw,100px)/.85 var(--serif); letter-spacing:-.055em;
+      background:0 0; border:0; padding:0; text-align:left; cursor:pointer; transition:color .16s var(--ease-out);
+    }
+    .hero-card-number:hover, .hero-card-number:focus-visible { color:var(--gold); }
     .hero-card-number span { font-size:.38em; color:var(--gold); letter-spacing:-.01em; }
     .hero-card p { margin:12px 0 0; color:#b7a897; font-size:12px; line-height:1.6; }
     .tiny-rule { height:1px; background:var(--line-soft); margin:18px 0; }
@@ -486,8 +490,17 @@
     .experiment-card::before { content:""; position:absolute; inset:0; background:linear-gradient(120deg,transparent 0 49.5%,rgba(230,189,107,.04) 50%,transparent 50.5%); pointer-events:none; }
     .experiment-head { padding:50px 50px 28px; display:grid; grid-template-columns:1fr auto; gap:28px; align-items:end; }
     .experiment-head h2 { margin:10px 0 0; color:#f5ead8; font:500 clamp(46px,6vw,82px)/.95 var(--serif); letter-spacing:-.045em; }
-    .experiment-head .time { color:#e1bc77; font:500 clamp(58px,8vw,104px)/.9 var(--serif); letter-spacing:-.055em; }
+    .experiment-head .time {
+      color:#e1bc77; font:500 clamp(58px,8vw,104px)/.9 var(--serif); letter-spacing:-.055em;
+      background:0 0; border:0; padding:0; margin:0; text-align:left; cursor:pointer;
+      transition:color .16s var(--ease-out);
+    }
+    .experiment-head .time:hover, .experiment-head .time:focus-visible { color:var(--gold); }
     .experiment-head .time span { font-size:.3em; color:var(--gold-2); margin-left:5px; letter-spacing:.04em; }
+    .time-hint {
+      grid-column:1 / -1; margin:-4px 0 0; color:#9b9084; font-size:10.5px; letter-spacing:.11em;
+      text-transform:uppercase; text-align:right;
+    }
     .wave { height:140px; display:flex; align-items:center; gap:3px; padding:0 36px; overflow:hidden; opacity:.9; }
     .wave i { display:block; flex:1 1 0; min-width:2px; max-width:5px; height:var(--h); background:linear-gradient(180deg,#d6b16c,rgba(157,38,29,.34)); border-radius:999px; transform-origin:center; animation:wave 1.7s ease-in-out infinite; animation-delay:var(--d); }
     @keyframes wave { 0%,100%{transform:scaleY(.42);opacity:.4} 50%{transform:scaleY(1);opacity:1} }
@@ -881,8 +894,19 @@
   <noscript>
     <style>.reveal { opacity:1 !important; transform:none !important; }</style>
   </noscript>
+  <!-- Meta Pixel (conjunto de dados nandovalle.com, portfolio Nando) -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1092820289901687');
+    fbq('track', 'PageView');
+  </script>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1092820289901687&ev=PageView&noscript=1" /></noscript>
 <a class="skip-link" href="#top">Skip to content</a>
   <div class="noise" aria-hidden="true"></div>
   <div class="top-progress" aria-hidden="true"><span id="progressBar"></span></div>
@@ -898,7 +922,7 @@
         <a class="nav-link" href="#experimento">The test</a>
         <a class="nav-link nav-artista" href="#artista">Artist</a>
         <a class="nav-link" href="#fontes">Sources</a>
-        <a class="nav-cta" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer" aria-label="Listen to Insane Baroque Blaze on Spotify">
+        <a class="nav-cta" href="https://song.link/us/i/6794384682" target="_blank" rel="noopener noreferrer" aria-label="Listen to Insane Baroque Blaze on any platform">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M7.3 9.2c3.3-1 7-.7 9.7.7M7.9 12.1c2.7-.7 5.8-.5 8.2.6M8.5 14.9c2.1-.5 4.5-.3 6.4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
           <span class="cta-txt">Listen now</span>
         </a>
@@ -950,13 +974,13 @@
         <p class="hero-deck">On Niccol&ograve; Paganini, Aleister Crowley, a guitar, and what is left when legend meets the <strong>experiment.</strong></p>
         <div class="hero-buttons">
           <a class="btn btn-gold" href="#dossie">Open the dossier <span aria-hidden="true">&darr;</span></a>
-          <a class="btn" href="https://open.spotify.com/track/0tVaSUQuKdwRk9m4wdM1wN?si=484a297eac86424f" target="_blank" rel="noopener noreferrer" aria-label="Listen to Insane Baroque Blaze on Spotify"><span aria-hidden="true">&#9654;</span> Play the track</a>
+          <a class="btn" href="https://song.link/us/i/6794384682" target="_blank" rel="noopener noreferrer" aria-label="Listen to Insane Baroque Blaze on any platform"><span aria-hidden="true">&#9654;</span> Play the track</a>
         </div>
       </div>
       <aside class="hero-card" aria-label="First measured occurrence">
         <div class="stamp">measured occurrence</div>
-        <div class="hero-card-number">0:01<span>.5</span></div>
-        <p>The first result appears on practically the opening gesture of the guitar.</p>
+        <button type="button" class="hero-card-number" data-seek="1.5" aria-label="Play Insane Baroque Blaze now — the tritone appears at 0:01.5">0:01<span>.5</span></button>
+        <p>The first result appears on practically the opening gesture of the guitar. ▶ Tap the number to play it now.</p>
         <div class="tiny-rule"></div>
         <div class="mini-grid">
           <div><span>Track</span><strong>Insane Baroque Blaze</strong></div>
@@ -1068,7 +1092,8 @@
         <div class="experiment-card">
           <div class="experiment-head">
             <div><h2>Insane Baroque Blaze</h2></div>
-            <div class="time" data-nao-cobrir>0:01<span>.5</span></div>
+            <button type="button" class="time" data-nao-cobrir data-seek="1.5" aria-label="Play Insane Baroque Blaze now — the tritone appears at 0:01.5">0:01<span>.5</span></button>
+            <p class="time-hint">▶ tap the number to play the track now</p>
           </div>
 
           <div class="wave" aria-hidden="true" id="wave"></div>
@@ -1172,7 +1197,8 @@
         <div class="player-slot" id="playerSlot">
           <div class="spotify-frame" id="playerFrame">
             <button class="dock-close" id="dockClose" type="button" aria-label="Close the sticky player">&times;</button>
-            <iframe style="border-radius:20px" src="https://open.spotify.com/embed/track/0tVaSUQuKdwRk9m4wdM1wN?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Insane Baroque Blaze · Spotify"></iframe>
+            <div id="spotifyEmbed" style="border-radius:20px;min-height:352px"></div>
+            <noscript><iframe style="border-radius:20px" src="https://open.spotify.com/embed/track/0tVaSUQuKdwRk9m4wdM1wN?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Insane Baroque Blaze · Spotify"></iframe></noscript>
           </div>
         </div>
       </div>
@@ -1734,16 +1760,34 @@
     // da tela; o iframe nunca muda de lugar no DOM, porque mover o no recarregaria
     // o embed e cortaria o som. So acopla depois que a pessoa mexeu no player, e
     // some de vez se ela fechar.
+    //
+    // O embed roda pela iFrame API oficial do Spotify (nao mais um <iframe> estatico)
+    // para os marcadores [data-seek] (ex.: o "0:01,5") tocarem a faixa com um clique.
+    // Referencia: developer.spotify.com/documentation/embeds/references/iframe-api
+    // Se o script da API nao responder em alguns segundos (bloqueio de rede ou de
+    // extensao), cai para o iframe simples, sem os marcadores.
+    //
+    // LIMITE CONFIRMADO (23/09/2026): EmbedController.seek() nao pula a posicao em
+    // faixas de musica - so funciona documentado para episodio de podcast. Testado
+    // com o embed real (ouvindo os postMessage de playback_update): a reproducao
+    // sempre comeca em position:0, mesmo chamando seek(1.5) antes ou depois do
+    // playback_started. Por isso os marcadores so tocam a faixa do inicio; como o
+    // trítono medido fica em 0:01,5 - a poucos segundos do começo - o efeito prático
+    // e quase o mesmo. Se um dia precisar de seek de verdade dentro da faixa, so da
+    // com o Web Playback SDK (exige OAuth de conta Spotify Premium do ouvinte), nao
+    // com este embed gratuito.
     (function () {
       const slot = document.getElementById('playerSlot');
       const frame = document.getElementById('playerFrame');
       const botaoFechar = document.getElementById('dockClose');
-      const iframe = frame && frame.querySelector('iframe');
-      if (!slot || !frame || !iframe || !botaoFechar) return;
+      const embedEl = document.getElementById('spotifyEmbed');
+      if (!slot || !frame || !botaoFechar || !embedEl) return;
 
       let tocou = false;
       let dispensado = false;
       let acoplado = false;
+      let controller = null;
+      let iframe = null;
 
       function acoplar(ligar) {
         if (ligar === acoplado) return;
@@ -1760,17 +1804,65 @@
         acoplar(r.bottom < 8 || r.top > window.innerHeight - 8);
       }
 
-      // Iframe de outra origem nao avisa que recebeu clique. O que da para observar
-      // e a janela perder o foco com o iframe como elemento ativo.
-      window.addEventListener('blur', function () {
-        if (document.activeElement === iframe) { tocou = true; avaliar(); }
-      });
+      function ligarDeteccaoDeFoco() {
+        // Iframe de outra origem nao avisa que recebeu clique. O que da para observar
+        // e a janela perder o foco com o iframe como elemento ativo.
+        window.addEventListener('blur', function () {
+          if (document.activeElement === iframe) { tocou = true; avaliar(); }
+        });
+      }
+
       botaoFechar.addEventListener('click', function () { dispensado = true; acoplar(false); });
       const avaliarPorQuadro = porQuadro(avaliar);
       document.addEventListener('scroll', avaliarPorQuadro, { passive: true });
       window.addEventListener('resize', avaliarPorQuadro, { passive: true });
+
+      function pularPara(segundos) {
+        if (!isFinite(segundos)) return;
+        tocou = true;
+        dispensado = false;
+        slot.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (controller) {
+          controller.addListener('playback_started', function () { controller.seek(segundos); });
+          controller.play();
+        }
+        avaliar();
+      }
+      Array.prototype.forEach.call(document.querySelectorAll('[data-seek]'), function (el) {
+        el.addEventListener('click', function () { pularPara(parseFloat(el.getAttribute('data-seek'))); });
+      });
+
+      window.onSpotifyIframeApiReady = function (IFrameAPI) {
+        if (!document.getElementById('spotifyEmbed')) return; // ja caiu no fallback
+        IFrameAPI.createController(embedEl, {
+          uri: 'spotify:track:0tVaSUQuKdwRk9m4wdM1wN',
+          width: '100%',
+          height: 352
+        }, function (EmbedController) {
+          controller = EmbedController;
+          iframe = frame.querySelector('iframe');
+          ligarDeteccaoDeFoco();
+        });
+      };
+
+      setTimeout(function () {
+        if (controller || frame.querySelector('iframe')) return;
+        const alt = document.createElement('iframe');
+        alt.style.borderRadius = '20px';
+        alt.src = 'https://open.spotify.com/embed/track/0tVaSUQuKdwRk9m4wdM1wN?utm_source=generator&theme=0';
+        alt.width = '100%';
+        alt.height = '352';
+        alt.setAttribute('frameborder', '0');
+        alt.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
+        alt.loading = 'lazy';
+        alt.title = 'Insane Baroque Blaze · Spotify';
+        embedEl.replaceWith(alt);
+        iframe = alt;
+        ligarDeteccaoDeFoco();
+      }, 4000);
     })();
   </script>
+  <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 
   <script>
     /* Aparato em acordeao abaixo de 640px: a afirmacao fica visivel, o "onde conferir"
