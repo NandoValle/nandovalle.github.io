@@ -76,6 +76,14 @@
     document.addEventListener('click', function (e) {
       var t = e.target.closest && e.target.closest('[data-cookie-prefs]');
       if (t) { e.preventDefault(); show(); }
+      // Evento "OuvirAgora": botao "Ouvir agora" / "Listen now" do topo (a.nav-cta).
+      // So dispara com consentimento, porque sem ele window.fbq nao existe.
+      var cta = e.target.closest && e.target.closest('a.nav-cta');
+      if (cta && window.fbq) {
+        window.fbq('trackCustom', 'OuvirAgora', {
+          pagina: location.pathname, idioma: en ? 'en' : 'pt', destino: cta.href
+        });
+      }
     });
     var c = read();
     if (c === 'granted') loadPixel();
