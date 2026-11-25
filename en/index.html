@@ -559,6 +559,21 @@
     .source-card h3 { color:#dfd3c2; font:500 26px/1.05 var(--serif); margin:28px 0 8px; }
     .source-card p { color:#968b7e; font-size:13px; line-height:1.55; margin:0 0 20px; }
     .source-card .arrow { margin-top:auto; color:#b58d4d; font-size:18px; }
+    /* Faixa do Spotify logo abaixo do heroi: perfil do artista + as faixas do perfil. */
+    .sp-band { padding:70px 20px 22px; scroll-margin-top:70px; }
+    .sp-band::after { display:none; }
+    .sp-head { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:26px; }
+    .sp-head small { display:block; color:#b98a3e; text-transform:uppercase; font-size:11px; letter-spacing:.17em; }
+    .sp-head h2 { margin:10px 0 0; color:#ede1cf; font:500 clamp(30px,3.4vw,44px)/1 var(--serif); letter-spacing:-.035em; }
+    .sp-head p { max-width:460px; color:#8e8378; font-size:13px; line-height:1.65; margin:10px 0 0; }
+    .sp-follow { flex:none; padding:16px 24px; font-size:14px; }
+    .sp-follow svg { width:20px; height:20px; }
+    .sp-tracks { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .sp-tracks li { min-height:152px; border-radius:14px; background:rgba(255,255,255,.03); border:1px solid var(--line-soft); overflow:hidden; }
+    .sp-tracks iframe { display:block; width:100%; height:152px; border:0; }
+    @media (max-width: 980px) { .sp-tracks { grid-template-columns:1fr; gap:12px; } .sp-tracks li { min-height:80px; } .sp-tracks iframe { height:80px; } }
+    .sp-band + .discog { padding-top:56px; }
+    @media (max-width: 640px) { section.sp-band { padding:48px 14px 0; } section.sp-band + .discog { padding-top:48px; } .sp-head { display:block; } .sp-follow { margin-top:18px; width:100%; justify-content:center; } }
     .discog { padding:70px 20px 62px; }
     .discog-head { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:26px; }
     .discog-head h2 { margin:10px 0 0; color:#ede1cf; font:500 clamp(30px,3.4vw,44px)/1 var(--serif); letter-spacing:-.035em; }
@@ -966,6 +981,7 @@
         <div class="hero-buttons">
           <a class="btn btn-gold" href="#dossie">Open the dossier <span aria-hidden="true">&darr;</span></a>
           <a class="btn" href="https://song.link/us/i/6794384682" target="_blank" rel="noopener noreferrer" aria-label="Listen to Insane Baroque Blaze on any platform"><span aria-hidden="true">&#9654;</span> Play the track</a>
+          <a class="btn" href="https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ" target="_blank" rel="noopener noreferrer" aria-label="Nando Valle's profile on Spotify"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M7.3 9.2c3.3-1 7-.7 9.7.7M7.9 12.1c2.7-.7 5.8-.5 8.2.6M8.5 14.9c2.1-.5 4.5-.3 6.4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> Spotify</a>
         </div>
       </div>
       <aside class="hero-card" aria-label="First measured occurrence">
@@ -980,6 +996,24 @@
           <div><span>Artist</span><strong>Nando Valle</strong></div>
         </div>
       </aside>
+    </div>
+  </section>
+
+  <section class="section sp-band" id="spotify" aria-label="Nando Valle on Spotify">
+    <div class="wrap reveal">
+      <div class="sp-head">
+        <div>
+          <small>Artist profile</small>
+          <h2>On Spotify.</h2>
+          <p>The profile gathers everything released so far. Follow there to get the next releases.</p>
+        </div>
+        <a class="btn btn-gold sp-follow" href="https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M7.3 9.2c3.3-1 7-.7 9.7.7M7.9 12.1c2.7-.7 5.8-.5 8.2.6M8.5 14.9c2.1-.5 4.5-.3 6.4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> Follow on Spotify <span aria-hidden="true">&nearr;</span></a>
+      </div>
+      <ul class="sp-tracks" aria-label="Tracks by Nando Valle on Spotify">
+        <li><iframe src="https://open.spotify.com/embed/track/0tVaSUQuKdwRk9m4wdM1wN?utm_source=generator&theme=0" title="Insane Baroque Blaze · Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></li>
+        <li><iframe src="https://open.spotify.com/embed/track/1sA3p0KcpxFTKSUJqy1jAD?utm_source=generator&theme=0" title="Track by Nando Valle on Spotify (2 of 3)" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></li>
+        <li><iframe src="https://open.spotify.com/embed/track/4sEbEAgndVqoDDI7PLNPUN?utm_source=generator&theme=0" title="Track by Nando Valle on Spotify (3 of 3)" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></li>
+      </ul>
     </div>
   </section>
 
@@ -1032,7 +1066,7 @@
         <p>Records instrumental rock with form and vocabulary borrowed from classical music. Every track ships with its method: the rule used, the files and the caveats, for anyone who wants to redo the count.</p>
         <div class="track-meta"><span>INSTRUMENTAL ROCK</span><span>BAROQUE ROCK</span><span>NEOCLASSICAL</span><span>BRAZIL</span></div>
         <div class="artist-links">
-          <a class="btn" href="https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ" target="_blank" rel="noopener noreferrer">Spotify &nearr;</a>
+          <a class="btn btn-gold" href="https://open.spotify.com/artist/3pHmeyLy9Du1fsh3RCACIQ" target="_blank" rel="noopener noreferrer">Follow on Spotify &nearr;</a>
           <a class="btn" href="https://music.apple.com/us/artist/nando-valle/6793694273" target="_blank" rel="noopener noreferrer">Apple Music &nearr;</a>
           <a class="btn" href="https://www.instagram.com/nandovale7/" target="_blank" rel="noopener noreferrer">Instagram &nearr;</a>
           <a class="btn" href="https://www.tiktok.com/@nandovale7" target="_blank" rel="noopener noreferrer">TikTok &nearr;</a>
